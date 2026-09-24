@@ -1,2 +1,11 @@
 starter.md
 .env
+support/
+support/*
+data/
+
+
+# Virtual environments
+.venv/
+venv/
+env/
