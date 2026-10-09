@@ -1,0 +1,225 @@
+{
+  "source_manifest": "data/pilot_runs/slm_zero_shot_q8_schema_v2/pilot_manifest.json",
+  "source_sha256": "bb5e165a96756d1fe9a9ef1376618838cb1959bcf9099d9261b3a74f3556d134",
+  "selection": "Three bags per pilot selection group, ranked by SHA-256 of audit-select-20260928|head_id|tail_id, excluding the three examples already shown in SLM_pilot; all twelve reordered by audit-order-20260928 hash. Group and distant labels withheld from annotation input.",
+  "items": [
+    {
+      "sample_id": "B01",
+      "pair_ids": [
+        "m.013yq",
+        "m.020fp1"
+      ],
+      "head": "Atlanta",
+      "tail": "Turner Field",
+      "sentences": [
+        "In Atlanta , a statue of Ty Cobb , sliding into a base , is located outside the northern entrance to Turner Field .",
+        "Schuerholz tells of a heated six-hour meeting with Glavine at Turner Field and a subsequent meeting at Glavine 's home in an Atlanta suburb ."
+      ]
+    },
+    {
+      "sample_id": "B02",
+      "pair_ids": [
+        "m.02hrh0_",
+        "m.02lz3v"
+      ],
+      "head": "Honolulu",
+      "tail": "Hawaii Kai",
+      "sentences": [
+        "Martin Denny , the bandleader who mingled easygoing jazz with Polynesian instrumentation and jungle noises to exemplify the '' exotica '' sound that swept suburban America in the 1950 's and 60 's , died on Wednesday at his home in Hawaii Kai , near Honolulu ."
+      ]
+    },
+    {
+      "sample_id": "B03",
+      "pair_ids": [
+        "m.05gnf",
+        "m.01w6dw"
+      ],
+      "head": "NBC",
+      "tail": "American Express",
+      "sentences": [
+        "But reality shows are the most popular vehicles for product placement , with everything from contestants on NBC 's '' The Apprentice '' being required to write a new Burger King jingle , to '' The Restaurant , '' also on NBC , which mentions an American Express credit card numerous times in a number of episodes ."
+      ]
+    },
+    {
+      "sample_id": "B04",
+      "pair_ids": [
+        "m.02rq9n",
+        "m.056ws9"
+      ],
+      "head": "Jeffrey Katzenberg",
+      "tail": "DreamWorks Animation",
+      "sentences": [
+        "Inside the theater , Jeffrey Katzenberg , the chief executive of DreamWorks Animation , was more subdued , having taken something of a beating himself in recent days .",
+        "One Disney veteran not likely to return is Jeffrey Katzenberg , a former Disney executive and the chief executive of rival DreamWorks Animation , although he still has a keen interest in the company .",
+        "Jeffrey Katzenberg , chief executive of DreamWorks Animation , said the film would be released in 2008 ."
+      ]
+    },
+    {
+      "sample_id": "B05",
+      "pair_ids": [
+        "m.0ccvx",
+        "m.01qcx_"
+      ],
+      "head": "Queens",
+      "tail": "Astoria",
+      "sentences": [
+        "MARSHA AND EDWARD LAMADRID took the less-traveled route to suburbia : first they raised two sons in an apartment in Astoria , Queens ; then , as empty-nesters , they moved to a quiet neighborhood of single-family homes in Tappan , a hamlet of Orangeburg in Rockland County . ''",
+        "Four years ago , he and his wife and daughter moved from Astoria , Queens , into a home at the corner of Pitkin and Shepherd Avenues . ''",
+        "It was named Kaufman Astoria in 1982 when New York City took title to the property in Astoria , Queens , and leased it to a partnership headed by George S. Kaufman , a real estate developer , and entertainers Alan King and Johnny Carson .",
+        "Astoria Boulevard may be bustling just a short distance away , but at the point it intersects 14th Street in Astoria , Queens , it practically yearns out loud for life .",
+        "-LRB- Museum of the Moving Image , 35th Avenue at 36th Street , Astoria , Queens , 718-784-0077 ; $ 10 , $ 24 for the special screenings followed by discussions with Mr. Altman . -RRB-",
+        "None felt more put-upon than hundreds of residents and merchants in Astoria , Queens , who suffered through several days without power last month and lost power again yesterday when some overburdened lines caught fire .",
+        "Some 1.8 million New Yorkers are uninsured , and half of those people work full time , Mr. Weiner said during a campaign stop on Ditmars Boulevard in Astoria , Queens .",
+        "Replating firms abound in the New York metropolitan area , but the one that has most often been recommended to me is Empire Metal Finishing in Astoria , Queens .",
+        "This branch of a restaurant in Astoria , Queens , opened this year and is larger than the original .",
+        "Ms. Clifton said that with the help of a local pastor she managed to enroll her 5-year-old granddaughter , Akyra , in a public school in Astoria , Queens .",
+        "They are people like Caterina Biancaniello , who said she grew weary of brokers trying to goad her into selling her home in Astoria , Queens . ''",
+        "Mr. Martinez , who lives in Astoria , Queens , with his wife and 19-month-old twins , worked his way up a year and a half ago to the sushi counter , where he and the other eight chefs pare off wedges of salmon and yellowtail and press them on beds of warm rice .",
+        "The Forsaken Land Opens today in Astoria , Queens .",
+        "-LRB- Another large-scale operation in Queens , Schaller & Weber , is in Astoria , but its retail flagship is on the Upper East Side . -RRB-",
+        "Two years ago , Liz and David Josefsberg , both 34 , rented in Astoria , Queens , but yearned to find more room , better housing stock and an affordable starter apartment .",
+        "It 's become one of my personal New York City traditions , '' said Paul Shpontak , 47 , a building consultant from Astoria , Queens , who has been a regular for 28 years . ''",
+        "Later her aunt moved the family to Astoria , Queens , where they still live .",
+        "The other night , Mike Decay , a 26-year-old D.J. from Astoria , Queens , was swiveling at blender speed , wearing a T-shirt scrawled with the slogan '' The twist to end all twists . '' ''",
+        "Rescuers were also required to free motorists in Astoria , Queens ; Suffern , N.Y. ; and Montgomery , N.J. In West Paterson , N.J. , at least two cars were submerged as a creek overflowed into the parking lot of a Kohls department store , employees said .",
+        "Chris Peters , an executive vice president at Prudential Douglas Elliman , who manages the firm 's Chelsea office , said that when he decided to sell an investment property he owns in Astoria , Queens , he thought he 'd have no difficulty conducting the sale himself ."
+      ]
+    },
+    {
+      "sample_id": "B06",
+      "pair_ids": [
+        "m.05ns41",
+        "m.0cr3d"
+      ],
+      "head": "Betty Smith",
+      "tail": "Brooklyn",
+      "sentences": [
+        "1943 -- `` A Tree Grows in Brooklyn , '' by Betty Smith , depicts the coming of age of young Francie Nolan in pre-hipster Williamsburg .",
+        "` A Tree Grows in Brooklyn ' City Center , 131 West 55th Street Book by George Abbott and Betty Smith ; music by Arthur Schwartz ; lyrics by Dorothy Fields ; based on the novel by Smith .",
+        "` A Tree Grows in Brooklyn ' City Center , 131 West 55th Street Book by George Abbott and Betty Smith ; music by Arthur Schwartz ; lyrics by Dorothy Fields ; based on the novel by Smith .",
+        "The other reading selections included excerpts from the story '' The Happy Prince '' by Oscar Wilde and passages from '' A Tree Grows in Brooklyn '' by Betty Smith and '' My Brother Sam is Dead '' by James Lincoln Collier and Christopher Collier ."
+      ]
+    },
+    {
+      "sample_id": "B07",
+      "pair_ids": [
+        "m.02vzc",
+        "m.03khn"
+      ],
+      "head": "Finland",
+      "tail": "Helsinki",
+      "sentences": [
+        "In August , aboard a cruise ship off Helsinki , Finland , Mr. Hemment remixed a short set of house and electroclash beats in a live performance for a party of about 1,000 .",
+        "The world championships will be run in August in Helsinki , Finland , and the winning 4x100 team here -- Coby Miller , Leonard Scott , Shawn Crawford and Gatlin -- could well be the United States ' relay team there .",
+        "The Indonesian government and rebels from the province of Aceh are set to end their decades-long conflict with the signing of a peace treaty on Monday in Helsinki , Finland , cementing a deal that came together in the aftermath of the tsunami that devastated the region in December .",
+        "The Indonesian government and separatists from the tsunami-devastated province of Aceh , meeting in Helsinki , Finland , agreed Sunday to end a 30-year conflict , one of the longest in Southeast Asia , which has killed some 15,000 people .",
+        "Malkin signed a one-year contract with Metallurg in August reportedly worth $ 3.45 million -- but then bolted the team a few days later in Helsinki , Finland , and was spirited off to Los Angeles and then Pittsburgh .",
+        "Another option suggested by Craig Lasco at Scantours in Los Angeles is a small Finnish line , Kristina Cruises , which plans a July cruise on the 245-passenger Kristina Regina from Helsinki to Visby , Sweden ; Riga ; and Mariehamn , Finland .",
+        "Just 50 miles across the Gulf of Finland from Helsinki , Tallinn gets a whopping injection of cash and conviviality from the more than half-million Finns who head across every year -- frequently on multiple daily '' booze cruises '' -- to exploit Tallinn 's significantly cheaper alcohol ."
+      ]
+    },
+    {
+      "sample_id": "B08",
+      "pair_ids": [
+        "m.03shp",
+        "m.0ftlx"
+      ],
+      "head": "Iran",
+      "tail": "Tehran",
+      "sentences": [
+        "Tehran took the biggest step , because Iran 's ban on negotiating with the '' Great Satan '' dates to a decree by Ayatollah Ruhollah Khomeini , leader of the 1979 Iranian revolution .",
+        "And despite the critical need for intelligence on Iran , Mr. Risen says , a C.I.A. communications officer accidentally sent detailed information to the wrong indigenous agent in Tehran that outlined the agency 's entire network . ''",
+        "The agency says it has repeatedly confronted Iran with the allegations , which Tehran dismissed as '' baseless , '' adding that '' it would provide further clarifications later , '' the report said .",
+        "Further , people here believe that the true target was Tehran , and that Israel , the United States and Arab governments in Egypt , Saudi Arabia and Jordan are hoping to roll back Iran 's influence in the region . ''",
+        "The United States gave its explicit support on Friday to a European proposal to defuse the West 's confrontation with Iran over what is suspected of being its nuclear weapons program , while in Tehran the Iranian government received the proposal and said it would study its contents before commenting . ''",
+        "But so far Iran has seen nothing to indicate that the European trio , backed by the United States , is even contemplating offering the level of incentives Tehran expects . ''",
+        "When Iran defiantly cut the locks and seals on its nuclear enrichment plants in January and restarted its effort to manufacture atomic fuel , it forced the world to confront a momentous question : How long will it be before Tehran has the ability to produce a bomb that would alter the balance of power in the Middle East ?",
+        "Iran 's president declared yesterday that his country 's nuclear program was nearing an important milestone , even as international atomic inspectors reported that they had found unexplained traces of plutonium and that Tehran continued to be so uncooperative in answering questions that they had been unable to confirm earlier claims of progress .",
+        "The foreign ministers of Britain and Germany are scheduled to appear , a few days before a meeting of the International Atomic Energy Agency in Vienna , at which their countries are likely to push for Iran to be referred to the United Nations Security Council for possible sanctions , after Tehran 's decision to resume uranium enrichment activities .",
+        "It offered to lift its objections on Iran 's application to the World Trade Organization and to provide aircraft parts to Tehran .",
+        "The Swiss ambassador to Iran received the proposal on behalf of the United States , which does not have a representative in Tehran .",
+        "Though punitive sanctions are in no way certain , agreeing to start down a road that could lead to them is a huge step for Moscow and Beijing , commercial partners of Tehran that have long resisted attempts by the United States and Europe to punish Iran at the United Nations .",
+        "In Tehran on Monday , Mr. Ahmadinejad portrayed Iran 's position not as obstinate or rigid but as a reflection of strength . ''",
+        "The Bush administration said Wednesday that the United States would join Europeans in talks with Iran over its nuclear program , but only if Tehran first suspended its uranium activities , which are thought to be a cover for developing nuclear arms .",
+        "But intelligence analysts say there is little evidence that the Hezbollah raid more than three weeks ago that touched off the current fighting was ordered by Tehran , or that Iran is directly coordinating the steady attacks on Israeli targets . ''",
+        "The first alternative would have Iran participate in an '' international facility '' in Russia that would enrich uranium , an idea that Tehran has consistently rejected .",
+        "The fact that Ms. Rice has announced the United States willingness to hold talks with Iran is more important than the conditions she set , '' said Saeed Leylaz , a political analyst from Tehran who has close relations with people in the government .",
+        "We are sure that there are no such documents in Iran , '' Ali A. Larijani , secretary of the Supreme National Security Council and the country 's chief nuclear negotiator , said in an interview in Tehran . ''",
+        "Tehran has offered a counterproposal : it would be happy to reopen the window , but only if the Security Council drops its case against Iran and returns it to the atomic energy agency .",
+        "A Western diplomat based in Tehran said that Iran 's recent behavior has been infuriating , an apparent effort to undermine the diplomatic process ."
+      ]
+    },
+    {
+      "sample_id": "B09",
+      "pair_ids": [
+        "m.059rby",
+        "m.0ccvx"
+      ],
+      "head": "New York",
+      "tail": "Queens",
+      "sentences": [
+        "Saying the name change was all about '' the L.A. media market , '' he noted that people do n't refer to the Yankees or the Mets by using the Bronx or Queens ; they say New York .",
+        "Born in 1929 in Flushing , Queens , Anne Rogers was the great-granddaughter of a 19th-century mayor of New York , Philip Hone , and a second-generation dog person .",
+        "New York 's new chicken capital is Jackson Heights , Queens , where Mario 's Colombian chickens duke it out with the Peruvian ones at La Casa del Pollo and Pollo Don Alex. Raul Rojas , the owner of Super Pollo on Northern Boulevard , said that Peruvians are the acknowledged masters of pollo brasado . ''",
+        "Ten-year-old Adnan Thakur was born and raised in Jamaica , Queens , in the kind of immigrant family that transformed New York 's neighborhoods in the 1990 's .",
+        "Every cent you donate goes straight to the Brooklyn Bureau of Community Service ; the Catholic Charities of the Archdiocese of New York ; the Catholic Charities , Diocese of Brooklyn and Queens ; the Children 's Aid Society ; the Community Service Society of New York ; the Federation of Protestant Welfare Agencies ; and the UJA-Federation of New York .",
+        "On the other hand , the authority was permitted in 1984 by the Legislatures of New York and New Jersey to enter into leases with residential developers for sites on the Queens and Hoboken , N.J. , waterfronts .",
+        "New York not only proposes to remake Manhattan 's Far West Side , but also etches new life into stretches of the Queens and Brooklyn waterfronts , as well as reclaiming two polluted lakes in Queens for the rowing competition and turning part of Staten Island 's Fresh Kills landfill into a park with a mountain-biking course . ''",
+        "New York is not yet Surf Town U.S.A. , but like other spots along the East Coast , it is the scene of a boom in surfing -- not Web surfing , not subway surfing , but the kind you do on waves , in the ocean , in Queens .",
+        "Lieutenant Fitzpatrick said the couple had lived in the New York area for 14 years , residing in several places in Nassau County and Queens before moving to Sacramento in 2000 .",
+        "He has also continued to support a few Democrats who hold office in New York , such as helping raise money for Assemblyman Michael N. Gianaris of Queens ; his in-kind contributions to Mr. Gianaris totaled $ 4,345.10 .",
+        "B1 Spitzer and Suozzi Debate The two Democratic candidates for governor of New York clashed relentlessly in their sole debate over tax cuts , gay marriage , the death penalty , marijuana , the Queens blackout , and even their own future presidential ambitions .",
+        "That , according to a recent report from the advocacy group Transportation Alternatives , is just how life is in New York neighborhoods with clusters of government offices , from Jamaica in Queens , to Concourse Village in the Bronx , to St. George in Staten Island .",
+        "Interment to follow at Calvary Cemetery , Queens , New York .",
+        "In contrast , New York now has three Chinatowns -- one each for Manhattan , Brooklyn and Queens , though only the original can claim the name .",
+        "It is hard to find Moroccan fabrics in New York , but silks and cottons with a similar look can be found at India Sari Palace in Jackson Heights , Queens ; 37-07 74th Street -LRB- 37th Avenue -RRB- , (718) 426-2700 .",
+        "In April , the New York attorney general , Eliot Spitzer , announced the indictment of eight people accused of involvement in mortgage fraud that he said cost banks as much as $ 200 million during the five years the ring operated , primarily in Brooklyn and Queens and in Suffolk County on Long Island .",
+        "With a shrunken payroll in New York , it moved most of its operations and top executives from Manhattan to less expensive quarters in Queens .",
+        "Halina Trzcianowska , a nurse with the Visiting Nurse Service of New York , spent much of the late morning in Sunnyside , Queens , assisting Jorge Ros , 66 , who suffers from chronic arthritis , and Ann Noughton , 65 , who has lung cancer .",
+        "The Bloomberg administration has been aggressively trying to nurture light manufacturing in New York by upgrading city-owned industrial real estate , like the three Bush Terminal buildings ; offering tax credits and other incentives ; and creating 16 protective zones , where residential conversions are banned , in Queens , Brooklyn and the Bronx .",
+        "Mr. Beige called the claims of poor working conditions '' a red herring '' and said the company , which started 55 years ago in Queens as a small candy store and now has about 1,200 employees in the New York region , treated all 2,000 of its workers around the world well . ''"
+      ]
+    },
+    {
+      "sample_id": "B10",
+      "pair_ids": [
+        "m.048_950",
+        "m.0484mzq"
+      ],
+      "head": "Sam",
+      "tail": "Jon",
+      "sentences": [
+        "Darling husband of Seena , beloved father of Robin and Sam , adoring Poppa of Melissa and Jon , loving brother of Natalie and Al -LRB- Janet -RRB- , the late Leroy -LRB- Joan -RRB- , dear uncle and great uncle ."
+      ]
+    },
+    {
+      "sample_id": "B11",
+      "pair_ids": [
+        "m.06q1r",
+        "m.02m77"
+      ],
+      "head": "Scotland",
+      "tail": "Edinburgh",
+      "sentences": [
+        "After performing their dance in private last Saturday , the All Blacks romped all over Wales , 45-10 , for their fourth straight victory on the trip , a tune-up for September 's World Cup , to be based mostly in France but with a few matches in Edinburgh , Scotland , and Cardiff .",
+        "A card attached to it reads : '' From Liz and Hugh , Edinburgh , Scotland .",
+        "We 're very impressed with their dedication , talent and organizational skills , '' said Mr. Philip , whose school sends a small group to Edinburgh , Scotland , every other year for the international Fringe Festival .",
+        "I have been away from Florida for a long time , '' wrote Nicole Brandon of Edinburgh , Scotland , '' but my memories as a little kid are punctuated at all the most random times by the Rice brothers . ''",
+        "Next week copies of the piece , believed to be his only musical work , are to be presented to the National Library of Scotland and the Writers Museum in Edinburgh .",
+        "A card attached to it reads : '' From Liz and Hugh , Edinburgh , Scotland ."
+      ]
+    },
+    {
+      "sample_id": "B12",
+      "pair_ids": [
+        "m.0nzw2",
+        "m.0767_6"
+      ],
+      "head": "DeKalb County",
+      "tail": "Derwin Brown",
+      "sentences": [
+        "He said he needed the stringent security measures because a sheriff-elect in neighboring DeKalb County , Derwin Brown , was assassinated in 2000 after announcing intended dismissals ."
+      ]
+    }
+  ]
+}

@@ -1,11 +1,46 @@
-starter.md
-.env
-support/
-support/*
-data/
+# Local datasets, model weights, score caches, and private sampling provenance
+/data/
+/models/
+/model_cache/
+/outputs/
 
-
-# Virtual environments
+# Python environments and regenerable caches
 .venv/
 venv/
 env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and machine metadata
+.env
+.env.*
+!.env.example
+.DS_Store
+.AppleDouble
+*.log
+
+# Editor state
+.vscode/
+.idea/
+
+# Downloads, temporary files and model exports outside the normal cache folders
+*.part
+*.incomplete
+*.download
+*.tmp
+*.bak
+*.gguf
+*.safetensors
+pytorch_model*.bin
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.pem
+*.key
+.coverage
+htmlcov/

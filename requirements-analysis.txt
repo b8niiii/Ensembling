@@ -1,0 +1,4 @@
+# Optional scientific figure regeneration only. Default notebook viewing uses
+# saved PNGs and the existing project dependencies; no runtime update is needed.
+# Verified in an isolated temporary Python 3.12 environment on 8 October 2026.
+matplotlib==3.11.2

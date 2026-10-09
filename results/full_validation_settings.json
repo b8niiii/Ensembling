@@ -1,0 +1,83 @@
+{
+  "fingerprint": "c9a68bf3bb8d0af2830fabbaa7948bb165077e4bea69e90b7233a744f4743793",
+  "settings": {
+    "adapter_sha256": "239c94e39764e61df77194bca3efb3c5d1dc52a6ff5deedefdadbac7c0515c38",
+    "bag_cap": 20,
+    "boundary_alignment": "split model words at supplied mention boundaries; sentence text unchanged",
+    "device": "cpu",
+    "entity_labels": [
+      "person",
+      "organization",
+      "location",
+      "other"
+    ],
+    "entity_labels_role": "unchanged encoder prompts only; no entity-type classification",
+    "entity_threshold": null,
+    "gliner_implementation_sha256": {
+      "model.py": "cc1c03ed1540de4c6b836f544921e0a2de33cfae6ad4d8aeb35dc08845d867fe",
+      "modeling/base.py": "121ce030f6ed9137315bc8486031c7901f433ef52f5881343773cdb46e8e9e3f",
+      "modeling/span_rep.py": "dba08bc90d09164ea72a66331dd802149520d68661b71abfdd20d25602981e81"
+    },
+    "inference_mode": "supplied_dataset_spans_no_entity_recognition",
+    "label_module_sha256": "ef8e5f430a8a55628e212772bf445242b1abd5b6a8e247e3b0c729d0c51d30f8",
+    "label_name": {
+      "/business/company/advisors": "company has advisor",
+      "/business/company/founders": "company has founder",
+      "/business/company/majorshareholders": "company has major shareholder",
+      "/business/company/place_founded": "company was founded in place",
+      "/business/location": "business is located in place",
+      "/business/person/company": "person is associated with company",
+      "/film/film/featured_film_locations": "film features location",
+      "/location/administrative_division/country": "administrative division belongs to country",
+      "/location/country/administrative_divisions": "country has administrative division",
+      "/location/country/capital": "country has capital city",
+      "/location/location/contains": "location contains location",
+      "/location/neighborhood/neighborhood_of": "neighborhood belongs to location",
+      "/location/region/capital": "region has capital city",
+      "/location/us_county/county_seat": "US county has county seat",
+      "/people/deceasedperson/place_of_burial": "deceased person was buried in place",
+      "/people/deceasedperson/place_of_death": "deceased person died in place",
+      "/people/ethnicity/geographic_distribution": "ethnicity is distributed in location",
+      "/people/person/children": "person has child",
+      "/people/person/ethnicity": "person belongs to ethnicity",
+      "/people/person/nationality": "person has nationality",
+      "/people/person/place_lived": "person lived in place",
+      "/people/person/place_of_birth": "person was born in place",
+      "/people/person/religion": "person follows religion",
+      "/time/event/locations": "event occurred in location"
+    },
+    "manifest_count": 36266,
+    "manual_test_access": false,
+    "mapping": "dataset half-open character spans; head index 0 to tail index 1; union over sentences",
+    "models": [
+      {
+        "name": "GLiNER-relex-base",
+        "repo": "knowledgator/gliner-relex-base-v1.0",
+        "revision": "e6a880049a19c5cc222a7a479c32e84b0d8cdd9a",
+        "slug": "gliner_relex_base",
+        "weights_sha256": "7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5"
+      },
+      {
+        "name": "GLiNER-relex-large",
+        "repo": "knowledgator/gliner-relex-large-v1.0",
+        "revision": "4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290",
+        "slug": "gliner_relex_large",
+        "weights_sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+      }
+    ],
+    "primary_relation_threshold": 0.5,
+    "purpose": "Full NYT10m validation using supplied head/tail spans without NER",
+    "rel2id_sha256": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+    "runner_sha256": "0cd124c5faf928de950a85e08e049b29b636395572c9a62c127803352f66747e",
+    "saved_scores": "all 24 directed positive-relation scores per sentence and bag maxima",
+    "selection": "same first-and-last-inclusive evenly spaced record indices as extended pilot",
+    "train_sha256": "33900650c692279adbe0a041b5c6a90e9216c905c73975905a04669695f7f2af",
+    "validation_sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c",
+    "versions": {
+      "gliner": "0.2.29",
+      "huggingface_hub": "0.36.2",
+      "torch": "2.14.0",
+      "transformers": "4.57.6"
+    }
+  }
+}

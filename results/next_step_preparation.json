@@ -1,0 +1,36 @@
+{
+  "audit": {
+    "bags": 20,
+    "excludes_reviewed_30": true,
+    "inputs_sha256": "11e9022d2bb120e7bf3cd57b8d0b2c47cd8834a54b3e989a4ff0baed4b92f679",
+    "review_status": "inactive_unannotated_not_in_current_work_plan",
+    "selected_records": 30,
+    "selection_counts": {
+      "distant_NA_disagreement": 8,
+      "distant_positive_disagreement": 8,
+      "random_remaining_validation": 4
+    }
+  },
+  "date": "2026-10-06",
+  "reduction_pilot": {
+    "bag_cap": 20,
+    "bags": 100,
+    "inference_run": false,
+    "manifest_sha256": "a25bd929bd41bc5d474e1cc6d2a54a8bdca004774f3ae9c6de172881dc379959",
+    "selected_records": 118
+  },
+  "seed": 20261006,
+  "source_run_fingerprint": "c9a68bf3bb8d0af2830fabbaa7948bb165077e4bea69e90b7233a744f4743793",
+  "work_order_revision": {
+    "additional_manual_annotation_scheduled": false,
+    "date": "2026-10-06",
+    "error_analysis_reference": "existing reviewed30",
+    "first_test_systems": [
+      "relex_base",
+      "relex_large",
+      "validation_selected_static_ensemble",
+      "validation_verified_API_LLM"
+    ],
+    "reduction_phase": "after first frozen released-SLM/static-ensemble/API comparison"
+  }
+}

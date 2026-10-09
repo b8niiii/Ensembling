@@ -1,0 +1,190 @@
+{
+  "annotation_type": "human-confirmed text-supported NYT10m validation bag relations; not official test gold",
+  "review_status": "human_confirmed",
+  "confirmation_date": "2026-10-01",
+  "sample_file": "support/validation_expanded_18_2026-10-01.json",
+  "sample_sha256": "756fa0184d7c2c6bb1c4b97ce3e4fb0521ad3c09487250c1419a21cfb542d6e8",
+  "policy": "Ordered head-to-tail pair; closed NYT10m relation inventory; supplied-text support includes documented motivated inference, with explicit premises and uncertainty. External entity-specific world facts are kept separate. Empty list means no supported allowed relation. Capital-to-containment and direction conventions are retained. The thesis author confirmed the inference criterion and the B08/N18 additions in chat on 6 October 2026.",
+  "annotations": [
+    {
+      "sample_id": "N01",
+      "pair_ids": [
+        "m.04wcf",
+        "m.05vw7"
+      ],
+      "relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "N02",
+      "pair_ids": [
+        "m.0d060g",
+        "m.0154gx"
+      ],
+      "relations": [
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "N03",
+      "pair_ids": [
+        "m.026tkbc",
+        "m.02z2m_"
+      ],
+      "relations": [
+        "/business/person/company"
+      ]
+    },
+    {
+      "sample_id": "N04",
+      "pair_ids": [
+        "m.026g4n0",
+        "m.0wdjl"
+      ],
+      "relations": [
+        "/people/person/place_of_birth"
+      ]
+    },
+    {
+      "sample_id": "N05",
+      "pair_ids": [
+        "m.0674cw",
+        "m.04vmp"
+      ],
+      "relations": [
+        "/people/deceasedperson/place_of_death"
+      ]
+    },
+    {
+      "sample_id": "N06",
+      "pair_ids": [
+        "m.02l8jr",
+        "m.018pyg"
+      ],
+      "relations": [
+        "/people/person/children"
+      ]
+    },
+    {
+      "sample_id": "N07",
+      "pair_ids": [
+        "m.03wpv91",
+        "m.0x67"
+      ],
+      "relations": [
+        "/people/person/ethnicity"
+      ]
+    },
+    {
+      "sample_id": "N08",
+      "pair_ids": [
+        "m.015vw5",
+        "m.0ygbf"
+      ],
+      "relations": [
+        "/business/location"
+      ]
+    },
+    {
+      "sample_id": "N09",
+      "pair_ids": [
+        "m.027m0s",
+        "m.08wxz6"
+      ],
+      "relations": [
+        "/business/company/founders"
+      ]
+    },
+    {
+      "sample_id": "N10",
+      "pair_ids": [
+        "m.02plttk",
+        "m.0d05w3"
+      ],
+      "relations": [
+        "/people/person/nationality"
+      ]
+    },
+    {
+      "sample_id": "N11",
+      "pair_ids": [
+        "m.05lsgj",
+        "m.0f04v"
+      ],
+      "relations": [
+        "/people/person/place_of_birth"
+      ]
+    },
+    {
+      "sample_id": "N12",
+      "pair_ids": [
+        "m.052f_2",
+        "m.0c1d0"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": "N13",
+      "pair_ids": [
+        "m.02p10m",
+        "m.048yyh"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": "N14",
+      "pair_ids": [
+        "m.05cskg",
+        "m.0209vm"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": "N15",
+      "pair_ids": [
+        "m.02079bk",
+        "m.04b2m_7"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": "N16",
+      "pair_ids": [
+        "m.02qcy82",
+        "m.01wdsm"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": "N17",
+      "pair_ids": [
+        "m.04jpl",
+        "m.0nczk"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": "N18",
+      "pair_ids": [
+        "m.09bvds",
+        "m.03rjj"
+      ],
+      "relations": [
+        "/people/person/nationality"
+      ],
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "support_type": "motivated_pragmatic_inference",
+      "confidence": "medium",
+      "rationale": "Confirmed on 6 October: Italy will use Barzagli in another player’s spot is read as national-team player representation, supporting nationality under the documented domain convention. External biography is not the annotation premise."
+    }
+  ],
+  "annotation_version": "text_supported_inference_v2_20261006",
+  "revision_date": "2026-10-06",
+  "previous_version_file": "support/archive/annotations_before_inference_revision_2026-10-06/validation_expanded_18_annotations_2026-10-01.json",
+  "previous_version_sha256": "1d51816d93ab66b98f0ad83f14c7ef681e20bb871e83d7004f346d3b0d017571",
+  "revision_note": "N18 nationality added with explicit human confirmation on 6 October 2026; the other seventeen label sets remain as confirmed on 1 October. Original labels remain archived and in the experiment-local historical reference."
+}

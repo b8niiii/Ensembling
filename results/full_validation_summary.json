@@ -1,0 +1,688 @@
+{
+  "disagreeing_bags": 8206,
+  "distant_label_scores": {
+    "all_validation_distant_labels": {
+      "intersection": {
+        "FN": 2257,
+        "FP": 3348,
+        "TP": 1805,
+        "bags": 36266,
+        "micro_f1": 0.3918,
+        "negative_bags_with_fp": 2564,
+        "precision": 0.3503,
+        "recall": 0.4444
+      },
+      "relex_base": {
+        "FN": 1926,
+        "FP": 7074,
+        "TP": 2136,
+        "bags": 36266,
+        "micro_f1": 0.3219,
+        "negative_bags_with_fp": 4873,
+        "precision": 0.2319,
+        "recall": 0.5258
+      },
+      "relex_large": {
+        "FN": 1364,
+        "FP": 9343,
+        "TP": 2698,
+        "bags": 36266,
+        "micro_f1": 0.3351,
+        "negative_bags_with_fp": 5601,
+        "precision": 0.2241,
+        "recall": 0.6642
+      },
+      "union": {
+        "FN": 1033,
+        "FP": 13069,
+        "TP": 3029,
+        "bags": 36266,
+        "micro_f1": 0.3005,
+        "negative_bags_with_fp": 7611,
+        "precision": 0.1882,
+        "recall": 0.7457
+      }
+    },
+    "bags_above_20_records": {
+      "intersection": {
+        "FN": 12,
+        "FP": 66,
+        "TP": 60,
+        "bags": 75,
+        "micro_f1": 0.6061,
+        "negative_bags_with_fp": 16,
+        "precision": 0.4762,
+        "recall": 0.8333
+      },
+      "relex_base": {
+        "FN": 9,
+        "FP": 116,
+        "TP": 63,
+        "bags": 75,
+        "micro_f1": 0.502,
+        "negative_bags_with_fp": 19,
+        "precision": 0.352,
+        "recall": 0.875
+      },
+      "relex_large": {
+        "FN": 6,
+        "FP": 127,
+        "TP": 66,
+        "bags": 75,
+        "micro_f1": 0.4981,
+        "negative_bags_with_fp": 20,
+        "precision": 0.342,
+        "recall": 0.9167
+      },
+      "union": {
+        "FN": 3,
+        "FP": 177,
+        "TP": 69,
+        "bags": 75,
+        "micro_f1": 0.434,
+        "negative_bags_with_fp": 22,
+        "precision": 0.2805,
+        "recall": 0.9583
+      }
+    },
+    "bags_with_2_to_20_records": {
+      "intersection": {
+        "FN": 481,
+        "FP": 752,
+        "TP": 768,
+        "bags": 2974,
+        "micro_f1": 0.5547,
+        "negative_bags_with_fp": 438,
+        "precision": 0.5053,
+        "recall": 0.6149
+      },
+      "relex_base": {
+        "FN": 408,
+        "FP": 1432,
+        "TP": 841,
+        "bags": 2974,
+        "micro_f1": 0.4776,
+        "negative_bags_with_fp": 686,
+        "precision": 0.37,
+        "recall": 0.6733
+      },
+      "relex_large": {
+        "FN": 232,
+        "FP": 2181,
+        "TP": 1017,
+        "bags": 2974,
+        "micro_f1": 0.4574,
+        "negative_bags_with_fp": 791,
+        "precision": 0.318,
+        "recall": 0.8143
+      },
+      "union": {
+        "FN": 159,
+        "FP": 2861,
+        "TP": 1090,
+        "bags": 2974,
+        "micro_f1": 0.4192,
+        "negative_bags_with_fp": 983,
+        "precision": 0.2759,
+        "recall": 0.8727
+      }
+    },
+    "distant_NA_only": {
+      "intersection": {
+        "FN": 0,
+        "FP": 2792,
+        "TP": 0,
+        "bags": 32392,
+        "micro_f1": 0.0,
+        "negative_bags_with_fp": 2564,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "relex_base": {
+        "FN": 0,
+        "FP": 5746,
+        "TP": 0,
+        "bags": 32392,
+        "micro_f1": 0.0,
+        "negative_bags_with_fp": 4873,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "relex_large": {
+        "FN": 0,
+        "FP": 7089,
+        "TP": 0,
+        "bags": 32392,
+        "micro_f1": 0.0,
+        "negative_bags_with_fp": 5601,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "union": {
+        "FN": 0,
+        "FP": 10043,
+        "TP": 0,
+        "bags": 32392,
+        "micro_f1": 0.0,
+        "negative_bags_with_fp": 7611,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    "distant_positive": {
+      "intersection": {
+        "FN": 2257,
+        "FP": 556,
+        "TP": 1805,
+        "bags": 3874,
+        "micro_f1": 0.562,
+        "negative_bags_with_fp": 0,
+        "precision": 0.7645,
+        "recall": 0.4444
+      },
+      "relex_base": {
+        "FN": 1926,
+        "FP": 1328,
+        "TP": 2136,
+        "bags": 3874,
+        "micro_f1": 0.5676,
+        "negative_bags_with_fp": 0,
+        "precision": 0.6166,
+        "recall": 0.5258
+      },
+      "relex_large": {
+        "FN": 1364,
+        "FP": 2254,
+        "TP": 2698,
+        "bags": 3874,
+        "micro_f1": 0.5986,
+        "negative_bags_with_fp": 0,
+        "precision": 0.5448,
+        "recall": 0.6642
+      },
+      "union": {
+        "FN": 1033,
+        "FP": 3026,
+        "TP": 3029,
+        "bags": 3874,
+        "micro_f1": 0.5988,
+        "negative_bags_with_fp": 0,
+        "precision": 0.5002,
+        "recall": 0.7457
+      }
+    },
+    "singleton_bags": {
+      "intersection": {
+        "FN": 1764,
+        "FP": 2530,
+        "TP": 977,
+        "bags": 33217,
+        "micro_f1": 0.3127,
+        "negative_bags_with_fp": 2110,
+        "precision": 0.2786,
+        "recall": 0.3564
+      },
+      "relex_base": {
+        "FN": 1509,
+        "FP": 5526,
+        "TP": 1232,
+        "bags": 33217,
+        "micro_f1": 0.2594,
+        "negative_bags_with_fp": 4168,
+        "precision": 0.1823,
+        "recall": 0.4495
+      },
+      "relex_large": {
+        "FN": 1126,
+        "FP": 7035,
+        "TP": 1615,
+        "bags": 33217,
+        "micro_f1": 0.2836,
+        "negative_bags_with_fp": 4790,
+        "precision": 0.1867,
+        "recall": 0.5892
+      },
+      "union": {
+        "FN": 871,
+        "FP": 10031,
+        "TP": 1870,
+        "bags": 33217,
+        "micro_f1": 0.2554,
+        "negative_bags_with_fp": 6606,
+        "precision": 0.1571,
+        "recall": 0.6822
+      }
+    }
+  },
+  "inference_mode": "supplied_dataset_spans_no_entity_recognition",
+  "inference_wall_s_by_model": {
+    "gliner_relex_base": 3157.34,
+    "gliner_relex_large": 10078.57
+  },
+  "previous_joint_run": {
+    "all_validation_distant_labels": {
+      "intersection": {
+        "FN": 2262,
+        "FP": 3330,
+        "TP": 1800,
+        "bags": 36266,
+        "micro_f1": 0.3916,
+        "negative_bags_with_fp": 2547,
+        "precision": 0.3509,
+        "recall": 0.4431
+      },
+      "relex_base": {
+        "FN": 1929,
+        "FP": 6980,
+        "TP": 2133,
+        "bags": 36266,
+        "micro_f1": 0.3238,
+        "negative_bags_with_fp": 4788,
+        "precision": 0.2341,
+        "recall": 0.5251
+      },
+      "relex_large": {
+        "FN": 1365,
+        "FP": 9346,
+        "TP": 2697,
+        "bags": 36266,
+        "micro_f1": 0.3349,
+        "negative_bags_with_fp": 5560,
+        "precision": 0.2239,
+        "recall": 0.664
+      },
+      "union": {
+        "FN": 1032,
+        "FP": 12996,
+        "TP": 3030,
+        "bags": 36266,
+        "micro_f1": 0.3017,
+        "negative_bags_with_fp": 7503,
+        "precision": 0.1891,
+        "recall": 0.7459
+      }
+    },
+    "entity_threshold": 0.3,
+    "inference_wall_s_by_model": {
+      "gliner_relex_base": 3541.66,
+      "gliner_relex_large": 12227.68
+    },
+    "relation_threshold": 0.5,
+    "reviewed_30_text": {
+      "intersection": {
+        "FN": 9,
+        "FP": 5,
+        "TP": 14,
+        "bags": 30,
+        "micro_f1": 0.6667,
+        "negative_bags_with_fp": 3,
+        "precision": 0.7368,
+        "recall": 0.6087
+      },
+      "relex_base": {
+        "FN": 9,
+        "FP": 14,
+        "TP": 14,
+        "bags": 30,
+        "micro_f1": 0.549,
+        "negative_bags_with_fp": 5,
+        "precision": 0.5,
+        "recall": 0.6087
+      },
+      "relex_large": {
+        "FN": 1,
+        "FP": 17,
+        "TP": 22,
+        "bags": 30,
+        "micro_f1": 0.7097,
+        "negative_bags_with_fp": 4,
+        "precision": 0.5641,
+        "recall": 0.9565
+      },
+      "union": {
+        "FN": 1,
+        "FP": 26,
+        "TP": 22,
+        "bags": 30,
+        "micro_f1": 0.6197,
+        "negative_bags_with_fp": 6,
+        "precision": 0.4583,
+        "recall": 0.9565
+      }
+    },
+    "reviewed_reference_scope": "Historical original annotations; not rescored with the 6 October inference revision.",
+    "run_directory": "data/pilot_runs/relex_full_validation_v1_20261002",
+    "run_fingerprint": "a478aeb660204f35a1b8b92419b3d7e19e0a46992cd256098ae98962c9dae674"
+  },
+  "primary_relation_threshold": 0.5,
+  "reference_warning": "Full validation relation labels are distant supervision, not manual gold",
+  "report_metadata": {
+    "excluded_cohorts": [
+      "pair_seen_in_train",
+      "pair_not_seen_in_train"
+    ],
+    "exclusion_reason": "NYT10m split membership does not establish checkpoint training exposure",
+    "reviewed_reference": {
+      "changed_samples_from_original_reviewed30": [
+        "N18"
+      ],
+      "confirmed_date": "2026-10-06",
+      "historical_B08_in_current_cohort": false,
+      "labels_sha256": "fb9972e04f461ce077ccde2c10d7811496fb711614be8d14344dde986fdb46ea",
+      "policy": "Text-supported relations including documented motivated inference; external facts kept separate.",
+      "source_hashes": {
+        "support/validation_clean_annotations_2026-09-29.json": "cd48853a1ee86fee66336e002fb770b26b129bb825aa725c975cd36081978b43",
+        "support/validation_clean_sample_2026-09-29.json": "00dd4aa10878b6aed80134cc575b88879bd45bf35f2e32fd71b06cc113f23b9e",
+        "support/validation_expanded_18_2026-10-01.json": "756fa0184d7c2c6bb1c4b97ce3e4fb0521ad3c09487250c1419a21cfb542d6e8",
+        "support/validation_expanded_18_annotations_2026-10-01.json": "88d17eef49c8de819b4894245ea0b7881f75ec756776fcf3499e29f71efeaece"
+      },
+      "version": "text_supported_inference_v2_20261006"
+    },
+    "reviewed_reference_role": "Separate text-annotation diagnostic on a selected 30-bag sample; not a representative benchmark",
+    "script_sha256": "3a692db31313d2c18b92316c2c834809cf42c425ed79aa6051e5ad24b5f37e3a",
+    "version": "validation_cohorts_v3_annotations_20261006"
+  },
+  "reviewed_30_text_scores": {
+    "intersection": {
+      "FN": 9,
+      "FP": 3,
+      "TP": 15,
+      "bags": 30,
+      "micro_f1": 0.7143,
+      "negative_bags_with_fp": 1,
+      "precision": 0.8333,
+      "recall": 0.625
+    },
+    "relex_base": {
+      "FN": 9,
+      "FP": 12,
+      "TP": 15,
+      "bags": 30,
+      "micro_f1": 0.5882,
+      "negative_bags_with_fp": 3,
+      "precision": 0.5556,
+      "recall": 0.625
+    },
+    "relex_large": {
+      "FN": 1,
+      "FP": 15,
+      "TP": 23,
+      "bags": 30,
+      "micro_f1": 0.7419,
+      "negative_bags_with_fp": 3,
+      "precision": 0.6053,
+      "recall": 0.9583
+    },
+    "union": {
+      "FN": 1,
+      "FP": 24,
+      "TP": 23,
+      "bags": 30,
+      "micro_f1": 0.6479,
+      "negative_bags_with_fp": 5,
+      "precision": 0.4894,
+      "recall": 0.9583
+    }
+  },
+  "run_fingerprint": "c9a68bf3bb8d0af2830fabbaa7948bb165077e4bea69e90b7233a744f4743793",
+  "threshold_diagnostics": {
+    "0.5": {
+      "all_validation_distant_labels": {
+        "intersection": {
+          "FN": 2257,
+          "FP": 3348,
+          "TP": 1805,
+          "bags": 36266,
+          "micro_f1": 0.3918,
+          "negative_bags_with_fp": 2564,
+          "precision": 0.3503,
+          "recall": 0.4444
+        },
+        "relex_base": {
+          "FN": 1926,
+          "FP": 7074,
+          "TP": 2136,
+          "bags": 36266,
+          "micro_f1": 0.3219,
+          "negative_bags_with_fp": 4873,
+          "precision": 0.2319,
+          "recall": 0.5258
+        },
+        "relex_large": {
+          "FN": 1364,
+          "FP": 9343,
+          "TP": 2698,
+          "bags": 36266,
+          "micro_f1": 0.3351,
+          "negative_bags_with_fp": 5601,
+          "precision": 0.2241,
+          "recall": 0.6642
+        },
+        "union": {
+          "FN": 1033,
+          "FP": 13069,
+          "TP": 3029,
+          "bags": 36266,
+          "micro_f1": 0.3005,
+          "negative_bags_with_fp": 7611,
+          "precision": 0.1882,
+          "recall": 0.7457
+        }
+      },
+      "reviewed_30_text": {
+        "intersection": {
+          "FN": 9,
+          "FP": 3,
+          "TP": 15,
+          "bags": 30,
+          "micro_f1": 0.7143,
+          "negative_bags_with_fp": 1,
+          "precision": 0.8333,
+          "recall": 0.625
+        },
+        "relex_base": {
+          "FN": 9,
+          "FP": 12,
+          "TP": 15,
+          "bags": 30,
+          "micro_f1": 0.5882,
+          "negative_bags_with_fp": 3,
+          "precision": 0.5556,
+          "recall": 0.625
+        },
+        "relex_large": {
+          "FN": 1,
+          "FP": 15,
+          "TP": 23,
+          "bags": 30,
+          "micro_f1": 0.7419,
+          "negative_bags_with_fp": 3,
+          "precision": 0.6053,
+          "recall": 0.9583
+        },
+        "union": {
+          "FN": 1,
+          "FP": 24,
+          "TP": 23,
+          "bags": 30,
+          "micro_f1": 0.6479,
+          "negative_bags_with_fp": 5,
+          "precision": 0.4894,
+          "recall": 0.9583
+        }
+      }
+    },
+    "0.7": {
+      "all_validation_distant_labels": {
+        "intersection": {
+          "FN": 3320,
+          "FP": 1016,
+          "TP": 742,
+          "bags": 36266,
+          "micro_f1": 0.255,
+          "negative_bags_with_fp": 852,
+          "precision": 0.4221,
+          "recall": 0.1827
+        },
+        "relex_base": {
+          "FN": 3164,
+          "FP": 1881,
+          "TP": 898,
+          "bags": 36266,
+          "micro_f1": 0.2625,
+          "negative_bags_with_fp": 1466,
+          "precision": 0.3231,
+          "recall": 0.2211
+        },
+        "relex_large": {
+          "FN": 1731,
+          "FP": 5367,
+          "TP": 2331,
+          "bags": 36266,
+          "micro_f1": 0.3964,
+          "negative_bags_with_fp": 3363,
+          "precision": 0.3028,
+          "recall": 0.5739
+        },
+        "union": {
+          "FN": 1575,
+          "FP": 6232,
+          "TP": 2487,
+          "bags": 36266,
+          "micro_f1": 0.3892,
+          "negative_bags_with_fp": 3902,
+          "precision": 0.2852,
+          "recall": 0.6123
+        }
+      },
+      "reviewed_30_text": {
+        "intersection": {
+          "FN": 15,
+          "FP": 0,
+          "TP": 9,
+          "bags": 30,
+          "micro_f1": 0.5455,
+          "negative_bags_with_fp": 0,
+          "precision": 1.0,
+          "recall": 0.375
+        },
+        "relex_base": {
+          "FN": 14,
+          "FP": 4,
+          "TP": 10,
+          "bags": 30,
+          "micro_f1": 0.5263,
+          "negative_bags_with_fp": 0,
+          "precision": 0.7143,
+          "recall": 0.4167
+        },
+        "relex_large": {
+          "FN": 4,
+          "FP": 10,
+          "TP": 20,
+          "bags": 30,
+          "micro_f1": 0.7407,
+          "negative_bags_with_fp": 2,
+          "precision": 0.6667,
+          "recall": 0.8333
+        },
+        "union": {
+          "FN": 3,
+          "FP": 14,
+          "TP": 21,
+          "bags": 30,
+          "micro_f1": 0.7119,
+          "negative_bags_with_fp": 2,
+          "precision": 0.6,
+          "recall": 0.875
+        }
+      }
+    },
+    "0.9": {
+      "all_validation_distant_labels": {
+        "intersection": {
+          "FN": 4004,
+          "FP": 86,
+          "TP": 58,
+          "bags": 36266,
+          "micro_f1": 0.0276,
+          "negative_bags_with_fp": 75,
+          "precision": 0.4028,
+          "recall": 0.0143
+        },
+        "relex_base": {
+          "FN": 4000,
+          "FP": 119,
+          "TP": 62,
+          "bags": 36266,
+          "micro_f1": 0.0292,
+          "negative_bags_with_fp": 100,
+          "precision": 0.3425,
+          "recall": 0.0153
+        },
+        "relex_large": {
+          "FN": 2538,
+          "FP": 1887,
+          "TP": 1524,
+          "bags": 36266,
+          "micro_f1": 0.4079,
+          "negative_bags_with_fp": 1346,
+          "precision": 0.4468,
+          "recall": 0.3752
+        },
+        "union": {
+          "FN": 2534,
+          "FP": 1920,
+          "TP": 1528,
+          "bags": 36266,
+          "micro_f1": 0.4069,
+          "negative_bags_with_fp": 1370,
+          "precision": 0.4432,
+          "recall": 0.3762
+        }
+      },
+      "reviewed_30_text": {
+        "intersection": {
+          "FN": 23,
+          "FP": 0,
+          "TP": 1,
+          "bags": 30,
+          "micro_f1": 0.08,
+          "negative_bags_with_fp": 0,
+          "precision": 1.0,
+          "recall": 0.0417
+        },
+        "relex_base": {
+          "FN": 23,
+          "FP": 0,
+          "TP": 1,
+          "bags": 30,
+          "micro_f1": 0.08,
+          "negative_bags_with_fp": 0,
+          "precision": 1.0,
+          "recall": 0.0417
+        },
+        "relex_large": {
+          "FN": 11,
+          "FP": 1,
+          "TP": 13,
+          "bags": 30,
+          "micro_f1": 0.6842,
+          "negative_bags_with_fp": 0,
+          "precision": 0.9286,
+          "recall": 0.5417
+        },
+        "union": {
+          "FN": 11,
+          "FP": 1,
+          "TP": 13,
+          "bags": 30,
+          "micro_f1": 0.6842,
+          "negative_bags_with_fp": 0,
+          "precision": 0.9286,
+          "recall": 0.5417
+        }
+      }
+    }
+  }
+}

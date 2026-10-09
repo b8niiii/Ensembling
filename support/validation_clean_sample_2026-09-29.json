@@ -1,0 +1,168 @@
+{
+  "source_manifest": "data/nyt10m/nyt10m_val.txt",
+  "source_sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c",
+  "nyt11_train_source": "Despina/nyt_11 at b2b57aee1e2e843ed712ea61bcd0a1071bda87c2, data/train-00000-of-00001.parquet",
+  "nyt11_train_sha256": "45cdd73a004157aa42994a1a3f7f25de727a7841d0a529e6032bace4148ab15c",
+  "selection": "Purposeful diagnostic validation sample: 4 distant-NA, 6 distant-single and 2 distant-multi bags, selected from complete 1–20-sentence bags with no exact, NFKC-casefold-whitespace, or punctuation-insensitive sentence match in published NYT11 train; previous 12 validation pairs excluded. Distant labels were used only for strata, and are withheld from items and text-only annotation. Within chosen bags, order is SHA-256 of clean-validation-order-20260929|head_id|tail_id. The sample is not prevalence-representative.",
+  "overlap_match_rule": "Any sentence match by exact text, NFKC+casefold+collapsed whitespace, or punctuation-insensitive word sequence disqualifies the entire validation bag.",
+  "items": [
+    {
+      "sample_id": "C01",
+      "pair_ids": [
+        "m.05qkp",
+        "m.0fs0v"
+      ],
+      "head": "Papua New Guinea",
+      "tail": "Port Moresby",
+      "sentences": [
+        "Port Moresby , the capital of Papua New Guinea , has for decades been portrayed in the Western press as a lawless place overrun by ferocious gangs of '' raskols . ''"
+      ]
+    },
+    {
+      "sample_id": "C02",
+      "pair_ids": [
+        "m.07ym0",
+        "m.05qtj"
+      ],
+      "head": "Voltaire",
+      "tail": "Paris",
+      "sentences": [
+        "Abdellatif Kechiche 's first film , about a young North African immigrant 's adventures in Paris , was called '' It 's Voltaire 's Fault . ''",
+        "During the seasonal collections in Europe , they eat at the same three or four restaurants in Milan -LRB- da Giacomo -RRB- and Paris -LRB- Voltaire or Costes -RRB- .",
+        "Jean-Fran çois Revel , a prolific philosopher , writer and journalist who summoned the classical polemical weapons of Voltaire and Montaigne , including humor , irony and surprise , to illuminate subjects from French cuisine to French anti-Americanism , died on Saturday in Paris ."
+      ]
+    },
+    {
+      "sample_id": "C03",
+      "pair_ids": [
+        "m.02w9slf",
+        "m.0841v"
+      ],
+      "head": "West Side",
+      "tail": "Wal-Mart",
+      "sentences": [
+        "In the coming weeks , Wal-Mart expects to open its first store in Chicago , on the city 's West Side ."
+      ]
+    },
+    {
+      "sample_id": "C04",
+      "pair_ids": [
+        "m.015fr",
+        "m.01hy_"
+      ],
+      "head": "Brazil",
+      "tail": "Brasília",
+      "sentences": [
+        "We started because it was something the business community asked for and to deter the mafia falsifying visas around our consulates , '' the Mexican ambassador to Brazil , Cecília Soto , said in a telephone interview from Brasília . ''",
+        "What 's on the table today , taking into account all aspects , is n't sufficient , '' Celso Amorim , Brazil 's foreign minister , said at a news conference in Brasília . ''",
+        "On Friday , lawyers representing the husband of a crash victim asked a court in Brasília , the capital , to order that the Legacy remain in Brazil for now .",
+        "In '' Brasília 18 % , '' a distinguished medical examiner , summoned to Brazil 's administrative capital to confirm the identity of a beautiful congressional aide found dead , finds himself a pawn in a political conspiracy that extends to the highest levels of government ."
+      ]
+    },
+    {
+      "sample_id": "C05",
+      "pair_ids": [
+        "m.02ygr1",
+        "m.02vsjy0"
+      ],
+      "head": "Carlos Slim Helú",
+      "tail": "Carlos Slim Domit",
+      "sentences": [
+        "LAST week , Carlos Slim Domit , the eldest son of Carlos Slim Helú , the Mexican billionaire , confirmed what had earlier been largely dismissed as a rumor : he had acquired a stake in Univision , the big Spanish-language television and radio company that recently put itself on the block ."
+      ]
+    },
+    {
+      "sample_id": "C06",
+      "pair_ids": [
+        "m.01pt2r",
+        "m.01g3rx"
+      ],
+      "head": "Evo Morales",
+      "tail": "Aymara",
+      "sentences": [
+        "To judge by the overwhelming victory of Evo Morales , an Aymara , in Bolivia 's elections on Dec. 18 , he kept his promise ."
+      ]
+    },
+    {
+      "sample_id": "C07",
+      "pair_ids": [
+        "m.03j0v_",
+        "m.0930r6"
+      ],
+      "head": "Lowry Mays",
+      "tail": "Mark Mays",
+      "sentences": [
+        "Mark Mays , Clear Channel 's chief executive and the son of Lowry Mays , the company 's founder , said on a conference call with analysts yesterday that the company wanted to allow '' our business units to grow as fast as they possibly can , and as we have looked at different ways to accomplish that over the last couple of years , we believe that this absolutely does that . ''"
+      ]
+    },
+    {
+      "sample_id": "C08",
+      "pair_ids": [
+        "m.0169dl",
+        "m.0dvmd"
+      ],
+      "head": "Matt Damon",
+      "tail": "Leonardo DiCaprio",
+      "sentences": [
+        "Based on the crackling Hong Kong thriller '' Infernal Affairs , '' it features fine twinned performances from Matt Damon and Leonardo DiCaprio , and a showboating Jack Nicholson ."
+      ]
+    },
+    {
+      "sample_id": "C09",
+      "pair_ids": [
+        "m.03_80b",
+        "m.04vmp"
+      ],
+      "head": "Ismail Merchant",
+      "tail": "Mumbai",
+      "sentences": [
+        "Ismail Merchant Buried At a ceremony attended by relatives and friends , Ismail Merchant , the producer of award-winning films like '' Howards End , '' '' A Room With a View '' and '' The Remains of the Day , '' was buried on Saturday in Mumbai , formerly Bombay , where he was born in 1936 , the BBC reported ."
+      ]
+    },
+    {
+      "sample_id": "C10",
+      "pair_ids": [
+        "m.06bnz",
+        "m.01z215"
+      ],
+      "head": "Russia",
+      "tail": "Saudi Arabia",
+      "sentences": [
+        "Cuba , China , Russia , Pakistan and Saudi Arabia , on the other hand , sought and won seats ."
+      ]
+    },
+    {
+      "sample_id": "C11",
+      "pair_ids": [
+        "m.01qhsj",
+        "m.0cy07"
+      ],
+      "head": "Mo Mowlam",
+      "tail": "Canterbury",
+      "sentences": [
+        "Mo Mowlam , the earthy , straight-talking politician who as Britain 's Northern Ireland secretary helped negotiate the Good Friday peace settlement in 1998 , died Friday morning at a hospice in Canterbury , her family said ."
+      ]
+    },
+    {
+      "sample_id": "C12",
+      "pair_ids": [
+        "m.02y1vz",
+        "m.086dny"
+      ],
+      "head": "Facebook",
+      "tail": "Mark Zuckerberg",
+      "sentences": [
+        "YAHOO BIDS FOR FACEBOOK -- To woo Mark Zuckerberg , the 22-year-old founder of the social networking Web site Facebook , Yahoo has offered about $ 900 million for the company and said it would keep Mr. Zuckerberg in charge ."
+      ]
+    }
+  ],
+  "selection_pool_counts": {
+    "total_validation_bags": 36266,
+    "old_sample_excluded": 12,
+    "bags_longer_than_20_excluded": 72,
+    "nyt11_sentence_overlap_excluded": 6690,
+    "eligible_distant_na": 28663,
+    "eligible_distant_single": 816,
+    "eligible_distant_multi": 13
+  }
+}

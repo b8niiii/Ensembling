@@ -1,0 +1,667 @@
+{
+  "date": "2026-10-06",
+  "authorized_plan": "Keep relex base/large, all current scores, and verified aggregate historical evidence; remove obsolete details and model caches.",
+  "entries": [
+    {
+      "path": ".DS_Store",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 6148,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "data/.DS_Store",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 6148,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "source/.DS_Store",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 6148,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "source/Extended_validation.ipynb",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 99046,
+      "allocated_bytes": 102400
+    },
+    {
+      "path": "source/Full_validation_relex_joint_archive.ipynb",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 68387,
+      "allocated_bytes": 69632
+    },
+    {
+      "path": "source/GLiFormer_reviewed_30.ipynb",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 18269,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "source/GenTune_contract_smoke.ipynb",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 58853,
+      "allocated_bytes": 61440
+    },
+    {
+      "path": "source/RE_specialist_screen.ipynb",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 60583,
+      "allocated_bytes": 61440
+    },
+    {
+      "path": "source/Reviewed_validation_30.ipynb",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 72810,
+      "allocated_bytes": 73728
+    },
+    {
+      "path": "source/SLM_pilot.ipynb",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 57163,
+      "allocated_bytes": 57344
+    },
+    {
+      "path": "source/SLM_roster_smoke.ipynb",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 50907,
+      "allocated_bytes": 53248
+    },
+    {
+      "path": "source/__pycache__",
+      "recursive": true,
+      "regular_files": 10,
+      "symlinks": 0,
+      "logical_bytes": 227929,
+      "allocated_bytes": 241664
+    },
+    {
+      "path": "source/audit_gliformer_pair_matching.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 9306,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "source/build_clean_validation_sample.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 3800,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "source/build_extended_validation_report.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 15255,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "source/nyt11_overlap_audit.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 5966,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "source/nyt11_test_near_duplicate_audit.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 11835,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "source/run_extended_gliner_relex_large.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 733,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "source/run_extended_other_encoders.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 8520,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "source/run_extended_validation.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 24282,
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "source/run_full_validation_relex.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 22665,
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "source/run_gliformer_reviewed_30.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 9840,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "source/run_reviewed_30_encoder.py",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 9500,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 6062,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "data/model_cache/models--Despina--Qwen2.5-0.5B-Instruct-re_gentune-2-shot",
+      "recursive": true,
+      "regular_files": 7,
+      "symlinks": 7,
+      "logical_bytes": 81863139,
+      "allocated_bytes": 81879040
+    },
+    {
+      "path": "data/model_cache/models--LiquidAI--LFM2.5-350M-GGUF",
+      "recursive": true,
+      "regular_files": 0,
+      "symlinks": 2,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/models--Qwen--Qwen2.5-0.5B-Instruct",
+      "recursive": true,
+      "regular_files": 10,
+      "symlinks": 10,
+      "logical_bytes": 999604126,
+      "allocated_bytes": 999624704
+    },
+    {
+      "path": "data/model_cache/models--fastino--gliner2.5-base-v1",
+      "recursive": true,
+      "regular_files": 10,
+      "symlinks": 10,
+      "logical_bytes": 784259224,
+      "allocated_bytes": 784281600
+    },
+    {
+      "path": "data/model_cache/models--fastino--gliner2.5-small-v1",
+      "recursive": true,
+      "regular_files": 10,
+      "symlinks": 10,
+      "logical_bytes": 305454805,
+      "allocated_bytes": 305479680
+    },
+    {
+      "path": "data/model_cache/models--ggml-org--Qwen3.5-0.8B-GGUF",
+      "recursive": true,
+      "regular_files": 0,
+      "symlinks": 2,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/models--ggml-org--gemma-3-1b-it-GGUF",
+      "recursive": true,
+      "regular_files": 0,
+      "symlinks": 2,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/models--ibm-granite--granite-4.0-350m-GGUF",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 1,
+      "logical_bytes": 378138016,
+      "allocated_bytes": 378138624
+    },
+    {
+      "path": "data/model_cache/models--jackboyla--glirel-large-v0",
+      "recursive": true,
+      "regular_files": 4,
+      "symlinks": 4,
+      "logical_bytes": 1866517239,
+      "allocated_bytes": 1866526720
+    },
+    {
+      "path": "data/model_cache/models--knowledgator--gliformer-large-v1",
+      "recursive": true,
+      "regular_files": 5,
+      "symlinks": 5,
+      "logical_bytes": 2311085112,
+      "allocated_bytes": 2311098368
+    },
+    {
+      "path": "data/model_cache/models--mradermacher--Text2Graph-R1-Qwen2.5-0.5b-GGUF",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 1,
+      "logical_bytes": 531068672,
+      "allocated_bytes": 531070976
+    },
+    {
+      "path": "data/model_cache/models--tiiuae--Falcon-H1-0.5B-Instruct-GGUF",
+      "recursive": true,
+      "regular_files": 0,
+      "symlinks": 2,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/pilot_runs/.DS_Store",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 10244,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "data/pilot_runs/gentune_contract_smoke_nyt11_clean_20260930_v1",
+      "recursive": true,
+      "regular_files": 41,
+      "symlinks": 0,
+      "logical_bytes": 118563,
+      "allocated_bytes": 196608
+    },
+    {
+      "path": "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1",
+      "recursive": true,
+      "regular_files": 83,
+      "symlinks": 0,
+      "logical_bytes": 594105,
+      "allocated_bytes": 806912
+    },
+    {
+      "path": "data/pilot_runs/reviewed_validation_30_gliformer_large_v1_20261001",
+      "recursive": true,
+      "regular_files": 33,
+      "symlinks": 0,
+      "logical_bytes": 50494,
+      "allocated_bytes": 147456
+    },
+    {
+      "path": "data/pilot_runs/slm_extended_validation_q8_v1_20260930",
+      "recursive": true,
+      "regular_files": 7103,
+      "symlinks": 0,
+      "logical_bytes": 84331155,
+      "allocated_bytes": 98332672
+    },
+    {
+      "path": "data/pilot_runs/slm_roster_smoke_q8_explicit_v3_20260929",
+      "recursive": true,
+      "regular_files": 61,
+      "symlinks": 0,
+      "logical_bytes": 300942,
+      "allocated_bytes": 401408
+    },
+    {
+      "path": "data/pilot_runs/slm_zero_shot_q8_schema_v2",
+      "recursive": true,
+      "regular_files": 460,
+      "symlinks": 0,
+      "logical_bytes": 3318191,
+      "allocated_bytes": 4042752
+    },
+    {
+      "path": "data/model_cache/.locks/models--Despina--Qwen2.5-0.5B-Instruct-re_gentune-2-shot",
+      "recursive": true,
+      "regular_files": 7,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--LiquidAI--LFM2.5-350M-GGUF",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--Qwen--Qwen2.5-0.5B-Instruct",
+      "recursive": true,
+      "regular_files": 10,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--fastino--gliner2.5-base-v1",
+      "recursive": true,
+      "regular_files": 10,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--fastino--gliner2.5-small-v1",
+      "recursive": true,
+      "regular_files": 10,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--ggml-org--Qwen3.5-0.8B-GGUF",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--ggml-org--gemma-3-1b-it-GGUF",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--ibm-granite--granite-4.0-350m-GGUF",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--jackboyla--glirel-large-v0",
+      "recursive": true,
+      "regular_files": 4,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--knowledgator--gliformer-large-v1",
+      "recursive": true,
+      "regular_files": 5,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--mradermacher--Text2Graph-R1-Qwen2.5-0.5b-GGUF",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/.locks/models--tiiuae--Falcon-H1-0.5B-Instruct-GGUF",
+      "recursive": true,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/blobs/.huggingface-shared-blobs",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 2,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_v1_20261002/.DS_Store",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 6148,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_v1_20261002/disagreements.json",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 6090344,
+      "allocated_bytes": 6090752
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_v1_20261002/gliner_relex_base",
+      "recursive": true,
+      "regular_files": 36267,
+      "symlinks": 0,
+      "logical_bytes": 514715654,
+      "allocated_bytes": 595476480
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_v1_20261002/gliner_relex_large",
+      "recursive": true,
+      "regular_files": 36267,
+      "symlinks": 0,
+      "logical_bytes": 372107660,
+      "allocated_bytes": 451919872
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_v1_20261002/manifest.json",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 21210425,
+      "allocated_bytes": 21213184
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_v1_20261002/per_relation_distant_scores.csv",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 5585,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner25_base",
+      "recursive": true,
+      "regular_files": 32,
+      "symlinks": 0,
+      "logical_bytes": 92128,
+      "allocated_bytes": 159744
+    },
+    {
+      "path": "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner_relex_base",
+      "recursive": true,
+      "regular_files": 32,
+      "symlinks": 0,
+      "logical_bytes": 412253,
+      "allocated_bytes": 475136
+    },
+    {
+      "path": "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner_relex_large",
+      "recursive": true,
+      "regular_files": 32,
+      "symlinks": 0,
+      "logical_bytes": 289284,
+      "allocated_bytes": 348160
+    },
+    {
+      "path": "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/glirel_large",
+      "recursive": true,
+      "regular_files": 32,
+      "symlinks": 0,
+      "logical_bytes": 29515,
+      "allocated_bytes": 131072
+    },
+    {
+      "path": "data/model_cache/blobs/13/13358c1c6932c23d9b618e499681d873bb0aa0876fdd5136e906f86ff08c1d16",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 833592096,
+      "allocated_bytes": 833593344
+    },
+    {
+      "path": "data/model_cache/blobs/13/13358c1c6932c23d9b618e499681d873bb0aa0876fdd5136e906f86ff08c1d16.lock",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/blobs/13/13358c1c6932c23d9b618e499681d873bb0aa0876fdd5136e906f86ff08c1d16.refs",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 107,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "data/model_cache/blobs/37/37362f9aa1d6c2af8f08edab15d3a6a48755df4158d66f8ee9aa2babea60a5b6",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 556316832,
+      "allocated_bytes": 556318720
+    },
+    {
+      "path": "data/model_cache/blobs/37/37362f9aa1d6c2af8f08edab15d3a6a48755df4158d66f8ee9aa2babea60a5b6.lock",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/blobs/37/37362f9aa1d6c2af8f08edab15d3a6a48755df4158d66f8ee9aa2babea60a5b6.refs",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 116,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "data/model_cache/blobs/4f/4f27b8fc43d487adcadcf0d5cbf578c12a632a62c5160a0f5bdf6bffa4f2e9a2",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 379217632,
+      "allocated_bytes": 379219968
+    },
+    {
+      "path": "data/model_cache/blobs/4f/4f27b8fc43d487adcadcf0d5cbf578c12a632a62c5160a0f5bdf6bffa4f2e9a2.lock",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/blobs/4f/4f27b8fc43d487adcadcf0d5cbf578c12a632a62c5160a0f5bdf6bffa4f2e9a2.refs",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 106,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "data/model_cache/blobs/b0/b00dfdd4f2492857e16ceec5f386f01dee6d816c68876851e1072f0ed136a399",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 1069306368,
+      "allocated_bytes": 1069309952
+    },
+    {
+      "path": "data/model_cache/blobs/b0/b00dfdd4f2492857e16ceec5f386f01dee6d816c68876851e1072f0ed136a399.lock",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data/model_cache/blobs/b0/b00dfdd4f2492857e16ceec5f386f01dee6d816c68876851e1072f0ed136a399.refs",
+      "recursive": false,
+      "regular_files": 1,
+      "symlinks": 0,
+      "logical_bytes": 108,
+      "allocated_bytes": 4096
+    }
+  ],
+  "allocated_bytes_removed": 11277250560,
+  "logical_bytes_removed": 11100966545,
+  "current_prediction_count_expected": 72532,
+  "protected_files_sha256": {
+    "source/run_full_validation_relex_given_entities.py": "0cd124c5faf928de950a85e08e049b29b636395572c9a62c127803352f66747e",
+    "source/relex_given_entities.py": "239c94e39764e61df77194bca3efb3c5d1dc52a6ff5deedefdadbac7c0515c38",
+    "source/run_extended_gliner_relex.py": "ef8e5f430a8a55628e212772bf445242b1abd5b6a8e247e3b0c729d0c51d30f8",
+    "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/manifest.json": "7401a243244e6a8972d2d5584a1fe308f638d1412f151ef5f24c77a0b69fd6f6",
+    "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/settings.json": "a4486a2d110111ed80f3fc59acd63343a13326c1c1712984228de62e0cdb3233",
+    "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/offline_preflight.json": "e58489954f3e5f1b123e8e5ea17e7ee0e59e06841465dd7b1e1a0cc34af0b8ed",
+    "data/nyt10m/nyt10m_train.txt": "33900650c692279adbe0a041b5c6a90e9216c905c73975905a04669695f7f2af",
+    "data/nyt10m/nyt10m_test.txt": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9",
+    "data/nyt10m/nyt10m_val.txt": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c",
+    "data/nyt10m/nyt10m_rel2id.json": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+    "data/model_cache/models--knowledgator--gliner-relex-base-v1.0/snapshots/e6a880049a19c5cc222a7a479c32e84b0d8cdd9a/model.safetensors": "7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5",
+    "data/model_cache/models--knowledgator--gliner-relex-large-v1.0/snapshots/4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290/model.safetensors": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+  },
+  "prediction_tree_sha256_expected": "c0f605d20de0fe0f955d42ccf57b775271e6b38db3cc2c60cefc41f2b413076b",
+  "preserved_local": [
+    "data/nyt10m/",
+    ".venv/",
+    "data/model_cache/models--knowledgator--gliner-relex-base-v1.0/",
+    "data/model_cache/models--knowledgator--gliner-relex-large-v1.0/",
+    "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/",
+    "data/pilot_runs/relex_full_validation_v1_20261002/summary.json",
+    "data/pilot_runs/relex_full_validation_v1_20261002/settings.json",
+    "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/manifest.json",
+    "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/reviewed_reference.json",
+    "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/settings.json",
+    "outputs/01a10674-20b6-7b23-8d09-24af3c4b9120/Startup_round_Milano_Torino_Roma_2026.xlsx",
+    "support/validation_*",
+    "support/literature.md"
+  ],
+  "plan_date": "2026-10-05",
+  "allocated_bytes_after_cleanup": 5001056256,
+  "allocated_bytes_before_cleanup": 16278048768,
+  "net_project_allocated_bytes_reduction": 11276992512
+}

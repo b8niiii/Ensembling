@@ -1,0 +1,484 @@
+{
+  "analysis_version": "paired_bag_analysis_v1_20261008",
+  "fingerprint": "b7ab3463602ffb361ff4ecdbc37ce947b0bca7b9cbcfa0221e7761ab3de3f6a3",
+  "reference": "selected_sentence_manual_union",
+  "primary_rows": [
+    {
+      "FN": 1973,
+      "FP": 1543,
+      "TP": 1926,
+      "bags": 5174,
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "mean_wall_s": 0.37833728888934276,
+      "micro_f1": 0.5228013029315961,
+      "positive_predictions_on_reference_empty_bags": 526,
+      "precision": 0.5552032285961372,
+      "recall": 0.49397281354193384,
+      "reference_empty_bags": 1855,
+      "successful_exact_match_bags": 2410,
+      "system": "large_0.7",
+      "timing_scope": "sum of CPU bag attempts plus session label encoding; loading/preflight separate",
+      "total_wall_s": 1957.5171327134594
+    },
+    {
+      "FN": 2366,
+      "FP": 688,
+      "TP": 1533,
+      "bags": 5174,
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "mean_wall_s": 0.7351941151049107,
+      "micro_f1": 0.5009803921568627,
+      "positive_predictions_on_reference_empty_bags": 308,
+      "precision": 0.6902296262944619,
+      "recall": 0.39317773788150806,
+      "reference_empty_bags": 1855,
+      "successful_exact_match_bags": 2588,
+      "system": "majority_0.5_0.7_0.7",
+      "timing_scope": "sum of CPU bag attempts plus session label encoding; loading/preflight separate",
+      "total_wall_s": 3803.894351552808
+    },
+    {
+      "FN": 1721,
+      "FP": 390,
+      "TP": 2178,
+      "bags": 5174,
+      "invalid": 78,
+      "invalid_rate": 0.01507537688442211,
+      "mean_wall_s": 4.256658026397129,
+      "micro_f1": 0.6735735271377764,
+      "positive_predictions_on_reference_empty_bags": 270,
+      "precision": 0.8481308411214953,
+      "recall": 0.5586047704539625,
+      "reference_empty_bags": 1855,
+      "successful_exact_match_bags": 3317,
+      "system": "deepseek_low",
+      "timing_scope": "sum of API request attempts; includes service/network; excludes backoff and idle time",
+      "token_charge_USD_estimate": 2.40966831,
+      "total_wall_s": 22023.948628578743
+    }
+  ],
+  "ensemble_diagnostics": {
+    "relative_to": "large_0.7",
+    "ensemble": "majority_0.5_0.7_0.7",
+    "changed_bags": 1200,
+    "removed_true_positives": 468,
+    "removed_false_positives": 897,
+    "added_true_positives": 75,
+    "added_false_positives": 42,
+    "mechanism": "Large-only labels are rejected (one vote); labels absent from large are added only when both base and GLiDRE agree.",
+    "per_relation": [
+      {
+        "relation": "/business/company/advisors",
+        "manual_support": 52,
+        "removed_true_positives": 1,
+        "added_true_positives": 0,
+        "removed_false_positives": 0,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/business/company/founders",
+        "manual_support": 40,
+        "removed_true_positives": 0,
+        "added_true_positives": 1,
+        "removed_false_positives": 2,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/business/company/majorshareholders",
+        "manual_support": 4,
+        "removed_true_positives": 0,
+        "added_true_positives": 0,
+        "removed_false_positives": 1,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/business/company/place_founded",
+        "manual_support": 4,
+        "removed_true_positives": 1,
+        "added_true_positives": 0,
+        "removed_false_positives": 21,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/business/location",
+        "manual_support": 129,
+        "removed_true_positives": 19,
+        "added_true_positives": 0,
+        "removed_false_positives": 12,
+        "added_false_positives": 1
+      },
+      {
+        "relation": "/business/person/company",
+        "manual_support": 467,
+        "removed_true_positives": 3,
+        "added_true_positives": 30,
+        "removed_false_positives": 5,
+        "added_false_positives": 1
+      },
+      {
+        "relation": "/film/film/featured_film_locations",
+        "manual_support": 1,
+        "removed_true_positives": 0,
+        "added_true_positives": 0,
+        "removed_false_positives": 0,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/location/administrative_division/country",
+        "manual_support": 102,
+        "removed_true_positives": 19,
+        "added_true_positives": 0,
+        "removed_false_positives": 20,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/location/country/administrative_divisions",
+        "manual_support": 174,
+        "removed_true_positives": 89,
+        "added_true_positives": 0,
+        "removed_false_positives": 181,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/location/country/capital",
+        "manual_support": 18,
+        "removed_true_positives": 1,
+        "added_true_positives": 0,
+        "removed_false_positives": 160,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/location/location/contains",
+        "manual_support": 1153,
+        "removed_true_positives": 276,
+        "added_true_positives": 2,
+        "removed_false_positives": 145,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/location/neighborhood/neighborhood_of",
+        "manual_support": 28,
+        "removed_true_positives": 7,
+        "added_true_positives": 0,
+        "removed_false_positives": 23,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/location/region/capital",
+        "manual_support": 9,
+        "removed_true_positives": 1,
+        "added_true_positives": 0,
+        "removed_false_positives": 139,
+        "added_false_positives": 3
+      },
+      {
+        "relation": "/location/us_county/county_seat",
+        "manual_support": 4,
+        "removed_true_positives": 0,
+        "added_true_positives": 0,
+        "removed_false_positives": 5,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/people/deceasedperson/place_of_burial",
+        "manual_support": 4,
+        "removed_true_positives": 0,
+        "added_true_positives": 0,
+        "removed_false_positives": 0,
+        "added_false_positives": 6
+      },
+      {
+        "relation": "/people/deceasedperson/place_of_death",
+        "manual_support": 57,
+        "removed_true_positives": 2,
+        "added_true_positives": 17,
+        "removed_false_positives": 18,
+        "added_false_positives": 1
+      },
+      {
+        "relation": "/people/ethnicity/geographic_distribution",
+        "manual_support": 6,
+        "removed_true_positives": 0,
+        "added_true_positives": 0,
+        "removed_false_positives": 0,
+        "added_false_positives": 1
+      },
+      {
+        "relation": "/people/person/children",
+        "manual_support": 54,
+        "removed_true_positives": 12,
+        "added_true_positives": 1,
+        "removed_false_positives": 3,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/people/person/ethnicity",
+        "manual_support": 13,
+        "removed_true_positives": 4,
+        "added_true_positives": 0,
+        "removed_false_positives": 61,
+        "added_false_positives": 8
+      },
+      {
+        "relation": "/people/person/nationality",
+        "manual_support": 303,
+        "removed_true_positives": 17,
+        "added_true_positives": 2,
+        "removed_false_positives": 26,
+        "added_false_positives": 13
+      },
+      {
+        "relation": "/people/person/place_lived",
+        "manual_support": 1162,
+        "removed_true_positives": 12,
+        "added_true_positives": 16,
+        "removed_false_positives": 14,
+        "added_false_positives": 2
+      },
+      {
+        "relation": "/people/person/place_of_birth",
+        "manual_support": 97,
+        "removed_true_positives": 3,
+        "added_true_positives": 6,
+        "removed_false_positives": 16,
+        "added_false_positives": 6
+      },
+      {
+        "relation": "/people/person/religion",
+        "manual_support": 16,
+        "removed_true_positives": 1,
+        "added_true_positives": 0,
+        "removed_false_positives": 0,
+        "added_false_positives": 0
+      },
+      {
+        "relation": "/time/event/locations",
+        "manual_support": 2,
+        "removed_true_positives": 0,
+        "added_true_positives": 0,
+        "removed_false_positives": 45,
+        "added_false_positives": 0
+      }
+    ],
+    "examples": {
+      "removed_true_positives": {
+        "bag_id": "16a3ef24b39e2cbe4cb4f699",
+        "head": "Atlanta",
+        "tail": "Sweet Auburn",
+        "relation": "/location/location/contains",
+        "selected_sentences": [
+          "J. W. ROBINSON , 80 , remembers when the Sweet Auburn neighborhood in Atlanta was a mecca for aspiring African-American professionals like himself ."
+        ],
+        "gold": [
+          "/location/location/contains"
+        ],
+        "member_predictions": {
+          "base": [],
+          "large": [
+            "/location/location/contains"
+          ],
+          "glidre": []
+        }
+      },
+      "added_true_positives": {
+        "bag_id": "2070f998477fd41658003723",
+        "head": "David Brooks",
+        "tail": "The New York Times",
+        "relation": "/business/person/company",
+        "selected_sentences": [
+          "Rush Limbaugh suggested a theme song of Sir Mix-A-Lot 's '' Baby Got Back '' ; on '' The Chris Matthews Show '' on NBC , David Brooks , a columnist for The New York Times , suggested Hall and Oates 's '' Maneater '' ; on the Web site Townhall.com , Jon Sanders suggested R.E.M. 's '' It 's the End of the World as We Know It '' and Barry McGuire 's '' Eve of Destruction . ''"
+        ],
+        "gold": [
+          "/business/person/company"
+        ],
+        "member_predictions": {
+          "base": [
+            "/business/person/company"
+          ],
+          "large": [],
+          "glidre": [
+            "/business/person/company"
+          ]
+        }
+      }
+    }
+  },
+  "cost_dimensions": {
+    "local_cpu_inference_seconds": {
+      "large_0.7": 1957.5171327134594,
+      "majority_0.5_0.7_0.7": 3803.894351552808,
+      "member_seconds": {
+        "base": 599.459098636391,
+        "large": 1957.5171327134594,
+        "glidre": 1246.9181202029577
+      },
+      "scope": "sum of CPU bag attempts plus session label encoding; loading/preflight separate"
+    },
+    "api_request_seconds": {
+      "total": 22023.948628578743,
+      "scope": "sum of API request attempts; includes service/network; excludes backoff and idle time"
+    },
+    "api_expenditure_USD": {
+      "completed_response_charge_estimate": 2.40966831,
+      "unknown_attempt_reserve": 0.012102599999999998,
+      "usage_plus_reserve": 2.4217709099999998,
+      "note": "Reconstructed from recorded tariff/cache accounting; not an invoice; reserve is not a known charge."
+    },
+    "peak_local_memory_bytes": {
+      "large_0.7": null,
+      "majority_0.5_0.7_0.7": null
+    },
+    "memory_note": "Peak memory was not recorded. Checkpoint size is not runtime memory; provider memory is unavailable.",
+    "local_monetary_cost_USD": null,
+    "local_energy_cost": null,
+    "comparison_note": "CPU inference and API network/service latency have different measurement scopes; neither is equivalent hardware compute."
+  },
+  "provenance": {
+    "saved_files_checked": 25878,
+    "saved_file_inventory_sha256": "2b20b079d0cf874ebff31f92660f958e8f6933da83c29677a0f244d8a65272c0",
+    "source_hashes_unchanged": true,
+    "input_manifest_sha256": "706eec8d09a9380e8aa26287cacbada881d74f52776bd1aa20ce34895b346245",
+    "reference_sha256": "4f1ead0830501826ff93cf5e39ee1d1e3f6a525d2b7ff10f72e1387dd7491c4e",
+    "new_predictions": 0,
+    "new_API_calls": 0,
+    "analysis_source_sha256": "210e7096645d7822c1f221bbb6cb62ce4c475fb2b0b3cff8aa0d79cdcc054c21"
+  },
+  "count_archive": {
+    "path": "results/test_bag_counts_20261008.npz",
+    "sha256": "ca9b32a42fdd03f7037d8debfe619542fda16595d928ea167dd30d00f5eb09e8",
+    "shape": [
+      5174,
+      3,
+      3
+    ],
+    "axes": [
+      "paired bag in frozen manifest order",
+      "primary system",
+      "TP, FP, FN"
+    ],
+    "content": "Sufficient statistics only; no text, names or entity IDs. Includes all bags and invalid outputs."
+  },
+  "uncertainty": {
+    "method": "paired whole-bag percentile bootstrap; micro metrics recomputed from summed TP/FP/FN",
+    "replicates": 20000,
+    "seed": 20261008,
+    "bags": 5174,
+    "confidence_level": 0.95,
+    "rng": "numpy.default_rng / PCG64",
+    "quantile_method": "linear",
+    "multiple_comparisons": "Three prespecified contrasts; nominal intervals, no familywise adjustment.",
+    "scope": "Sampling uncertainty conditional on fixed saved predictions, references and frozen configurations. Assumes approximately exchangeable bags; shared entities/articles may create dependence. Does not measure repeated API-generation, training, annotation, model-selection or timing uncertainty.",
+    "system_intervals": [
+      {
+        "system": "large_0.7",
+        "precision": {
+          "estimate": 0.5552032285961372,
+          "ci95": [
+            0.5397417240743467,
+            0.5707683753053163
+          ]
+        },
+        "recall": {
+          "estimate": 0.49397281354193384,
+          "ci95": [
+            0.4783052512786083,
+            0.509834495852244
+          ]
+        },
+        "micro_f1": {
+          "estimate": 0.5228013029315961,
+          "ci95": [
+            0.5096009450416019,
+            0.5359374224039465
+          ]
+        }
+      },
+      {
+        "system": "majority_0.5_0.7_0.7",
+        "precision": {
+          "estimate": 0.6902296262944619,
+          "ci95": [
+            0.6715295342078391,
+            0.7086183310533516
+          ]
+        },
+        "recall": {
+          "estimate": 0.39317773788150806,
+          "ci95": [
+            0.3782966819960568,
+            0.40830993259475307
+          ]
+        },
+        "micro_f1": {
+          "estimate": 0.5009803921568627,
+          "ci95": [
+            0.48620577734501785,
+            0.5156628452420344
+          ]
+        }
+      },
+      {
+        "system": "deepseek_low",
+        "precision": {
+          "estimate": 0.8481308411214953,
+          "ci95": [
+            0.8339797917962661,
+            0.8618046062336565
+          ]
+        },
+        "recall": {
+          "estimate": 0.5586047704539625,
+          "ci95": [
+            0.543622403867232,
+            0.5736939189707411
+          ]
+        },
+        "micro_f1": {
+          "estimate": 0.6735735271377764,
+          "ci95": [
+            0.6606698355549769,
+            0.6863706856611341
+          ]
+        }
+      }
+    ],
+    "paired_f1_differences": [
+      {
+        "system_a": "majority_0.5_0.7_0.7",
+        "system_b": "large_0.7",
+        "f1_difference_percentage_points": -2.182091077473336,
+        "ci95_percentage_points": [
+          -3.256479910646456,
+          -1.110655554726102
+        ],
+        "ci_excludes_zero": true
+      },
+      {
+        "system_a": "deepseek_low",
+        "system_b": "large_0.7",
+        "f1_difference_percentage_points": 15.07722242061803,
+        "ci95_percentage_points": [
+          13.645472285951543,
+          16.511477504059574
+        ],
+        "ci_excludes_zero": true
+      },
+      {
+        "system_a": "deepseek_low",
+        "system_b": "majority_0.5_0.7_0.7",
+        "f1_difference_percentage_points": 17.259313498091366,
+        "ci95_percentage_points": [
+          15.716278745394622,
+          18.812485998110287
+        ],
+        "ci_excludes_zero": true
+      }
+    ]
+  },
+  "analysis_runtime": {
+    "python": "3.14.3",
+    "numpy": "2.5.3"
+  }
+}

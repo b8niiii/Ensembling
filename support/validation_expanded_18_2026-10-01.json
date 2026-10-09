@@ -1,0 +1,224 @@
+{
+  "review_status": "awaiting_human_confirmation",
+  "source_manifest": "data/nyt10m/nyt10m_val.txt",
+  "source_sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c",
+  "selection": "18 complete one-sentence validation bags, chosen for text-grounded relation variety and difficult negatives. Excludes every pair in three previous model-run manifests and two previous reviewed samples; excludes ordered pairs in NYT10m train and punctuation-insensitive sentence matches to NYT10m train. NYT11 training overlap was not assessed for this new sample. No model outputs or distant labels are included. Not prevalence-representative.",
+  "items": [
+    {
+      "sample_id": "N01",
+      "pair_ids": [
+        "m.04wcf",
+        "m.05vw7"
+      ],
+      "head": "Montserrat",
+      "tail": "Plymouth",
+      "sentences": [
+        "The eruptions demolished much of Montserrat , a British colony , including its capital , Plymouth , and forced the evacuation of two-thirds of the island 's inhabitants ."
+      ]
+    },
+    {
+      "sample_id": "N02",
+      "pair_ids": [
+        "m.0d060g",
+        "m.0154gx"
+      ],
+      "head": "Canada",
+      "tail": "Mississauga",
+      "sentences": [
+        "Vincor is based in Mississauga , Canada , which is near Toronto ."
+      ]
+    },
+    {
+      "sample_id": "N03",
+      "pair_ids": [
+        "m.026tkbc",
+        "m.02z2m_"
+      ],
+      "head": "Mike Jeffries",
+      "tail": "Abercrombie & Fitch",
+      "sentences": [
+        "Mike Jeffries , the chief executive of Abercrombie & Fitch , does n't want you in his clothing stores . ''"
+      ]
+    },
+    {
+      "sample_id": "N04",
+      "pair_ids": [
+        "m.026g4n0",
+        "m.0wdjl"
+      ],
+      "head": "Jane Elizabeth Hodgson",
+      "tail": "Crookston",
+      "sentences": [
+        "Jane Elizabeth Hodgson was born on Jan. 23 , 1915 , in Crookston , Minn. ."
+      ]
+    },
+    {
+      "sample_id": "N05",
+      "pair_ids": [
+        "m.0674cw",
+        "m.04vmp"
+      ],
+      "head": "Hrishikesh Mukherjee",
+      "tail": "Mumbai",
+      "sentences": [
+        "Hrishikesh Mukherjee , who produced and directed memorable and successful Hindi films in a career of more than five decades , died on Aug. 27 in Mumbai ."
+      ]
+    },
+    {
+      "sample_id": "N06",
+      "pair_ids": [
+        "m.02l8jr",
+        "m.018pyg"
+      ],
+      "head": "Lloyd Maines",
+      "tail": "Natalie Maines",
+      "sentences": [
+        "And his recent album , '' Good Times '' -LRB- Dualtone -RRB- , was produced by Lloyd Maines , father of Natalie Maines -- the third Chick ."
+      ]
+    },
+    {
+      "sample_id": "N07",
+      "pair_ids": [
+        "m.03wpv91",
+        "m.0x67"
+      ],
+      "head": "Lloyd G. Trotter",
+      "tail": "African American",
+      "sentences": [
+        "Lloyd G. Trotter , an African American who has worked for G.E. for 35 years and is now chief executive of GE Consumer and Industrial , a $ 13 billion business , doubts that racism results in white employees getting jobs that their black colleagues covet . ''"
+      ]
+    },
+    {
+      "sample_id": "N08",
+      "pair_ids": [
+        "m.015vw5",
+        "m.0ygbf"
+      ],
+      "head": "Krispy Kreme",
+      "tail": "Winston-Salem",
+      "sentences": [
+        "Mr. Jervik , 49 , will receive at least $ 400,000 in pay next year , but there is no sugar coating on one clause in his contract : he must relocate to be near Krispy Kreme 's headquarters in Winston-Salem , N.C. Patrick McGeehan OPENERS : SUITS"
+      ]
+    },
+    {
+      "sample_id": "N09",
+      "pair_ids": [
+        "m.027m0s",
+        "m.08wxz6"
+      ],
+      "head": "Calvin Klein",
+      "tail": "Barry Schwartz",
+      "sentences": [
+        "There is a hole in everyone 's heart , '' said Sheryl Schwartz , the wife of Barry Schwartz , a co-founder of Calvin Klein and a prominent thoroughbred owner and breeder . ''"
+      ]
+    },
+    {
+      "sample_id": "N10",
+      "pair_ids": [
+        "m.02plttk",
+        "m.0d05w3"
+      ],
+      "head": "Lou Ye",
+      "tail": "China",
+      "sentences": [
+        "China Punishes Filmmaker The Chinese director Lou Ye has been banned from filmmaking for five years because he submitted his '' Summer Palace '' to the Cannes Film Festival without official approval , Reuters reported ."
+      ]
+    },
+    {
+      "sample_id": "N11",
+      "pair_ids": [
+        "m.05lsgj",
+        "m.0f04v"
+      ],
+      "head": "Theodor Uppman",
+      "tail": "San Jose",
+      "sentences": [
+        "Theodor Uppman was born in San Jose , Calif. , on Jan. 12 , 1920 , to a family of Swedish heritage ."
+      ]
+    },
+    {
+      "sample_id": "N12",
+      "pair_ids": [
+        "m.052f_2",
+        "m.0c1d0"
+      ],
+      "head": "James Manning",
+      "tail": "Providence",
+      "sentences": [
+        "The university 's founder , the Rev. James Manning , freed his only slave , but accepted donations from slave owners and traders , including the Brown family of Providence , R.I. ."
+      ]
+    },
+    {
+      "sample_id": "N13",
+      "pair_ids": [
+        "m.02p10m",
+        "m.048yyh"
+      ],
+      "head": "Univision",
+      "tail": "Gustavo Cisneros",
+      "sentences": [
+        "Gustavo Cisneros , chairman of the Cisneros Group , has been a member of Univision 's board since 2003 ."
+      ]
+    },
+    {
+      "sample_id": "N14",
+      "pair_ids": [
+        "m.05cskg",
+        "m.0209vm"
+      ],
+      "head": "Dyson",
+      "tail": "James Dyson",
+      "sentences": [
+        "Best foreign film -- James Dyson , the British inventor of the Dyson vacuum cleaner , gave a stirring performance in a commercial for his product line ."
+      ]
+    },
+    {
+      "sample_id": "N15",
+      "pair_ids": [
+        "m.02079bk",
+        "m.04b2m_7"
+      ],
+      "head": "Woodcliff Lake",
+      "tail": "Barr",
+      "sentences": [
+        "Based in Woodcliff Lake , N.J. , Barr specializes in contraceptives and generic drugs ."
+      ]
+    },
+    {
+      "sample_id": "N16",
+      "pair_ids": [
+        "m.02qcy82",
+        "m.01wdsm"
+      ],
+      "head": "Silver Lake Partners",
+      "tail": "Seagate Technology",
+      "sentences": [
+        "He co-founded Silver Lake Partners , the first private equity firm to focus successfully on technology companies , buying up businesses like Seagate Technology ."
+      ]
+    },
+    {
+      "sample_id": "N17",
+      "pair_ids": [
+        "m.04jpl",
+        "m.0nczk"
+      ],
+      "head": "London",
+      "tail": "Woolwich",
+      "sentences": [
+        "It went into service in 1982 at Woolwich , about 10 miles east of central London ."
+      ]
+    },
+    {
+      "sample_id": "N18",
+      "pair_ids": [
+        "m.09bvds",
+        "m.03rjj"
+      ],
+      "head": "Andrea Barzagli",
+      "tail": "Italy",
+      "sentences": [
+        "So Italy will use 25-year-old Andrea Barzagli in Nesta 's spot ."
+      ]
+    }
+  ]
+}

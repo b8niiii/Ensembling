@@ -1,0 +1,4668 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-05",
+  "purpose": "Historical aggregate evidence. Raw pilot predictions removed after verification; no inference in this report.",
+  "experiments": [
+    {
+      "id": "slm_zero_shot_q8_schema_v2",
+      "title": "150-bag generative pilot",
+      "sample": "150 selected validation bags; noisy distant labels",
+      "limitations": "Strict duplicate-label invalidation; Q8; 20-record cap. F1 combines semantics and parser failures.",
+      "tables": [
+        [
+          {
+            "bags_saved": 150,
+            "bags_target": 150,
+            "complete_for_scoring": true,
+            "context_exceeded": 0,
+            "ds_micro_f1": 0.119,
+            "ds_micro_precision": 0.094,
+            "ds_micro_recall": 0.16,
+            "failed": 0,
+            "invalid": 58,
+            "invalid_rate_pct": 38.7,
+            "mean_wall_s": 1.66,
+            "model": "Qwen3.5-0.8B",
+            "output_tokens_total": 13869,
+            "peak_server_rss_mib_observed": 2562.1,
+            "prompt_tokens_total": 134786,
+            "total_wall_s_all_attempts": 248.71,
+            "valid": 92,
+            "valid_empty": 1
+          },
+          {
+            "bags_saved": 150,
+            "bags_target": 150,
+            "complete_for_scoring": true,
+            "context_exceeded": 0,
+            "ds_micro_f1": 0.069,
+            "ds_micro_precision": 0.057,
+            "ds_micro_recall": 0.087,
+            "failed": 0,
+            "invalid": 1,
+            "invalid_rate_pct": 0.7,
+            "mean_wall_s": 1.08,
+            "model": "Falcon-H1-0.5B-Instruct",
+            "output_tokens_total": 3845,
+            "peak_server_rss_mib_observed": 6407.4,
+            "prompt_tokens_total": 166420,
+            "total_wall_s_all_attempts": 161.66,
+            "valid": 149,
+            "valid_empty": 0
+          },
+          {
+            "bags_saved": 150,
+            "bags_target": 150,
+            "complete_for_scoring": true,
+            "context_exceeded": 0,
+            "ds_micro_f1": 0.069,
+            "ds_micro_precision": 0.037,
+            "ds_micro_recall": 0.507,
+            "failed": 0,
+            "invalid": 4,
+            "invalid_rate_pct": 2.7,
+            "mean_wall_s": 1.16,
+            "model": "LFM2.5-350M",
+            "output_tokens_total": 22264,
+            "peak_server_rss_mib_observed": 2145.8,
+            "prompt_tokens_total": 143210,
+            "total_wall_s_all_attempts": 173.93,
+            "valid": 146,
+            "valid_empty": 0
+          }
+        ]
+      ],
+      "original_summary": [
+        {
+          "bags_saved": 150,
+          "bags_target": 150,
+          "complete_for_scoring": true,
+          "context_exceeded": 0,
+          "ds_micro_f1": 0.119,
+          "ds_micro_precision": 0.094,
+          "ds_micro_recall": 0.16,
+          "failed": 0,
+          "invalid": 58,
+          "invalid_rate_pct": 38.7,
+          "mean_wall_s": 1.66,
+          "model": "Qwen3.5-0.8B",
+          "output_tokens_total": 13869,
+          "peak_server_rss_mib_observed": 2562.1,
+          "prompt_tokens_total": 134786,
+          "total_wall_s_all_attempts": 248.71,
+          "valid": 92,
+          "valid_empty": 1
+        },
+        {
+          "bags_saved": 150,
+          "bags_target": 150,
+          "complete_for_scoring": true,
+          "context_exceeded": 0,
+          "ds_micro_f1": 0.069,
+          "ds_micro_precision": 0.057,
+          "ds_micro_recall": 0.087,
+          "failed": 0,
+          "invalid": 1,
+          "invalid_rate_pct": 0.7,
+          "mean_wall_s": 1.08,
+          "model": "Falcon-H1-0.5B-Instruct",
+          "output_tokens_total": 3845,
+          "peak_server_rss_mib_observed": 6407.4,
+          "prompt_tokens_total": 166420,
+          "total_wall_s_all_attempts": 161.66,
+          "valid": 149,
+          "valid_empty": 0
+        },
+        {
+          "bags_saved": 150,
+          "bags_target": 150,
+          "complete_for_scoring": true,
+          "context_exceeded": 0,
+          "ds_micro_f1": 0.069,
+          "ds_micro_precision": 0.037,
+          "ds_micro_recall": 0.507,
+          "failed": 0,
+          "invalid": 4,
+          "invalid_rate_pct": 2.7,
+          "mean_wall_s": 1.16,
+          "model": "LFM2.5-350M",
+          "output_tokens_total": 22264,
+          "peak_server_rss_mib_observed": 2145.8,
+          "prompt_tokens_total": 143210,
+          "total_wall_s_all_attempts": 173.93,
+          "valid": 146,
+          "valid_empty": 0
+        }
+      ],
+      "settings": {
+        "created_utc": "2026-09-25T11:01:31.974716+00:00",
+        "fingerprint": "94a7eb8de404f9611bca362c25119afe1b198c14f1a6001ce4dc30c5a2c7eb9d",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "settings": {
+          "bag_cap": 20,
+          "context_tokens": 8192,
+          "gpu_layers": 99,
+          "llama_server_version": "version: 0.5.0 (build 11146, commit 7fe450e19)",
+          "max_output_tokens": 384,
+          "models": [
+            {
+              "file": "Qwen3.5-0.8B-Q8_0.gguf",
+              "name": "Qwen3.5-0.8B",
+              "repo": "ggml-org/Qwen3.5-0.8B-GGUF",
+              "slug": "qwen35_08b_q8"
+            },
+            {
+              "file": "Falcon-H1-0.5B-Instruct-Q8_0.gguf",
+              "name": "Falcon-H1-0.5B-Instruct",
+              "repo": "tiiuae/Falcon-H1-0.5B-Instruct-GGUF",
+              "slug": "falcon_h1_05b_instruct_q8"
+            },
+            {
+              "file": "LFM2.5-350M-Q8_0.gguf",
+              "name": "LFM2.5-350M",
+              "repo": "LiquidAI/LFM2.5-350M-GGUF",
+              "slug": "lfm25_350m_q8"
+            }
+          ],
+          "prompt_version": "nyt10m_zero_shot_schema_v2",
+          "reasoning": "off",
+          "rel2id_sha256": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+          "response_format": {
+            "json_schema": {
+              "name": "nyt10m_relations",
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "relations": {
+                    "items": {
+                      "enum": [
+                        "/business/company/advisors",
+                        "/business/company/founders",
+                        "/business/company/majorshareholders",
+                        "/business/company/place_founded",
+                        "/business/location",
+                        "/business/person/company",
+                        "/film/film/featured_film_locations",
+                        "/location/administrative_division/country",
+                        "/location/country/administrative_divisions",
+                        "/location/country/capital",
+                        "/location/location/contains",
+                        "/location/neighborhood/neighborhood_of",
+                        "/location/region/capital",
+                        "/location/us_county/county_seat",
+                        "/people/deceasedperson/place_of_burial",
+                        "/people/deceasedperson/place_of_death",
+                        "/people/ethnicity/geographic_distribution",
+                        "/people/person/children",
+                        "/people/person/ethnicity",
+                        "/people/person/nationality",
+                        "/people/person/place_lived",
+                        "/people/person/place_of_birth",
+                        "/people/person/religion",
+                        "/time/event/locations"
+                      ],
+                      "type": "string"
+                    },
+                    "maxItems": 24,
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "relations"
+                ],
+                "type": "object"
+              },
+              "strict": true
+            },
+            "type": "json_schema"
+          },
+          "run_name": "slm_zero_shot_q8_schema_v2",
+          "seed": 20260925,
+          "temperature": 0,
+          "top_p": 1,
+          "validation_sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+        }
+      }
+    },
+    {
+      "id": "slm_roster_smoke_q8_explicit_v3_20260929",
+      "title": "12-bag generative roster smoke",
+      "sample": "Original 12 text-reviewed validation bags; 6 positive label instances",
+      "limitations": "Known-label deduplication; different reviewed sample from the later clean 12; selected diagnostic only.",
+      "tables": [
+        [
+          {
+            "answers_with_duplicates": 1,
+            "bags_saved": 12,
+            "bags_target": 12,
+            "complete_for_scoring": true,
+            "context_exceeded": 0,
+            "duplicate_labels_removed": 19,
+            "exact_bags": 3,
+            "failed": 0,
+            "invalid": 0,
+            "max_positive_labels_valid": 6,
+            "mean_positive_labels_valid": 2.67,
+            "mean_wall_s": 3.11,
+            "model": "Qwen3.5-0.8B",
+            "output_tokens_total": 473,
+            "peak_server_rss_mib_observed": 1445.8,
+            "prompt_tokens_total": 8511,
+            "reviewed_fn": 3,
+            "reviewed_fp": 29,
+            "reviewed_micro_f1": 0.158,
+            "reviewed_micro_precision": 0.094,
+            "reviewed_micro_recall": 0.5,
+            "reviewed_tp": 3,
+            "text_negative_bags_total": 6,
+            "text_negative_bags_with_false_positive": 5,
+            "total_wall_s_all_attempts": 37.3,
+            "valid": 12,
+            "valid_answers_with_10plus_relations": 0,
+            "valid_empty": 1
+          },
+          {
+            "answers_with_duplicates": 0,
+            "bags_saved": 12,
+            "bags_target": 12,
+            "complete_for_scoring": true,
+            "context_exceeded": 0,
+            "duplicate_labels_removed": 0,
+            "exact_bags": 1,
+            "failed": 0,
+            "invalid": 0,
+            "max_positive_labels_valid": 3,
+            "mean_positive_labels_valid": 1.75,
+            "mean_wall_s": 1.76,
+            "model": "Falcon-H1-0.5B-Instruct",
+            "output_tokens_total": 281,
+            "peak_server_rss_mib_observed": 1594.5,
+            "prompt_tokens_total": 10682,
+            "reviewed_fn": 5,
+            "reviewed_fp": 20,
+            "reviewed_micro_f1": 0.074,
+            "reviewed_micro_precision": 0.048,
+            "reviewed_micro_recall": 0.167,
+            "reviewed_tp": 1,
+            "text_negative_bags_total": 6,
+            "text_negative_bags_with_false_positive": 5,
+            "total_wall_s_all_attempts": 21.12,
+            "valid": 12,
+            "valid_answers_with_10plus_relations": 0,
+            "valid_empty": 2
+          },
+          {
+            "answers_with_duplicates": 0,
+            "bags_saved": 12,
+            "bags_target": 12,
+            "complete_for_scoring": true,
+            "context_exceeded": 0,
+            "duplicate_labels_removed": 0,
+            "exact_bags": 0,
+            "failed": 0,
+            "invalid": 0,
+            "max_positive_labels_valid": 8,
+            "mean_positive_labels_valid": 3.67,
+            "mean_wall_s": 0.87,
+            "model": "LFM2.5-350M",
+            "output_tokens_total": 457,
+            "peak_server_rss_mib_observed": 649.9,
+            "prompt_tokens_total": 9234,
+            "reviewed_fn": 6,
+            "reviewed_fp": 44,
+            "reviewed_micro_f1": 0.0,
+            "reviewed_micro_precision": 0.0,
+            "reviewed_micro_recall": 0.0,
+            "reviewed_tp": 0,
+            "text_negative_bags_total": 6,
+            "text_negative_bags_with_false_positive": 6,
+            "total_wall_s_all_attempts": 10.41,
+            "valid": 12,
+            "valid_answers_with_10plus_relations": 0,
+            "valid_empty": 0
+          },
+          {
+            "answers_with_duplicates": 0,
+            "bags_saved": 12,
+            "bags_target": 12,
+            "complete_for_scoring": true,
+            "context_exceeded": 0,
+            "duplicate_labels_removed": 0,
+            "exact_bags": 1,
+            "failed": 0,
+            "invalid": 0,
+            "max_positive_labels_valid": 9,
+            "mean_positive_labels_valid": 2.08,
+            "mean_wall_s": 4.86,
+            "model": "Gemma-3-1B-IT",
+            "output_tokens_total": 335,
+            "peak_server_rss_mib_observed": 1388.5,
+            "prompt_tokens_total": 8905,
+            "reviewed_fn": 5,
+            "reviewed_fp": 24,
+            "reviewed_micro_f1": 0.065,
+            "reviewed_micro_precision": 0.04,
+            "reviewed_micro_recall": 0.167,
+            "reviewed_tp": 1,
+            "text_negative_bags_total": 6,
+            "text_negative_bags_with_false_positive": 6,
+            "total_wall_s_all_attempts": 58.35,
+            "valid": 12,
+            "valid_answers_with_10plus_relations": 0,
+            "valid_empty": 4
+          }
+        ]
+      ],
+      "original_summary": [
+        {
+          "answers_with_duplicates": 1,
+          "bags_saved": 12,
+          "bags_target": 12,
+          "complete_for_scoring": true,
+          "context_exceeded": 0,
+          "duplicate_labels_removed": 19,
+          "exact_bags": 3,
+          "failed": 0,
+          "invalid": 0,
+          "max_positive_labels_valid": 6,
+          "mean_positive_labels_valid": 2.67,
+          "mean_wall_s": 3.11,
+          "model": "Qwen3.5-0.8B",
+          "output_tokens_total": 473,
+          "peak_server_rss_mib_observed": 1445.8,
+          "prompt_tokens_total": 8511,
+          "reviewed_fn": 3,
+          "reviewed_fp": 29,
+          "reviewed_micro_f1": 0.158,
+          "reviewed_micro_precision": 0.094,
+          "reviewed_micro_recall": 0.5,
+          "reviewed_tp": 3,
+          "text_negative_bags_total": 6,
+          "text_negative_bags_with_false_positive": 5,
+          "total_wall_s_all_attempts": 37.3,
+          "valid": 12,
+          "valid_answers_with_10plus_relations": 0,
+          "valid_empty": 1
+        },
+        {
+          "answers_with_duplicates": 0,
+          "bags_saved": 12,
+          "bags_target": 12,
+          "complete_for_scoring": true,
+          "context_exceeded": 0,
+          "duplicate_labels_removed": 0,
+          "exact_bags": 1,
+          "failed": 0,
+          "invalid": 0,
+          "max_positive_labels_valid": 3,
+          "mean_positive_labels_valid": 1.75,
+          "mean_wall_s": 1.76,
+          "model": "Falcon-H1-0.5B-Instruct",
+          "output_tokens_total": 281,
+          "peak_server_rss_mib_observed": 1594.5,
+          "prompt_tokens_total": 10682,
+          "reviewed_fn": 5,
+          "reviewed_fp": 20,
+          "reviewed_micro_f1": 0.074,
+          "reviewed_micro_precision": 0.048,
+          "reviewed_micro_recall": 0.167,
+          "reviewed_tp": 1,
+          "text_negative_bags_total": 6,
+          "text_negative_bags_with_false_positive": 5,
+          "total_wall_s_all_attempts": 21.12,
+          "valid": 12,
+          "valid_answers_with_10plus_relations": 0,
+          "valid_empty": 2
+        },
+        {
+          "answers_with_duplicates": 0,
+          "bags_saved": 12,
+          "bags_target": 12,
+          "complete_for_scoring": true,
+          "context_exceeded": 0,
+          "duplicate_labels_removed": 0,
+          "exact_bags": 0,
+          "failed": 0,
+          "invalid": 0,
+          "max_positive_labels_valid": 8,
+          "mean_positive_labels_valid": 3.67,
+          "mean_wall_s": 0.87,
+          "model": "LFM2.5-350M",
+          "output_tokens_total": 457,
+          "peak_server_rss_mib_observed": 649.9,
+          "prompt_tokens_total": 9234,
+          "reviewed_fn": 6,
+          "reviewed_fp": 44,
+          "reviewed_micro_f1": 0.0,
+          "reviewed_micro_precision": 0.0,
+          "reviewed_micro_recall": 0.0,
+          "reviewed_tp": 0,
+          "text_negative_bags_total": 6,
+          "text_negative_bags_with_false_positive": 6,
+          "total_wall_s_all_attempts": 10.41,
+          "valid": 12,
+          "valid_answers_with_10plus_relations": 0,
+          "valid_empty": 0
+        },
+        {
+          "answers_with_duplicates": 0,
+          "bags_saved": 12,
+          "bags_target": 12,
+          "complete_for_scoring": true,
+          "context_exceeded": 0,
+          "duplicate_labels_removed": 0,
+          "exact_bags": 1,
+          "failed": 0,
+          "invalid": 0,
+          "max_positive_labels_valid": 9,
+          "mean_positive_labels_valid": 2.08,
+          "mean_wall_s": 4.86,
+          "model": "Gemma-3-1B-IT",
+          "output_tokens_total": 335,
+          "peak_server_rss_mib_observed": 1388.5,
+          "prompt_tokens_total": 8905,
+          "reviewed_fn": 5,
+          "reviewed_fp": 24,
+          "reviewed_micro_f1": 0.065,
+          "reviewed_micro_precision": 0.04,
+          "reviewed_micro_recall": 0.167,
+          "reviewed_tp": 1,
+          "text_negative_bags_total": 6,
+          "text_negative_bags_with_false_positive": 6,
+          "total_wall_s_all_attempts": 58.35,
+          "valid": 12,
+          "valid_answers_with_10plus_relations": 0,
+          "valid_empty": 4
+        }
+      ],
+      "settings": {
+        "created_utc": "2026-09-29T08:34:44.800580+00:00",
+        "fingerprint": "e9e21a34c539829c19935ddc8f5f11307674b93f4f6d8310eb93026d759a71ee",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "settings": {
+          "bag_cap": 20,
+          "context_tokens": 8192,
+          "duplicate_policy": "deduplicate valid known label strings; preserve duplicate count",
+          "gpu_layers": 99,
+          "invalid_policy": "empty set for scoring; preserve raw answer and reason",
+          "llama_server_version": "version: 0.5.0 (build 11146, commit 7fe450e19)",
+          "max_output_tokens": 384,
+          "models": [
+            {
+              "file": "Qwen3.5-0.8B-Q8_0.gguf",
+              "name": "Qwen3.5-0.8B",
+              "repo": "ggml-org/Qwen3.5-0.8B-GGUF",
+              "slug": "qwen35_08b_q8"
+            },
+            {
+              "file": "Falcon-H1-0.5B-Instruct-Q8_0.gguf",
+              "name": "Falcon-H1-0.5B-Instruct",
+              "repo": "tiiuae/Falcon-H1-0.5B-Instruct-GGUF",
+              "slug": "falcon_h1_05b_instruct_q8"
+            },
+            {
+              "file": "LFM2.5-350M-Q8_0.gguf",
+              "name": "LFM2.5-350M",
+              "repo": "LiquidAI/LFM2.5-350M-GGUF",
+              "slug": "lfm25_350m_q8"
+            },
+            {
+              "file": "gemma-3-1b-it-Q8_0.gguf",
+              "name": "Gemma-3-1B-IT",
+              "repo": "ggml-org/gemma-3-1b-it-GGUF",
+              "slug": "gemma3_1b_it_q8"
+            }
+          ],
+          "prompt_version": "nyt10m_explicit_evidence_dedup_v3",
+          "reasoning": "off",
+          "rel2id_sha256": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+          "response_format": {
+            "json_schema": {
+              "name": "nyt10m_relations",
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "relations": {
+                    "items": {
+                      "enum": [
+                        "/business/company/advisors",
+                        "/business/company/founders",
+                        "/business/company/majorshareholders",
+                        "/business/company/place_founded",
+                        "/business/location",
+                        "/business/person/company",
+                        "/film/film/featured_film_locations",
+                        "/location/administrative_division/country",
+                        "/location/country/administrative_divisions",
+                        "/location/country/capital",
+                        "/location/location/contains",
+                        "/location/neighborhood/neighborhood_of",
+                        "/location/region/capital",
+                        "/location/us_county/county_seat",
+                        "/people/deceasedperson/place_of_burial",
+                        "/people/deceasedperson/place_of_death",
+                        "/people/ethnicity/geographic_distribution",
+                        "/people/person/children",
+                        "/people/person/ethnicity",
+                        "/people/person/nationality",
+                        "/people/person/place_lived",
+                        "/people/person/place_of_birth",
+                        "/people/person/religion",
+                        "/time/event/locations"
+                      ],
+                      "type": "string"
+                    },
+                    "maxItems": 24,
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "relations"
+                ],
+                "type": "object"
+              },
+              "strict": true
+            },
+            "type": "json_schema"
+          },
+          "reviewed_annotations_sha256": "cc7f17b6c2487266f1f3e3c4ba99d5f4bc584917ce35109490d69856608bda90",
+          "reviewed_sample_sha256": "2654b2645ba506f7549e3276ba8ba3182366ad0612a0d581981411a4bb85188a",
+          "run_name": "slm_roster_smoke_q8_explicit_v3_20260929",
+          "seed": 20260929,
+          "source_manifest_sha256": "bb5e165a96756d1fe9a9ef1376618838cb1959bcf9099d9261b3a74f3556d134",
+          "temperature": 0,
+          "top_p": 1,
+          "validation_sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+        }
+      }
+    },
+    {
+      "id": "re_specialist_screen_nyt11_clean_20260929_v1",
+      "title": "12-bag specialist screen",
+      "sample": "Replacement 12 reviewed validation bags; 11 positive label instances",
+      "limitations": "GenTune failures reflect the output-ontology contract, not a semantic F1 estimate; cross-runtime timings are descriptive.",
+      "tables": [
+        [
+          {
+            "bags_saved": 12,
+            "complete": true,
+            "inference_wall_s": 3.93,
+            "invalid": 0,
+            "micro_f1": 0.375,
+            "model": "glirel_large",
+            "model_load_wall_s": 25.834,
+            "negative_bags_with_fp": 0,
+            "precision": 0.6,
+            "recall": 0.273,
+            "sentence_calls": 17,
+            "valid": 12,
+            "valid_empty": 8
+          },
+          {
+            "bags_saved": 12,
+            "complete": true,
+            "inference_wall_s": 6.3,
+            "invalid": 0,
+            "micro_f1": 0.0,
+            "model": "gliner25_small",
+            "model_load_wall_s": 2.391,
+            "negative_bags_with_fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "sentence_calls": 17,
+            "valid": 12,
+            "valid_empty": 12
+          },
+          {
+            "bags_saved": 12,
+            "complete": true,
+            "inference_wall_s": 4.84,
+            "invalid": 0,
+            "micro_f1": 0.25,
+            "model": "gliner25_base",
+            "model_load_wall_s": 3.991,
+            "negative_bags_with_fp": 0,
+            "precision": 0.231,
+            "recall": 0.273,
+            "sentence_calls": 17,
+            "valid": 12,
+            "valid_empty": 6
+          },
+          {
+            "bags_saved": 12,
+            "complete": true,
+            "inference_wall_s": 6.22,
+            "invalid": 0,
+            "micro_f1": 0.571,
+            "model": "gliner_relex_base",
+            "model_load_wall_s": 21.352,
+            "negative_bags_with_fp": 0,
+            "precision": 0.6,
+            "recall": 0.545,
+            "sentence_calls": 17,
+            "valid": 12,
+            "valid_empty": 7
+          },
+          {
+            "bags_saved": 12,
+            "complete": true,
+            "inference_wall_s": 23.02,
+            "invalid": 0,
+            "micro_f1": 0.082,
+            "model": "text2graph_r1_q8",
+            "model_load_wall_s": 9.91,
+            "negative_bags_with_fp": 4,
+            "precision": 0.043,
+            "recall": 0.727,
+            "sentence_calls": 12,
+            "valid": 12,
+            "valid_empty": 0
+          },
+          {
+            "bags_saved": 12,
+            "complete": true,
+            "inference_wall_s": 6.66,
+            "invalid": 11,
+            "micro_f1": 0.0,
+            "model": "gentune_adapter_exploratory",
+            "model_load_wall_s": 22.136,
+            "negative_bags_with_fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "sentence_calls": 17,
+            "valid": 1,
+            "valid_empty": 1
+          }
+        ]
+      ],
+      "original_summary": [
+        {
+          "bags_saved": 12,
+          "complete": true,
+          "inference_wall_s": 3.93,
+          "invalid": 0,
+          "micro_f1": 0.375,
+          "model": "glirel_large",
+          "model_load_wall_s": 25.834,
+          "negative_bags_with_fp": 0,
+          "precision": 0.6,
+          "recall": 0.273,
+          "sentence_calls": 17,
+          "valid": 12,
+          "valid_empty": 8
+        },
+        {
+          "bags_saved": 12,
+          "complete": true,
+          "inference_wall_s": 6.3,
+          "invalid": 0,
+          "micro_f1": 0.0,
+          "model": "gliner25_small",
+          "model_load_wall_s": 2.391,
+          "negative_bags_with_fp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "sentence_calls": 17,
+          "valid": 12,
+          "valid_empty": 12
+        },
+        {
+          "bags_saved": 12,
+          "complete": true,
+          "inference_wall_s": 4.84,
+          "invalid": 0,
+          "micro_f1": 0.25,
+          "model": "gliner25_base",
+          "model_load_wall_s": 3.991,
+          "negative_bags_with_fp": 0,
+          "precision": 0.231,
+          "recall": 0.273,
+          "sentence_calls": 17,
+          "valid": 12,
+          "valid_empty": 6
+        },
+        {
+          "bags_saved": 12,
+          "complete": true,
+          "inference_wall_s": 6.22,
+          "invalid": 0,
+          "micro_f1": 0.571,
+          "model": "gliner_relex_base",
+          "model_load_wall_s": 21.352,
+          "negative_bags_with_fp": 0,
+          "precision": 0.6,
+          "recall": 0.545,
+          "sentence_calls": 17,
+          "valid": 12,
+          "valid_empty": 7
+        },
+        {
+          "bags_saved": 12,
+          "complete": true,
+          "inference_wall_s": 23.02,
+          "invalid": 0,
+          "micro_f1": 0.082,
+          "model": "text2graph_r1_q8",
+          "model_load_wall_s": 9.91,
+          "negative_bags_with_fp": 4,
+          "precision": 0.043,
+          "recall": 0.727,
+          "sentence_calls": 12,
+          "valid": 12,
+          "valid_empty": 0
+        },
+        {
+          "bags_saved": 12,
+          "complete": true,
+          "inference_wall_s": 6.66,
+          "invalid": 11,
+          "micro_f1": 0.0,
+          "model": "gentune_adapter_exploratory",
+          "model_load_wall_s": 22.136,
+          "negative_bags_with_fp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "sentence_calls": 17,
+          "valid": 1,
+          "valid_empty": 1
+        }
+      ],
+      "settings": {
+        "created_utc": "2026-09-29T14:46:00.286315+00:00",
+        "fingerprint": "41395fd1e3b2349d18b0fe9f11f0d0d367e7c5e439fbabdebab712bb9aadc2f7",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "settings": {
+          "aggregation": "union of positive labels across supplied sentences",
+          "bag_cap": 20,
+          "encoder_thresholds": {
+            "gliner_relex_entity": 0.3,
+            "gliner_relex_relation": 0.5,
+            "glirel": 0.25
+          },
+          "gentune_enabled": true,
+          "input_hashes": {
+            "rel2id": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+            "review": "0d1a981dccd3318ae41f8c7fe0a0580442f023af099f3b0e070f46feae5e4e29",
+            "sample": "00dd4aa10878b6aed80134cc575b88879bd45bf35f2e32fd71b06cc113f23b9e",
+            "validation": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+          },
+          "invalid_scoring": "empty set; raw response and failure reason preserved",
+          "label_name": {
+            "/business/company/advisors": "company has advisor",
+            "/business/company/founders": "company has founder",
+            "/business/company/majorshareholders": "company has major shareholder",
+            "/business/company/place_founded": "company was founded in place",
+            "/business/location": "business is located in place",
+            "/business/person/company": "person is associated with company",
+            "/film/film/featured_film_locations": "film features location",
+            "/location/administrative_division/country": "administrative division belongs to country",
+            "/location/country/administrative_divisions": "country has administrative division",
+            "/location/country/capital": "country has capital city",
+            "/location/location/contains": "location contains location",
+            "/location/neighborhood/neighborhood_of": "neighborhood belongs to location",
+            "/location/region/capital": "region has capital city",
+            "/location/us_county/county_seat": "US county has county seat",
+            "/people/deceasedperson/place_of_burial": "deceased person was buried in place",
+            "/people/deceasedperson/place_of_death": "deceased person died in place",
+            "/people/ethnicity/geographic_distribution": "ethnicity is distributed in location",
+            "/people/person/children": "person has child",
+            "/people/person/ethnicity": "person belongs to ethnicity",
+            "/people/person/nationality": "person has nationality",
+            "/people/person/place_lived": "person lived in place",
+            "/people/person/place_of_birth": "person was born in place",
+            "/people/person/religion": "person follows religion",
+            "/time/event/locations": "event occurred in location"
+          },
+          "linking": "exact normalized displayed head and tail names; directed",
+          "models": [
+            {
+              "kind": "glirel",
+              "repo": "jackboyla/glirel-large-v0",
+              "slug": "glirel_large"
+            },
+            {
+              "kind": "gliner25",
+              "repo": "fastino/gliner2.5-small-v1",
+              "slug": "gliner25_small"
+            },
+            {
+              "kind": "gliner25",
+              "repo": "fastino/gliner2.5-base-v1",
+              "slug": "gliner25_base"
+            },
+            {
+              "kind": "gliner_relex",
+              "repo": "knowledgator/gliner-relex-base-v1.0",
+              "slug": "gliner_relex_base"
+            },
+            {
+              "file": "Text2Graph-R1-Qwen2.5-0.5b.Q8_0.gguf",
+              "kind": "gguf",
+              "repo": "mradermacher/Text2Graph-R1-Qwen2.5-0.5b-GGUF",
+              "slug": "text2graph_r1_q8"
+            },
+            {
+              "base": "Qwen/Qwen2.5-0.5B-Instruct",
+              "kind": "gentune",
+              "repo": "Despina/Qwen2.5-0.5B-Instruct-re_gentune-2-shot",
+              "slug": "gentune_adapter_exploratory"
+            }
+          ],
+          "raw_capture": "all encoder predictions with kept flag, including rejected pairs",
+          "run_name": "re_specialist_screen_nyt11_clean_20260929_v1",
+          "schema": {
+            "json_schema": {
+              "name": "nyt10m_relations",
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "relations": {
+                    "items": {
+                      "enum": [
+                        "/business/company/advisors",
+                        "/business/company/founders",
+                        "/business/company/majorshareholders",
+                        "/business/company/place_founded",
+                        "/business/location",
+                        "/business/person/company",
+                        "/film/film/featured_film_locations",
+                        "/location/administrative_division/country",
+                        "/location/country/administrative_divisions",
+                        "/location/country/capital",
+                        "/location/location/contains",
+                        "/location/neighborhood/neighborhood_of",
+                        "/location/region/capital",
+                        "/location/us_county/county_seat",
+                        "/people/deceasedperson/place_of_burial",
+                        "/people/deceasedperson/place_of_death",
+                        "/people/ethnicity/geographic_distribution",
+                        "/people/person/children",
+                        "/people/person/ethnicity",
+                        "/people/person/nationality",
+                        "/people/person/place_lived",
+                        "/people/person/place_of_birth",
+                        "/people/person/religion",
+                        "/time/event/locations"
+                      ],
+                      "type": "string"
+                    },
+                    "maxItems": 24,
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "relations"
+                ],
+                "type": "object"
+              },
+              "strict": true
+            },
+            "type": "json_schema"
+          },
+          "seed": 20260929
+        }
+      }
+    },
+    {
+      "id": "gentune_contract_smoke_nyt11_clean_20260930_v1",
+      "title": "GenTune output-contract follow-up",
+      "sample": "Same replacement 12 bags; 17 sentences; reviewed text labels",
+      "limitations": "One valid empty response in one mode; invalid output F1 is not semantic evidence.",
+      "tables": [
+        [
+          {
+            "bag_calls": 0,
+            "bags_saved": 12,
+            "complete": true,
+            "fn": 11,
+            "fp": 0,
+            "inference_wall_s": 7.0,
+            "input_tokens": 5179,
+            "invalid": 11,
+            "micro_f1": 0.0,
+            "mode": "sentence_ids",
+            "negative_bags_with_fp": 0,
+            "output_tokens": 51,
+            "precision": 0.0,
+            "recall": 0.0,
+            "sentence_calls": 17,
+            "tp": 0,
+            "valid": 1,
+            "valid_empty": 1
+          },
+          {
+            "bag_calls": 0,
+            "bags_saved": 12,
+            "complete": true,
+            "fn": 11,
+            "fp": 0,
+            "inference_wall_s": 6.31,
+            "input_tokens": 8987,
+            "invalid": 12,
+            "micro_f1": 0.0,
+            "mode": "sentence_described",
+            "negative_bags_with_fp": 0,
+            "output_tokens": 52,
+            "precision": 0.0,
+            "recall": 0.0,
+            "sentence_calls": 17,
+            "tp": 0,
+            "valid": 0,
+            "valid_empty": 0
+          },
+          {
+            "bag_calls": 12,
+            "bags_saved": 12,
+            "complete": true,
+            "fn": 11,
+            "fp": 0,
+            "inference_wall_s": 2.54,
+            "input_tokens": 4031,
+            "invalid": 12,
+            "micro_f1": 0.0,
+            "mode": "bag_json",
+            "negative_bags_with_fp": 0,
+            "output_tokens": 24,
+            "precision": 0.0,
+            "recall": 0.0,
+            "sentence_calls": 0,
+            "tp": 0,
+            "valid": 0,
+            "valid_empty": 0
+          }
+        ]
+      ],
+      "original_summary": [
+        {
+          "bag_calls": 0,
+          "bags_saved": 12,
+          "complete": true,
+          "fn": 11,
+          "fp": 0,
+          "inference_wall_s": 7.0,
+          "input_tokens": 5179,
+          "invalid": 11,
+          "micro_f1": 0.0,
+          "mode": "sentence_ids",
+          "negative_bags_with_fp": 0,
+          "output_tokens": 51,
+          "precision": 0.0,
+          "recall": 0.0,
+          "sentence_calls": 17,
+          "tp": 0,
+          "valid": 1,
+          "valid_empty": 1
+        },
+        {
+          "bag_calls": 0,
+          "bags_saved": 12,
+          "complete": true,
+          "fn": 11,
+          "fp": 0,
+          "inference_wall_s": 6.31,
+          "input_tokens": 8987,
+          "invalid": 12,
+          "micro_f1": 0.0,
+          "mode": "sentence_described",
+          "negative_bags_with_fp": 0,
+          "output_tokens": 52,
+          "precision": 0.0,
+          "recall": 0.0,
+          "sentence_calls": 17,
+          "tp": 0,
+          "valid": 0,
+          "valid_empty": 0
+        },
+        {
+          "bag_calls": 12,
+          "bags_saved": 12,
+          "complete": true,
+          "fn": 11,
+          "fp": 0,
+          "inference_wall_s": 2.54,
+          "input_tokens": 4031,
+          "invalid": 12,
+          "micro_f1": 0.0,
+          "mode": "bag_json",
+          "negative_bags_with_fp": 0,
+          "output_tokens": 24,
+          "precision": 0.0,
+          "recall": 0.0,
+          "sentence_calls": 0,
+          "tp": 0,
+          "valid": 0,
+          "valid_empty": 0
+        }
+      ],
+      "settings": {
+        "created_utc": "2026-09-30T08:38:42.970758+00:00",
+        "fingerprint": "be41ac1f9d388d29a0f28084f0427c66dce0b7032847fc34dd1f4d6c5d15f8a4",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "settings": {
+          "adapter_repo": "Despina/Qwen2.5-0.5B-Instruct-re_gentune-2-shot",
+          "adapter_revision": "5b9c14e6730ac4e65547fa6025c452670d9e53a5",
+          "adapter_sha256": "5afab7118cde4cf5fd2b6d64ac728922803739964074f4fc6b47578e77508fbb",
+          "aggregation": "single-label sentence outputs unioned per bag; any invalid call invalidates bag",
+          "base_repo": "Qwen/Qwen2.5-0.5B-Instruct",
+          "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+          "context_limit": 1024,
+          "decoding": "greedy; no ICL; attention mask supplied; strict exact-ID parsing",
+          "input_hashes": {
+            "rel2id": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+            "review": "0d1a981dccd3318ae41f8c7fe0a0580442f023af099f3b0e070f46feae5e4e29",
+            "sample": "00dd4aa10878b6aed80134cc575b88879bd45bf35f2e32fd71b06cc113f23b9e",
+            "validation": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+          },
+          "invalid_scoring": "empty set, with invalid status reported separately",
+          "modes": [
+            {
+              "max_new_tokens": 64,
+              "name": "sentence_ids",
+              "system": "You are an expert relation extraction system. For the ordered Head to Tail pair, output ONLY ONE exact relation ID from the allowed set below. Output NA if no listed relation is explicitly stated. No explanation or punctuation.\nAllowed IDs: NA, /business/company/advisors, /business/company/founders, /business/company/majorshareholders, /business/company/place_founded, /business/location, /business/person/company, /film/film/featured_film_locations, /location/administrative_division/country, /location/country/administrative_divisions, /location/country/capital, /location/location/contains, /location/neighborhood/neighborhood_of, /location/region/capital, /location/us_county/county_seat, /people/deceasedperson/place_of_burial, /people/deceasedperson/place_of_death, /people/ethnicity/geographic_distribution, /people/person/children, /people/person/ethnicity, /people/person/nationality, /people/person/place_lived, /people/person/place_of_birth, /people/person/religion, /time/event/locations",
+              "unit": "sentence"
+            },
+            {
+              "max_new_tokens": 64,
+              "name": "sentence_described",
+              "system": "You are an expert relation extraction system. For the ordered Head to Tail pair, output ONLY ONE exact relation ID from the allowed set below. Output NA if no listed relation is explicitly stated. No explanation or punctuation.\n/business/company/advisors = head-to-tail: company has advisor\n/business/company/founders = head-to-tail: company has founder\n/business/company/majorshareholders = head-to-tail: company has major shareholder\n/business/company/place_founded = head-to-tail: company was founded in place\n/business/location = head-to-tail: business is located in place\n/business/person/company = head-to-tail: person is associated with company\n/film/film/featured_film_locations = head-to-tail: film features location\n/location/administrative_division/country = head-to-tail: administrative division belongs to country\n/location/country/administrative_divisions = head-to-tail: country has administrative division\n/location/country/capital = head-to-tail: country has capital city\n/location/location/contains = head-to-tail: location contains location\n/location/neighborhood/neighborhood_of = head-to-tail: neighborhood belongs to location\n/location/region/capital = head-to-tail: region has capital city\n/location/us_county/county_seat = head-to-tail: US county has county seat\n/people/deceasedperson/place_of_burial = head-to-tail: deceased person was buried in place\n/people/deceasedperson/place_of_death = head-to-tail: deceased person died in place\n/people/ethnicity/geographic_distribution = head-to-tail: ethnicity is distributed in location\n/people/person/children = head-to-tail: person has child\n/people/person/ethnicity = head-to-tail: person belongs to ethnicity\n/people/person/nationality = head-to-tail: person has nationality\n/people/person/place_lived = head-to-tail: person lived in place\n/people/person/place_of_birth = head-to-tail: person was born in place\n/people/person/religion = head-to-tail: person follows religion\n/time/event/locations = head-to-tail: event occurred in location\nNA = no explicitly stated listed relation.",
+              "unit": "sentence"
+            },
+            {
+              "max_new_tokens": 256,
+              "name": "bag_json",
+              "system": "Extract every relation explicitly stated across the supplied sentences for the ordered Head to Tail pair. Return exactly one JSON object with the sole key \"relations\", whose value is a list of distinct allowed relation IDs. Use {\"relations\": []} when none holds. No explanation.\nAllowed IDs: /business/company/advisors, /business/company/founders, /business/company/majorshareholders, /business/company/place_founded, /business/location, /business/person/company, /film/film/featured_film_locations, /location/administrative_division/country, /location/country/administrative_divisions, /location/country/capital, /location/location/contains, /location/neighborhood/neighborhood_of, /location/region/capital, /location/us_county/county_seat, /people/deceasedperson/place_of_burial, /people/deceasedperson/place_of_death, /people/ethnicity/geographic_distribution, /people/person/children, /people/person/ethnicity, /people/person/nationality, /people/person/place_lived, /people/person/place_of_birth, /people/person/religion, /time/event/locations",
+              "unit": "bag"
+            }
+          ],
+          "run_name": "gentune_contract_smoke_nyt11_clean_20260930_v1",
+          "seed": 20260930
+        }
+      }
+    },
+    {
+      "id": "extended_validation_1012",
+      "title": "Extended 1,012-bag comparison",
+      "sample": "500 representative random + 500 enriched distant-label bags + 12 reviewed bags; references shown separately",
+      "limitations": "Selected enriched and reviewed cohorts are not population estimates. Seven candidates use different runtimes; no controlled cost ranking. Fixed hybrid/union/intersection rules are exploratory.",
+      "tables": [
+        [
+          {
+            "model": "Qwen3.5-0.8B",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 210,
+            "duplicate answers": 7,
+            "mean wall s": 0.29,
+            "total wall s": 142.7,
+            "inference calls": 500,
+            "call unit": "bag",
+            "input tokens": 217146.0,
+            "output tokens": 7287.0,
+            "TP": 14,
+            "FP": 477,
+            "FN": 46,
+            "precision": 0.029,
+            "recall": 0.233,
+            "micro-F1": 0.051,
+            "negative bags with FP": 238
+          },
+          {
+            "model": "Falcon-H1-0.5B-Instruct",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 1,
+            "duplicate answers": 4,
+            "mean wall s": 0.58,
+            "total wall s": 291.7,
+            "inference calls": 500,
+            "call unit": "bag",
+            "input tokens": 270608.0,
+            "output tokens": 13042.0,
+            "TP": 7,
+            "FP": 914,
+            "FN": 53,
+            "precision": 0.008,
+            "recall": 0.117,
+            "micro-F1": 0.014,
+            "negative bags with FP": 441
+          },
+          {
+            "model": "Granite-4.0-350M",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 94,
+            "duplicate answers": 26,
+            "mean wall s": 0.28,
+            "total wall s": 141.5,
+            "inference calls": 500,
+            "call unit": "bag",
+            "input tokens": 210484.0,
+            "output tokens": 13115.0,
+            "TP": 2,
+            "FP": 993,
+            "FN": 58,
+            "precision": 0.002,
+            "recall": 0.033,
+            "micro-F1": 0.004,
+            "negative bags with FP": 355
+          },
+          {
+            "model": "GLiNER-relex-base",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 393,
+            "duplicate answers": 0,
+            "mean wall s": 0.09,
+            "total wall s": 46.8,
+            "inference calls": 631,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 33,
+            "FP": 93,
+            "FN": 27,
+            "precision": 0.262,
+            "recall": 0.55,
+            "micro-F1": 0.355,
+            "negative bags with FP": 67
+          },
+          {
+            "model": "GLiREL-large",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 474,
+            "duplicate answers": 0,
+            "mean wall s": 0.25,
+            "total wall s": 126.5,
+            "inference calls": 631,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 8,
+            "FP": 18,
+            "FN": 52,
+            "precision": 0.308,
+            "recall": 0.133,
+            "micro-F1": 0.186,
+            "negative bags with FP": 15
+          },
+          {
+            "model": "GLiNER2.5-base",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 454,
+            "duplicate answers": 0,
+            "mean wall s": 0.34,
+            "total wall s": 171.9,
+            "inference calls": 631,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 14,
+            "FP": 63,
+            "FN": 46,
+            "precision": 0.182,
+            "recall": 0.233,
+            "micro-F1": 0.204,
+            "negative bags with FP": 25
+          },
+          {
+            "model": "GLiNER-relex-large",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 379,
+            "duplicate answers": 0,
+            "mean wall s": 0.27,
+            "total wall s": 133.3,
+            "inference calls": 631,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 37,
+            "FP": 136,
+            "FN": 23,
+            "precision": 0.214,
+            "recall": 0.617,
+            "micro-F1": 0.318,
+            "negative bags with FP": 80
+          }
+        ],
+        [
+          {
+            "model": "Qwen3.5-0.8B",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 80,
+            "duplicate answers": 45,
+            "mean wall s": 0.84,
+            "total wall s": 421.8,
+            "inference calls": 500,
+            "call unit": "bag",
+            "input tokens": 310861.0,
+            "output tokens": 17537.0,
+            "TP": 192,
+            "FP": 934,
+            "FN": 394,
+            "precision": 0.171,
+            "recall": 0.328,
+            "micro-F1": 0.224,
+            "negative bags with FP": 50
+          },
+          {
+            "model": "Falcon-H1-0.5B-Instruct",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 43,
+            "duplicate answers": 10,
+            "mean wall s": 0.92,
+            "total wall s": 461.2,
+            "inference calls": 500,
+            "call unit": "bag",
+            "input tokens": 386100.0,
+            "output tokens": 12892.0,
+            "TP": 73,
+            "FP": 866,
+            "FN": 513,
+            "precision": 0.078,
+            "recall": 0.125,
+            "micro-F1": 0.096,
+            "negative bags with FP": 63
+          },
+          {
+            "model": "Granite-4.0-350M",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 83,
+            "duplicate answers": 31,
+            "mean wall s": 0.32,
+            "total wall s": 162.1,
+            "inference calls": 500,
+            "call unit": "bag",
+            "input tokens": 299980.0,
+            "output tokens": 11711.0,
+            "TP": 64,
+            "FP": 604,
+            "FN": 522,
+            "precision": 0.096,
+            "recall": 0.109,
+            "micro-F1": 0.102,
+            "negative bags with FP": 59
+          },
+          {
+            "model": "GLiNER-relex-base",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 161,
+            "duplicate answers": 0,
+            "mean wall s": 0.4,
+            "total wall s": 202.1,
+            "inference calls": 2563,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 330,
+            "FP": 275,
+            "FN": 256,
+            "precision": 0.545,
+            "recall": 0.563,
+            "micro-F1": 0.554,
+            "negative bags with FP": 24
+          },
+          {
+            "model": "GLiREL-large",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 327,
+            "duplicate answers": 0,
+            "mean wall s": 1.13,
+            "total wall s": 567.3,
+            "inference calls": 2563,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 156,
+            "FP": 64,
+            "FN": 430,
+            "precision": 0.709,
+            "recall": 0.266,
+            "micro-F1": 0.387,
+            "negative bags with FP": 15
+          },
+          {
+            "model": "GLiNER2.5-base",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 323,
+            "duplicate answers": 0,
+            "mean wall s": 1.3,
+            "total wall s": 649.0,
+            "inference calls": 2563,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 146,
+            "FP": 181,
+            "FN": 440,
+            "precision": 0.446,
+            "recall": 0.249,
+            "micro-F1": 0.32,
+            "negative bags with FP": 13
+          },
+          {
+            "model": "GLiNER-relex-large",
+            "bags": 500,
+            "target": 500,
+            "complete": true,
+            "valid": 500,
+            "invalid": 0,
+            "valid empty": 136,
+            "duplicate answers": 0,
+            "mean wall s": 1.09,
+            "total wall s": 546.7,
+            "inference calls": 2563,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 416,
+            "FP": 373,
+            "FN": 170,
+            "precision": 0.527,
+            "recall": 0.71,
+            "micro-F1": 0.605,
+            "negative bags with FP": 27
+          }
+        ],
+        [
+          {
+            "model": "Qwen3.5-0.8B",
+            "bags": 12,
+            "target": 12,
+            "complete": true,
+            "valid": 12,
+            "invalid": 0,
+            "valid empty": 2,
+            "duplicate answers": 1,
+            "mean wall s": 0.33,
+            "total wall s": 4.0,
+            "inference calls": 12,
+            "call unit": "bag",
+            "input tokens": 5223.0,
+            "output tokens": 197.0,
+            "TP": 2,
+            "FP": 14,
+            "FN": 9,
+            "precision": 0.125,
+            "recall": 0.182,
+            "micro-F1": 0.148,
+            "negative bags with FP": 2
+          },
+          {
+            "model": "Falcon-H1-0.5B-Instruct",
+            "bags": 12,
+            "target": 12,
+            "complete": true,
+            "valid": 12,
+            "invalid": 0,
+            "valid empty": 0,
+            "duplicate answers": 0,
+            "mean wall s": 0.59,
+            "total wall s": 7.0,
+            "inference calls": 12,
+            "call unit": "bag",
+            "input tokens": 6524.0,
+            "output tokens": 318.0,
+            "TP": 4,
+            "FP": 19,
+            "FN": 7,
+            "precision": 0.174,
+            "recall": 0.364,
+            "micro-F1": 0.235,
+            "negative bags with FP": 4
+          },
+          {
+            "model": "Granite-4.0-350M",
+            "bags": 12,
+            "target": 12,
+            "complete": true,
+            "valid": 12,
+            "invalid": 0,
+            "valid empty": 2,
+            "duplicate answers": 0,
+            "mean wall s": 0.15,
+            "total wall s": 1.8,
+            "inference calls": 12,
+            "call unit": "bag",
+            "input tokens": 5068.0,
+            "output tokens": 145.0,
+            "TP": 2,
+            "FP": 8,
+            "FN": 9,
+            "precision": 0.2,
+            "recall": 0.182,
+            "micro-F1": 0.19,
+            "negative bags with FP": 2
+          },
+          {
+            "model": "GLiNER-relex-base",
+            "bags": 12,
+            "target": 12,
+            "complete": true,
+            "valid": 12,
+            "invalid": 0,
+            "valid empty": 7,
+            "duplicate answers": 0,
+            "mean wall s": 0.11,
+            "total wall s": 1.3,
+            "inference calls": 17,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 6,
+            "FP": 4,
+            "FN": 5,
+            "precision": 0.6,
+            "recall": 0.545,
+            "micro-F1": 0.571,
+            "negative bags with FP": 0
+          },
+          {
+            "model": "GLiREL-large",
+            "bags": 12,
+            "target": 12,
+            "complete": true,
+            "valid": 12,
+            "invalid": 0,
+            "valid empty": 8,
+            "duplicate answers": 0,
+            "mean wall s": 0.29,
+            "total wall s": 3.5,
+            "inference calls": 17,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 3,
+            "FP": 2,
+            "FN": 8,
+            "precision": 0.6,
+            "recall": 0.273,
+            "micro-F1": 0.375,
+            "negative bags with FP": 0
+          },
+          {
+            "model": "GLiNER2.5-base",
+            "bags": 12,
+            "target": 12,
+            "complete": true,
+            "valid": 12,
+            "invalid": 0,
+            "valid empty": 6,
+            "duplicate answers": 0,
+            "mean wall s": 0.81,
+            "total wall s": 9.7,
+            "inference calls": 17,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 3,
+            "FP": 10,
+            "FN": 8,
+            "precision": 0.231,
+            "recall": 0.273,
+            "micro-F1": 0.25,
+            "negative bags with FP": 0
+          },
+          {
+            "model": "GLiNER-relex-large",
+            "bags": 12,
+            "target": 12,
+            "complete": true,
+            "valid": 12,
+            "invalid": 0,
+            "valid empty": 5,
+            "duplicate answers": 0,
+            "mean wall s": 0.31,
+            "total wall s": 3.8,
+            "inference calls": 17,
+            "call unit": "sentence",
+            "input tokens": null,
+            "output tokens": null,
+            "TP": 10,
+            "FP": 6,
+            "FN": 1,
+            "precision": 0.625,
+            "recall": 0.909,
+            "micro-F1": 0.741,
+            "negative bags with FP": 0
+          }
+        ],
+        [
+          {
+            "rule": "base + Qwen + Falcon: 2/3",
+            "TP": 10,
+            "FP": 105,
+            "FN": 50,
+            "micro-F1": 0.114
+          },
+          {
+            "rule": "base plus generative confirmation",
+            "TP": 10,
+            "FP": 21,
+            "FN": 50,
+            "micro-F1": 0.22
+          },
+          {
+            "rule": "base or generative consensus",
+            "TP": 33,
+            "FP": 177,
+            "FN": 27,
+            "micro-F1": 0.244
+          },
+          {
+            "rule": "base and large",
+            "TP": 27,
+            "FP": 36,
+            "FN": 33,
+            "micro-F1": 0.439
+          },
+          {
+            "rule": "base or large",
+            "TP": 43,
+            "FP": 193,
+            "FN": 17,
+            "micro-F1": 0.291
+          },
+          {
+            "rule": "base + large + GLiNER2.5: 2/3",
+            "TP": 31,
+            "FP": 46,
+            "FN": 29,
+            "micro-F1": 0.453
+          }
+        ],
+        [
+          {
+            "rule": "base + Qwen + Falcon: 2/3",
+            "TP": 140,
+            "FP": 254,
+            "FN": 446,
+            "micro-F1": 0.286
+          },
+          {
+            "rule": "base plus generative confirmation",
+            "TP": 118,
+            "FP": 120,
+            "FN": 468,
+            "micro-F1": 0.286
+          },
+          {
+            "rule": "base or generative consensus",
+            "TP": 352,
+            "FP": 409,
+            "FN": 234,
+            "micro-F1": 0.523
+          },
+          {
+            "rule": "base and large",
+            "TP": 296,
+            "FP": 142,
+            "FN": 290,
+            "micro-F1": 0.578
+          },
+          {
+            "rule": "base or large",
+            "TP": 450,
+            "FP": 506,
+            "FN": 136,
+            "micro-F1": 0.584
+          },
+          {
+            "rule": "base + large + GLiNER2.5: 2/3",
+            "TP": 338,
+            "FP": 209,
+            "FN": 248,
+            "micro-F1": 0.597
+          }
+        ],
+        [
+          {
+            "rule": "base + Qwen + Falcon: 2/3",
+            "TP": 4,
+            "FP": 3,
+            "FN": 7,
+            "micro-F1": 0.444
+          },
+          {
+            "rule": "base plus generative confirmation",
+            "TP": 4,
+            "FP": 1,
+            "FN": 7,
+            "micro-F1": 0.5
+          },
+          {
+            "rule": "base or generative consensus",
+            "TP": 6,
+            "FP": 6,
+            "FN": 5,
+            "micro-F1": 0.522
+          },
+          {
+            "rule": "base and large",
+            "TP": 6,
+            "FP": 1,
+            "FN": 5,
+            "micro-F1": 0.667
+          },
+          {
+            "rule": "base or large",
+            "TP": 10,
+            "FP": 9,
+            "FN": 1,
+            "micro-F1": 0.667
+          },
+          {
+            "rule": "base + large + GLiNER2.5: 2/3",
+            "TP": 6,
+            "FP": 5,
+            "FN": 5,
+            "micro-F1": 0.545
+          }
+        ]
+      ],
+      "table_titles": [
+        "Random 500: individual models",
+        "Enriched 500: individual models",
+        "Reviewed 12: individual models",
+        "Random 500: fixed fusion rules",
+        "Enriched 500: fixed fusion rules",
+        "Reviewed 12: fixed fusion rules"
+      ],
+      "settings": {
+        "created_utc": "2026-09-30T10:25:13.272652+00:00",
+        "fingerprint": "eab2a7d3529d723bbd45b7882c786f3e63b750f693d0d160ccac17f261aefdf9",
+        "llama_version": [
+          "0.00.000.138 I srv  llama_server: initializing ...",
+          "version: 0.5.0 (build 11146, commit 7fe450e19)",
+          "built with AppleClang 21.0.0.21000334 for Darwin arm64"
+        ],
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+        "settings": {
+          "bag_cap": 20,
+          "context": 8192,
+          "manifest_design": "500 random plus 500 enriched plus 12 reviewed",
+          "max_output": 384,
+          "models": [
+            {
+              "file": "Qwen3.5-0.8B-Q8_0.gguf",
+              "name": "Qwen3.5-0.8B",
+              "repo": "ggml-org/Qwen3.5-0.8B-GGUF",
+              "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+              "slug": "qwen35_08b_q8"
+            },
+            {
+              "file": "Falcon-H1-0.5B-Instruct-Q8_0.gguf",
+              "name": "Falcon-H1-0.5B-Instruct",
+              "repo": "tiiuae/Falcon-H1-0.5B-Instruct-GGUF",
+              "revision": "9bf0c2d4391cf4850aa62bfee1d8fe71afba8be2",
+              "slug": "falcon_h1_05b_instruct_q8"
+            },
+            {
+              "file": "granite-4.0-350m-Q8_0.gguf",
+              "name": "Granite-4.0-350M",
+              "repo": "ibm-granite/granite-4.0-350m-GGUF",
+              "revision": "b8208a86a58427e1739265318028eb5895b74bf2",
+              "slug": "granite40_350m_q8"
+            }
+          ],
+          "prompt_version": "nyt10m_explicit_evidence_unique_labels_v3",
+          "rel2id_sha256": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+          "response_format": {
+            "json_schema": {
+              "name": "nyt10m_relations",
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "relations": {
+                    "items": {
+                      "enum": [
+                        "/business/company/advisors",
+                        "/business/company/founders",
+                        "/business/company/majorshareholders",
+                        "/business/company/place_founded",
+                        "/business/location",
+                        "/business/person/company",
+                        "/film/film/featured_film_locations",
+                        "/location/administrative_division/country",
+                        "/location/country/administrative_divisions",
+                        "/location/country/capital",
+                        "/location/location/contains",
+                        "/location/neighborhood/neighborhood_of",
+                        "/location/region/capital",
+                        "/location/us_county/county_seat",
+                        "/people/deceasedperson/place_of_burial",
+                        "/people/deceasedperson/place_of_death",
+                        "/people/ethnicity/geographic_distribution",
+                        "/people/person/children",
+                        "/people/person/ethnicity",
+                        "/people/person/nationality",
+                        "/people/person/place_lived",
+                        "/people/person/place_of_birth",
+                        "/people/person/religion",
+                        "/time/event/locations"
+                      ],
+                      "type": "string"
+                    },
+                    "maxItems": 24,
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "relations"
+                ],
+                "type": "object"
+              },
+              "strict": true
+            },
+            "type": "json_schema"
+          },
+          "review_sample_sha256": "00dd4aa10878b6aed80134cc575b88879bd45bf35f2e32fd71b06cc113f23b9e",
+          "seed": 20260930,
+          "temperature": 0,
+          "top_p": 1,
+          "validation_sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+        }
+      }
+    },
+    {
+      "id": "reviewed_30_encoders",
+      "title": "Four-encoder reviewed-30 comparison",
+      "sample": "18 newly reviewed + 12 previously reviewed validation bags; 23 positive label instances across all 30",
+      "limitations": "Joint entity recognition and exact directed-name mapping. Purposeful sample; not a benchmark estimate. New/old cohorts remain separate.",
+      "tables": [
+        [
+          {
+            "model": "gliner_relex_base",
+            "cohort": "new reviewed 18",
+            "saved": 18,
+            "target": 18,
+            "valid": 18,
+            "failed": 0,
+            "inference wall s": 1.46,
+            "sentence calls": 18,
+            "complete": true,
+            "TP": 8,
+            "FP": 10,
+            "FN": 4,
+            "precision": 0.444,
+            "recall": 0.667,
+            "micro-F1": 0.533,
+            "negative bags with FP": 5
+          },
+          {
+            "model": "gliner_relex_base",
+            "cohort": "previously reviewed 12",
+            "saved": 12,
+            "target": 12,
+            "valid": 12,
+            "failed": 0,
+            "inference wall s": 6.09,
+            "sentence calls": 17,
+            "complete": true,
+            "TP": 6,
+            "FP": 4,
+            "FN": 5,
+            "precision": 0.6,
+            "recall": 0.545,
+            "micro-F1": 0.571,
+            "negative bags with FP": 0
+          },
+          {
+            "model": "gliner_relex_base",
+            "cohort": "all 30 (descriptive)",
+            "saved": 30,
+            "target": 30,
+            "valid": 30,
+            "failed": 0,
+            "inference wall s": 7.54,
+            "sentence calls": 35,
+            "complete": true,
+            "TP": 14,
+            "FP": 14,
+            "FN": 9,
+            "precision": 0.5,
+            "recall": 0.609,
+            "micro-F1": 0.549,
+            "negative bags with FP": 5
+          },
+          {
+            "model": "gliner_relex_large",
+            "cohort": "new reviewed 18",
+            "saved": 18,
+            "target": 18,
+            "valid": 18,
+            "failed": 0,
+            "inference wall s": 3.02,
+            "sentence calls": 18,
+            "complete": true,
+            "TP": 12,
+            "FP": 11,
+            "FN": 0,
+            "precision": 0.522,
+            "recall": 1.0,
+            "micro-F1": 0.686,
+            "negative bags with FP": 4
+          },
+          {
+            "model": "gliner_relex_large",
+            "cohort": "previously reviewed 12",
+            "saved": 12,
+            "target": 12,
+            "valid": 12,
+            "failed": 0,
+            "inference wall s": 4.45,
+            "sentence calls": 17,
+            "complete": true,
+            "TP": 10,
+            "FP": 6,
+            "FN": 1,
+            "precision": 0.625,
+            "recall": 0.909,
+            "micro-F1": 0.741,
+            "negative bags with FP": 0
+          },
+          {
+            "model": "gliner_relex_large",
+            "cohort": "all 30 (descriptive)",
+            "saved": 30,
+            "target": 30,
+            "valid": 30,
+            "failed": 0,
+            "inference wall s": 7.47,
+            "sentence calls": 35,
+            "complete": true,
+            "TP": 22,
+            "FP": 17,
+            "FN": 1,
+            "precision": 0.564,
+            "recall": 0.957,
+            "micro-F1": 0.71,
+            "negative bags with FP": 4
+          },
+          {
+            "model": "glirel_large",
+            "cohort": "new reviewed 18",
+            "saved": 18,
+            "target": 18,
+            "valid": 18,
+            "failed": 0,
+            "inference wall s": 3.3,
+            "sentence calls": 18,
+            "complete": true,
+            "TP": 2,
+            "FP": 2,
+            "FN": 10,
+            "precision": 0.5,
+            "recall": 0.167,
+            "micro-F1": 0.25,
+            "negative bags with FP": 2
+          },
+          {
+            "model": "glirel_large",
+            "cohort": "previously reviewed 12",
+            "saved": 12,
+            "target": 12,
+            "valid": 12,
+            "failed": 0,
+            "inference wall s": 3.49,
+            "sentence calls": 17,
+            "complete": true,
+            "TP": 3,
+            "FP": 2,
+            "FN": 8,
+            "precision": 0.6,
+            "recall": 0.273,
+            "micro-F1": 0.375,
+            "negative bags with FP": 0
+          },
+          {
+            "model": "glirel_large",
+            "cohort": "all 30 (descriptive)",
+            "saved": 30,
+            "target": 30,
+            "valid": 30,
+            "failed": 0,
+            "inference wall s": 6.8,
+            "sentence calls": 35,
+            "complete": true,
+            "TP": 5,
+            "FP": 4,
+            "FN": 18,
+            "precision": 0.556,
+            "recall": 0.217,
+            "micro-F1": 0.312,
+            "negative bags with FP": 2
+          },
+          {
+            "model": "gliner25_base",
+            "cohort": "new reviewed 18",
+            "saved": 18,
+            "target": 18,
+            "valid": 18,
+            "failed": 0,
+            "inference wall s": 4.35,
+            "sentence calls": 18,
+            "complete": true,
+            "TP": 7,
+            "FP": 10,
+            "FN": 5,
+            "precision": 0.412,
+            "recall": 0.583,
+            "micro-F1": 0.483,
+            "negative bags with FP": 1
+          },
+          {
+            "model": "gliner25_base",
+            "cohort": "previously reviewed 12",
+            "saved": 12,
+            "target": 12,
+            "valid": 12,
+            "failed": 0,
+            "inference wall s": 6.73,
+            "sentence calls": 17,
+            "complete": true,
+            "TP": 3,
+            "FP": 10,
+            "FN": 8,
+            "precision": 0.231,
+            "recall": 0.273,
+            "micro-F1": 0.25,
+            "negative bags with FP": 0
+          },
+          {
+            "model": "gliner25_base",
+            "cohort": "all 30 (descriptive)",
+            "saved": 30,
+            "target": 30,
+            "valid": 30,
+            "failed": 0,
+            "inference wall s": 11.08,
+            "sentence calls": 35,
+            "complete": true,
+            "TP": 10,
+            "FP": 20,
+            "FN": 13,
+            "precision": 0.333,
+            "recall": 0.435,
+            "micro-F1": 0.377,
+            "negative bags with FP": 1
+          }
+        ],
+        [
+          {
+            "rule": "intersection",
+            "cohort": "new reviewed 18",
+            "bags": 18,
+            "two-model inference wall s": 4.48,
+            "TP": 8,
+            "FP": 4,
+            "FN": 4,
+            "precision": 0.667,
+            "recall": 0.667,
+            "micro-F1": 0.667,
+            "negative bags with FP": 3
+          },
+          {
+            "rule": "union",
+            "cohort": "new reviewed 18",
+            "bags": 18,
+            "two-model inference wall s": 4.48,
+            "TP": 12,
+            "FP": 17,
+            "FN": 0,
+            "precision": 0.414,
+            "recall": 1.0,
+            "micro-F1": 0.585,
+            "negative bags with FP": 6
+          },
+          {
+            "rule": "intersection",
+            "cohort": "previously reviewed 12",
+            "bags": 12,
+            "two-model inference wall s": 10.53,
+            "TP": 6,
+            "FP": 1,
+            "FN": 5,
+            "precision": 0.857,
+            "recall": 0.545,
+            "micro-F1": 0.667,
+            "negative bags with FP": 0
+          },
+          {
+            "rule": "union",
+            "cohort": "previously reviewed 12",
+            "bags": 12,
+            "two-model inference wall s": 10.53,
+            "TP": 10,
+            "FP": 9,
+            "FN": 1,
+            "precision": 0.526,
+            "recall": 0.909,
+            "micro-F1": 0.667,
+            "negative bags with FP": 0
+          },
+          {
+            "rule": "intersection",
+            "cohort": "all 30 (descriptive)",
+            "bags": 30,
+            "two-model inference wall s": 15.01,
+            "TP": 14,
+            "FP": 5,
+            "FN": 9,
+            "precision": 0.737,
+            "recall": 0.609,
+            "micro-F1": 0.667,
+            "negative bags with FP": 3
+          },
+          {
+            "rule": "union",
+            "cohort": "all 30 (descriptive)",
+            "bags": 30,
+            "two-model inference wall s": 15.01,
+            "TP": 22,
+            "FP": 26,
+            "FN": 1,
+            "precision": 0.458,
+            "recall": 0.957,
+            "micro-F1": 0.62,
+            "negative bags with FP": 6
+          }
+        ],
+        [
+          {
+            "cohort": "new reviewed 18",
+            "model": "gliner_relex_base",
+            "correct predicted": 8,
+            "uniquely correct vs other three": 0,
+            "false positives": 10,
+            "inference wall s": 1.46
+          },
+          {
+            "cohort": "new reviewed 18",
+            "model": "gliner_relex_large",
+            "correct predicted": 12,
+            "uniquely correct vs other three": 3,
+            "false positives": 11,
+            "inference wall s": 3.02
+          },
+          {
+            "cohort": "new reviewed 18",
+            "model": "glirel_large",
+            "correct predicted": 2,
+            "uniquely correct vs other three": 0,
+            "false positives": 2,
+            "inference wall s": 3.3
+          },
+          {
+            "cohort": "new reviewed 18",
+            "model": "gliner25_base",
+            "correct predicted": 7,
+            "uniquely correct vs other three": 0,
+            "false positives": 10,
+            "inference wall s": 4.35
+          },
+          {
+            "cohort": "previously reviewed 12",
+            "model": "gliner_relex_base",
+            "correct predicted": 6,
+            "uniquely correct vs other three": 0,
+            "false positives": 4,
+            "inference wall s": 6.09
+          },
+          {
+            "cohort": "previously reviewed 12",
+            "model": "gliner_relex_large",
+            "correct predicted": 10,
+            "uniquely correct vs other three": 4,
+            "false positives": 6,
+            "inference wall s": 4.45
+          },
+          {
+            "cohort": "previously reviewed 12",
+            "model": "glirel_large",
+            "correct predicted": 3,
+            "uniquely correct vs other three": 0,
+            "false positives": 2,
+            "inference wall s": 3.49
+          },
+          {
+            "cohort": "previously reviewed 12",
+            "model": "gliner25_base",
+            "correct predicted": 3,
+            "uniquely correct vs other three": 1,
+            "false positives": 10,
+            "inference wall s": 6.73
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "model": "gliner_relex_base",
+            "correct predicted": 14,
+            "uniquely correct vs other three": 0,
+            "false positives": 14,
+            "inference wall s": 7.54
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "model": "gliner_relex_large",
+            "correct predicted": 22,
+            "uniquely correct vs other three": 7,
+            "false positives": 17,
+            "inference wall s": 7.47
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "model": "glirel_large",
+            "correct predicted": 5,
+            "uniquely correct vs other three": 0,
+            "false positives": 4,
+            "inference wall s": 6.8
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "model": "gliner25_base",
+            "correct predicted": 10,
+            "uniquely correct vs other three": 1,
+            "false positives": 20,
+            "inference wall s": 11.08
+          }
+        ]
+      ],
+      "table_titles": [
+        "Individual models",
+        "Base/large fusion",
+        "Unique correct labels"
+      ],
+      "settings": {
+        "fingerprint": "622a06eb952a59f87ee68a846ff99bc515f5c64cffe6cd78275ea5199ebbc171",
+        "models": [
+          "gliner_relex_base",
+          "gliner_relex_large",
+          "glirel_large",
+          "gliner25_base"
+        ],
+        "new_annotations_sha256": "1d51816d93ab66b98f0ad83f14c7ef681e20bb871e83d7004f346d3b0d017571",
+        "new_sample_sha256": "756fa0184d7c2c6bb1c4b97ce3e4fb0521ad3c09487250c1419a21cfb542d6e8",
+        "old_annotations_sha256": "0d1a981dccd3318ae41f8c7fe0a0580442f023af099f3b0e070f46feae5e4e29",
+        "old_sample_sha256": "00dd4aa10878b6aed80134cc575b88879bd45bf35f2e32fd71b06cc113f23b9e",
+        "purpose": "Human-reviewed validation-only encoder comparison; no test data",
+        "rel2id_sha256": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+        "reuse": "Pinned cached checkpoints and inference contracts from extended validation",
+        "runner_sha256": {
+          "run_extended_gliner_relex.py": "ef8e5f430a8a55628e212772bf445242b1abd5b6a8e247e3b0c729d0c51d30f8",
+          "run_extended_other_encoders.py": "63c7c829a0d3f7e2c2ac853353a54d44bd606adc131fae2cb50ce61229b8f964",
+          "run_reviewed_30_encoder.py": "152b840f97b6278e4ddab0958a65af05683f9ded2cc3c432d71c53d66768f09e"
+        },
+        "validation_sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+      }
+    },
+    {
+      "id": "gliformer_reviewed_30",
+      "title": "GLiFormer large reviewed-30 screen",
+      "sample": "Same 30 reviewed bags and separate old/new cohorts",
+      "limitations": "Exact directed-name matching; recorded CPU/MPS pilot timings are not a controlled backend comparison. An alternate location-qualifier mapping is diagnostic only.",
+      "tables": [
+        [
+          {
+            "cohort": "new reviewed 18",
+            "rule": "relex base alone",
+            "TP": 8,
+            "FP": 10,
+            "FN": 4,
+            "precision": 0.444,
+            "recall": 0.667,
+            "micro-F1": 0.533,
+            "negative bags with FP": 5,
+            "summed inference seconds": 1.46,
+            "members": "gliner_relex_base"
+          },
+          {
+            "cohort": "new reviewed 18",
+            "rule": "relex large alone",
+            "TP": 12,
+            "FP": 11,
+            "FN": 0,
+            "precision": 0.522,
+            "recall": 1.0,
+            "micro-F1": 0.686,
+            "negative bags with FP": 4,
+            "summed inference seconds": 3.02,
+            "members": "gliner_relex_large"
+          },
+          {
+            "cohort": "new reviewed 18",
+            "rule": "GLiREL alone",
+            "TP": 2,
+            "FP": 2,
+            "FN": 10,
+            "precision": 0.5,
+            "recall": 0.167,
+            "micro-F1": 0.25,
+            "negative bags with FP": 2,
+            "summed inference seconds": 3.3,
+            "members": "glirel_large"
+          },
+          {
+            "cohort": "new reviewed 18",
+            "rule": "GLiFormer alone",
+            "TP": 4,
+            "FP": 0,
+            "FN": 8,
+            "precision": 1.0,
+            "recall": 0.333,
+            "micro-F1": 0.5,
+            "negative bags with FP": 0,
+            "summed inference seconds": 3.9,
+            "members": "gliformer_large"
+          },
+          {
+            "cohort": "new reviewed 18",
+            "rule": "relex base ∩ large",
+            "TP": 8,
+            "FP": 4,
+            "FN": 4,
+            "precision": 0.667,
+            "recall": 0.667,
+            "micro-F1": 0.667,
+            "negative bags with FP": 3,
+            "summed inference seconds": 4.48,
+            "members": "gliner_relex_base, gliner_relex_large"
+          },
+          {
+            "cohort": "new reviewed 18",
+            "rule": "relex base ∪ large",
+            "TP": 12,
+            "FP": 17,
+            "FN": 0,
+            "precision": 0.414,
+            "recall": 1.0,
+            "micro-F1": 0.585,
+            "negative bags with FP": 6,
+            "summed inference seconds": 4.48,
+            "members": "gliner_relex_base, gliner_relex_large"
+          },
+          {
+            "cohort": "new reviewed 18",
+            "rule": "base + large + GLiREL, 2-of-3",
+            "TP": 9,
+            "FP": 4,
+            "FN": 3,
+            "precision": 0.692,
+            "recall": 0.75,
+            "micro-F1": 0.72,
+            "negative bags with FP": 3,
+            "summed inference seconds": 7.78,
+            "members": "gliner_relex_base, gliner_relex_large, glirel_large"
+          },
+          {
+            "cohort": "new reviewed 18",
+            "rule": "base + large + GLiFormer, 2-of-3",
+            "TP": 8,
+            "FP": 4,
+            "FN": 4,
+            "precision": 0.667,
+            "recall": 0.667,
+            "micro-F1": 0.667,
+            "negative bags with FP": 3,
+            "summed inference seconds": 8.38,
+            "members": "gliner_relex_base, gliner_relex_large, gliformer_large"
+          },
+          {
+            "cohort": "earlier reviewed 12",
+            "rule": "relex base alone",
+            "TP": 6,
+            "FP": 4,
+            "FN": 5,
+            "precision": 0.6,
+            "recall": 0.545,
+            "micro-F1": 0.571,
+            "negative bags with FP": 0,
+            "summed inference seconds": 6.09,
+            "members": "gliner_relex_base"
+          },
+          {
+            "cohort": "earlier reviewed 12",
+            "rule": "relex large alone",
+            "TP": 10,
+            "FP": 6,
+            "FN": 1,
+            "precision": 0.625,
+            "recall": 0.909,
+            "micro-F1": 0.741,
+            "negative bags with FP": 0,
+            "summed inference seconds": 4.45,
+            "members": "gliner_relex_large"
+          },
+          {
+            "cohort": "earlier reviewed 12",
+            "rule": "GLiREL alone",
+            "TP": 3,
+            "FP": 2,
+            "FN": 8,
+            "precision": 0.6,
+            "recall": 0.273,
+            "micro-F1": 0.375,
+            "negative bags with FP": 0,
+            "summed inference seconds": 3.49,
+            "members": "glirel_large"
+          },
+          {
+            "cohort": "earlier reviewed 12",
+            "rule": "GLiFormer alone",
+            "TP": 4,
+            "FP": 0,
+            "FN": 7,
+            "precision": 1.0,
+            "recall": 0.364,
+            "micro-F1": 0.533,
+            "negative bags with FP": 0,
+            "summed inference seconds": 4.65,
+            "members": "gliformer_large"
+          },
+          {
+            "cohort": "earlier reviewed 12",
+            "rule": "relex base ∩ large",
+            "TP": 6,
+            "FP": 1,
+            "FN": 5,
+            "precision": 0.857,
+            "recall": 0.545,
+            "micro-F1": 0.667,
+            "negative bags with FP": 0,
+            "summed inference seconds": 10.53,
+            "members": "gliner_relex_base, gliner_relex_large"
+          },
+          {
+            "cohort": "earlier reviewed 12",
+            "rule": "relex base ∪ large",
+            "TP": 10,
+            "FP": 9,
+            "FN": 1,
+            "precision": 0.526,
+            "recall": 0.909,
+            "micro-F1": 0.667,
+            "negative bags with FP": 0,
+            "summed inference seconds": 10.53,
+            "members": "gliner_relex_base, gliner_relex_large"
+          },
+          {
+            "cohort": "earlier reviewed 12",
+            "rule": "base + large + GLiREL, 2-of-3",
+            "TP": 6,
+            "FP": 2,
+            "FN": 5,
+            "precision": 0.75,
+            "recall": 0.545,
+            "micro-F1": 0.632,
+            "negative bags with FP": 0,
+            "summed inference seconds": 14.03,
+            "members": "gliner_relex_base, gliner_relex_large, glirel_large"
+          },
+          {
+            "cohort": "earlier reviewed 12",
+            "rule": "base + large + GLiFormer, 2-of-3",
+            "TP": 7,
+            "FP": 1,
+            "FN": 4,
+            "precision": 0.875,
+            "recall": 0.636,
+            "micro-F1": 0.737,
+            "negative bags with FP": 0,
+            "summed inference seconds": 15.18,
+            "members": "gliner_relex_base, gliner_relex_large, gliformer_large"
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "rule": "relex base alone",
+            "TP": 14,
+            "FP": 14,
+            "FN": 9,
+            "precision": 0.5,
+            "recall": 0.609,
+            "micro-F1": 0.549,
+            "negative bags with FP": 5,
+            "summed inference seconds": 7.54,
+            "members": "gliner_relex_base"
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "rule": "relex large alone",
+            "TP": 22,
+            "FP": 17,
+            "FN": 1,
+            "precision": 0.564,
+            "recall": 0.957,
+            "micro-F1": 0.71,
+            "negative bags with FP": 4,
+            "summed inference seconds": 7.47,
+            "members": "gliner_relex_large"
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "rule": "GLiREL alone",
+            "TP": 5,
+            "FP": 4,
+            "FN": 18,
+            "precision": 0.556,
+            "recall": 0.217,
+            "micro-F1": 0.312,
+            "negative bags with FP": 2,
+            "summed inference seconds": 6.8,
+            "members": "glirel_large"
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "rule": "GLiFormer alone",
+            "TP": 8,
+            "FP": 0,
+            "FN": 15,
+            "precision": 1.0,
+            "recall": 0.348,
+            "micro-F1": 0.516,
+            "negative bags with FP": 0,
+            "summed inference seconds": 8.54,
+            "members": "gliformer_large"
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "rule": "relex base ∩ large",
+            "TP": 14,
+            "FP": 5,
+            "FN": 9,
+            "precision": 0.737,
+            "recall": 0.609,
+            "micro-F1": 0.667,
+            "negative bags with FP": 3,
+            "summed inference seconds": 15.01,
+            "members": "gliner_relex_base, gliner_relex_large"
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "rule": "relex base ∪ large",
+            "TP": 22,
+            "FP": 26,
+            "FN": 1,
+            "precision": 0.458,
+            "recall": 0.957,
+            "micro-F1": 0.62,
+            "negative bags with FP": 6,
+            "summed inference seconds": 15.01,
+            "members": "gliner_relex_base, gliner_relex_large"
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "rule": "base + large + GLiREL, 2-of-3",
+            "TP": 15,
+            "FP": 6,
+            "FN": 8,
+            "precision": 0.714,
+            "recall": 0.652,
+            "micro-F1": 0.682,
+            "negative bags with FP": 3,
+            "summed inference seconds": 21.81,
+            "members": "gliner_relex_base, gliner_relex_large, glirel_large"
+          },
+          {
+            "cohort": "all 30 (descriptive)",
+            "rule": "base + large + GLiFormer, 2-of-3",
+            "TP": 15,
+            "FP": 5,
+            "FN": 8,
+            "precision": 0.75,
+            "recall": 0.652,
+            "micro-F1": 0.698,
+            "negative bags with FP": 3,
+            "summed inference seconds": 23.56,
+            "members": "gliner_relex_base, gliner_relex_large, gliformer_large"
+          }
+        ]
+      ],
+      "table_titles": [
+        "Individual and static voting systems"
+      ],
+      "settings": {
+        "created_utc": "2026-10-01T12:59:17.303816+00:00",
+        "fingerprint": "3997da80f25c843ec16bf9fb68a361156f522f403085748640e5a4bc297e74ab",
+        "settings": {
+          "bag_rule": "union of matching positive relations over all supplied sentences",
+          "device": "cpu",
+          "gliformer_version": "0.1.2",
+          "label_name": {
+            "/business/company/advisors": "company has advisor",
+            "/business/company/founders": "company has founder",
+            "/business/company/majorshareholders": "company has major shareholder",
+            "/business/company/place_founded": "company was founded in place",
+            "/business/location": "business is located in place",
+            "/business/person/company": "person is associated with company",
+            "/film/film/featured_film_locations": "film features location",
+            "/location/administrative_division/country": "administrative division belongs to country",
+            "/location/country/administrative_divisions": "country has administrative division",
+            "/location/country/capital": "country has capital city",
+            "/location/location/contains": "location contains location",
+            "/location/neighborhood/neighborhood_of": "neighborhood belongs to location",
+            "/location/region/capital": "region has capital city",
+            "/location/us_county/county_seat": "US county has county seat",
+            "/people/deceasedperson/place_of_burial": "deceased person was buried in place",
+            "/people/deceasedperson/place_of_death": "deceased person died in place",
+            "/people/ethnicity/geographic_distribution": "ethnicity is distributed in location",
+            "/people/person/children": "person has child",
+            "/people/person/ethnicity": "person belongs to ethnicity",
+            "/people/person/nationality": "person has nationality",
+            "/people/person/place_lived": "person lived in place",
+            "/people/person/place_of_birth": "person was born in place",
+            "/people/person/religion": "person follows religion",
+            "/time/event/locations": "event occurred in location"
+          },
+          "pair_rule": "exact casefolded whitespace-normalized, directed head and tail",
+          "parent_fingerprint": "622a06eb952a59f87ee68a846ff99bc515f5c64cffe6cd78275ea5199ebbc171",
+          "parent_manifest_sha256": "7242971ddcb04f833818231ef95ab733ede98892fc03e1fda9c35200a09f8e49",
+          "parent_reference_sha256": "d485ea4bfea929f9ab830550a61f9b53f8e59479a87a67707e2318509fd7a9ab",
+          "purpose": "Exploratory GLiFormer Large comparison on reviewed NYT10m validation only",
+          "repo": "knowledgator/gliformer-large-v1",
+          "revision": "d0a4e53d09cebe6bc963dd9be319d4279084bb2d",
+          "runner_sha256": "ebfca0ce979e2d86cea1ac3e3e524e7e0195a2b1cb76067b5723968c27946a64",
+          "schema": {
+            "nyt10m": {
+              "entities": [
+                "person",
+                "organization",
+                "location",
+                "other"
+              ],
+              "relations": [
+                "company has advisor",
+                "company has founder",
+                "company has major shareholder",
+                "company was founded in place",
+                "business is located in place",
+                "person is associated with company",
+                "film features location",
+                "administrative division belongs to country",
+                "country has administrative division",
+                "country has capital city",
+                "location contains location",
+                "neighborhood belongs to location",
+                "region has capital city",
+                "US county has county seat",
+                "deceased person was buried in place",
+                "deceased person died in place",
+                "ethnicity is distributed in location",
+                "person has child",
+                "person belongs to ethnicity",
+                "person has nationality",
+                "person lived in place",
+                "person was born in place",
+                "person follows religion",
+                "event occurred in location"
+              ]
+            }
+          },
+          "threshold": 0.5,
+          "torch_version": "2.14.0",
+          "transformers_version": "4.57.6"
+        }
+      },
+      "model": {
+        "device": "cpu",
+        "load_wall_s": 7.61,
+        "repo": "knowledgator/gliformer-large-v1",
+        "revision": "d0a4e53d09cebe6bc963dd9be319d4279084bb2d",
+        "weights_bytes": 2302735855,
+        "weights_sha256": "f80b29199d66f878669f283703e4dba9fd726755dcc20aba1ed0d24fce4a23f1"
+      },
+      "pair_matching_audit": {
+        "changed_bags": [
+          {
+            "location_qualifier": [
+              "/people/person/place_of_birth"
+            ],
+            "original": [],
+            "sample_id": "N04"
+          },
+          {
+            "location_qualifier": [
+              "/people/person/place_of_birth"
+            ],
+            "original": [],
+            "sample_id": "N11"
+          }
+        ],
+        "evidence_counts": {
+          "newly_kept": 2,
+          "original_kept": 8,
+          "original_rejected": 19,
+          "raw_triples": 27
+        },
+        "newly_kept": [
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": true,
+            "original_exact": false,
+            "qualifier_added": true,
+            "raw_head": "Jane Elizabeth Hodgson",
+            "raw_score": 0.899560272693634,
+            "raw_tail": "Crookston , Minn.",
+            "raw_tail_type": "location",
+            "relation": "/people/person/place_of_birth",
+            "sample_id": "N04",
+            "target_head": "Jane Elizabeth Hodgson",
+            "target_tail": "Crookston"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": true,
+            "original_exact": false,
+            "qualifier_added": true,
+            "raw_head": "Theodor Uppman",
+            "raw_score": 0.9438460469245911,
+            "raw_tail": "San Jose , Calif.",
+            "raw_tail_type": "location",
+            "relation": "/people/person/place_of_birth",
+            "sample_id": "N11",
+            "target_head": "Theodor Uppman",
+            "target_tail": "San Jose"
+          }
+        ],
+        "original_gliformer_fingerprint": "3997da80f25c843ec16bf9fb68a361156f522f403085748640e5a4bc297e74ab",
+        "originally_rejected": [
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 1,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Port Moresby",
+            "raw_score": 0.9330379962921143,
+            "raw_tail": "Papua New Guinea",
+            "raw_tail_type": "location",
+            "relation": "/location/country/capital",
+            "sample_id": "C01",
+            "target_head": "Papua New Guinea",
+            "target_tail": "Port Moresby"
+          },
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 1,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Jean-Fran çois Revel",
+            "raw_score": 0.5077638030052185,
+            "raw_tail": "French",
+            "raw_tail_type": "location",
+            "relation": "/people/deceasedperson/place_of_death",
+            "sample_id": "C02",
+            "target_head": "Voltaire",
+            "target_tail": "Paris"
+          },
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 2,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Jean-Fran çois Revel",
+            "raw_score": 0.6192542910575867,
+            "raw_tail": "Paris",
+            "raw_tail_type": "location",
+            "relation": "/people/deceasedperson/place_of_death",
+            "sample_id": "C02",
+            "target_head": "Voltaire",
+            "target_tail": "Paris"
+          },
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 1,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Brasília",
+            "raw_score": 0.5298289060592651,
+            "raw_tail": "Brazil",
+            "raw_tail_type": "location",
+            "relation": "/location/country/capital",
+            "sample_id": "C04",
+            "target_head": "Brazil",
+            "target_tail": "Brasília"
+          },
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 2,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Brasília",
+            "raw_score": 0.5618040561676025,
+            "raw_tail": "Brazil",
+            "raw_tail_type": "location",
+            "relation": "/location/country/capital",
+            "sample_id": "C04",
+            "target_head": "Brazil",
+            "target_tail": "Brasília"
+          },
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 3,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Brasília 18 %",
+            "raw_score": 0.8430266976356506,
+            "raw_tail": "Brazil",
+            "raw_tail_type": "location",
+            "relation": "/location/country/capital",
+            "sample_id": "C04",
+            "target_head": "Brazil",
+            "target_tail": "Brasília"
+          },
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 1,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Carlos Slim Domit",
+            "raw_score": 0.8645292520523071,
+            "raw_tail": "Carlos Slim Helú",
+            "raw_tail_type": "person",
+            "relation": "/people/person/children",
+            "sample_id": "C05",
+            "target_head": "Carlos Slim Helú",
+            "target_tail": "Carlos Slim Domit"
+          },
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 1,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Mark Mays",
+            "raw_score": 0.7149015665054321,
+            "raw_tail": "Clear Channel",
+            "raw_tail_type": "organization",
+            "relation": "/business/person/company",
+            "sample_id": "C07",
+            "target_head": "Lowry Mays",
+            "target_tail": "Mark Mays"
+          },
+          {
+            "cohort": "previously_reviewed_12",
+            "evidence_index": 2,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Mark Mays",
+            "raw_score": 0.733992874622345,
+            "raw_tail": "Lowry Mays",
+            "raw_tail_type": "person",
+            "relation": "/people/person/children",
+            "sample_id": "C07",
+            "target_head": "Lowry Mays",
+            "target_tail": "Mark Mays"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Vincor",
+            "raw_score": 0.6417523622512817,
+            "raw_tail": "Mississauga",
+            "raw_tail_type": "location",
+            "relation": "/business/location",
+            "sample_id": "N02",
+            "target_head": "Canada",
+            "target_tail": "Mississauga"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": true,
+            "original_exact": false,
+            "qualifier_added": true,
+            "raw_head": "Jane Elizabeth Hodgson",
+            "raw_score": 0.899560272693634,
+            "raw_tail": "Crookston , Minn.",
+            "raw_tail_type": "location",
+            "relation": "/people/person/place_of_birth",
+            "sample_id": "N04",
+            "target_head": "Jane Elizabeth Hodgson",
+            "target_tail": "Crookston"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Lloyd G. Trotter",
+            "raw_score": 0.5090597867965698,
+            "raw_tail": "G.E.",
+            "raw_tail_type": "organization",
+            "relation": "/business/person/company",
+            "sample_id": "N07",
+            "target_head": "Lloyd G. Trotter",
+            "target_tail": "African American"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Sheryl Schwartz",
+            "raw_score": 0.5485306978225708,
+            "raw_tail": "Calvin Klein",
+            "raw_tail_type": "organization",
+            "relation": "/business/person/company",
+            "sample_id": "N09",
+            "target_head": "Calvin Klein",
+            "target_tail": "Barry Schwartz"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 2,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Barry Schwartz",
+            "raw_score": 0.5580442547798157,
+            "raw_tail": "Calvin Klein",
+            "raw_tail_type": "organization",
+            "relation": "/business/person/company",
+            "sample_id": "N09",
+            "target_head": "Calvin Klein",
+            "target_tail": "Barry Schwartz"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": true,
+            "new_rule_keeps": true,
+            "original_exact": false,
+            "qualifier_added": true,
+            "raw_head": "Theodor Uppman",
+            "raw_score": 0.9438460469245911,
+            "raw_tail": "San Jose , Calif.",
+            "raw_tail_type": "location",
+            "relation": "/people/person/place_of_birth",
+            "sample_id": "N11",
+            "target_head": "Theodor Uppman",
+            "target_tail": "San Jose"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Gustavo Cisneros",
+            "raw_score": 0.5961747765541077,
+            "raw_tail": "Cisneros Group",
+            "raw_tail_type": "organization",
+            "relation": "/business/person/company",
+            "sample_id": "N13",
+            "target_head": "Univision",
+            "target_tail": "Gustavo Cisneros"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 2,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Gustavo Cisneros",
+            "raw_score": 0.5403746366500854,
+            "raw_tail": "Univision",
+            "raw_tail_type": "organization",
+            "relation": "/business/person/company",
+            "sample_id": "N13",
+            "target_head": "Univision",
+            "target_tail": "Gustavo Cisneros"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Barr",
+            "raw_score": 0.6535751223564148,
+            "raw_tail": "Woodcliff Lake , N.J.",
+            "raw_tail_type": "location",
+            "relation": "/business/location",
+            "sample_id": "N15",
+            "target_head": "Woodcliff Lake",
+            "target_tail": "Barr"
+          },
+          {
+            "cohort": "new_reviewed_18",
+            "evidence_index": 1,
+            "in_reviewed_reference": false,
+            "new_rule_keeps": false,
+            "original_exact": false,
+            "qualifier_added": false,
+            "raw_head": "Silver Lake Partners",
+            "raw_score": 0.659466028213501,
+            "raw_tail": "He",
+            "raw_tail_type": "person",
+            "relation": "/business/company/founders",
+            "sample_id": "N16",
+            "target_head": "Silver Lake Partners",
+            "target_tail": "Seagate Technology"
+          }
+        ],
+        "parent_manifest_sha256": "7242971ddcb04f833818231ef95ab733ede98892fc03e1fda9c35200a09f8e49",
+        "parent_reference_sha256": "d485ea4bfea929f9ab830550a61f9b53f8e59479a87a67707e2318509fd7a9ab",
+        "purpose": "Offline validation-only pair-matching sensitivity audit; no model rerun",
+        "rule": "Exact normalized directed head and tail; additionally accept a raw tail typed location whose text begins with the exact target tail followed by a comma and nonempty qualifier, while the head stays exact. Never reverse the pair or map another relation.",
+        "scores": {
+          "all_30_descriptive": {
+            "base_large_gliformer_original_2_of_3": {
+              "FN": 8,
+              "FP": 5,
+              "TP": 15,
+              "micro_f1": 0.698,
+              "negative_bags_with_fp": 3,
+              "precision": 0.75,
+              "recall": 0.652
+            },
+            "base_large_gliformer_qualifier_2_of_3": {
+              "FN": 8,
+              "FP": 5,
+              "TP": 15,
+              "micro_f1": 0.698,
+              "negative_bags_with_fp": 3,
+              "precision": 0.75,
+              "recall": 0.652
+            },
+            "gliformer_location_qualifier": {
+              "FN": 13,
+              "FP": 0,
+              "TP": 10,
+              "micro_f1": 0.606,
+              "negative_bags_with_fp": 0,
+              "precision": 1.0,
+              "recall": 0.435
+            },
+            "gliformer_original_exact": {
+              "FN": 15,
+              "FP": 0,
+              "TP": 8,
+              "micro_f1": 0.516,
+              "negative_bags_with_fp": 0,
+              "precision": 1.0,
+              "recall": 0.348
+            },
+            "relex_large": {
+              "FN": 1,
+              "FP": 17,
+              "TP": 22,
+              "micro_f1": 0.71,
+              "negative_bags_with_fp": 4,
+              "precision": 0.564,
+              "recall": 0.957
+            }
+          },
+          "new_reviewed_18": {
+            "base_large_gliformer_original_2_of_3": {
+              "FN": 4,
+              "FP": 4,
+              "TP": 8,
+              "micro_f1": 0.667,
+              "negative_bags_with_fp": 3,
+              "precision": 0.667,
+              "recall": 0.667
+            },
+            "base_large_gliformer_qualifier_2_of_3": {
+              "FN": 4,
+              "FP": 4,
+              "TP": 8,
+              "micro_f1": 0.667,
+              "negative_bags_with_fp": 3,
+              "precision": 0.667,
+              "recall": 0.667
+            },
+            "gliformer_location_qualifier": {
+              "FN": 6,
+              "FP": 0,
+              "TP": 6,
+              "micro_f1": 0.667,
+              "negative_bags_with_fp": 0,
+              "precision": 1.0,
+              "recall": 0.5
+            },
+            "gliformer_original_exact": {
+              "FN": 8,
+              "FP": 0,
+              "TP": 4,
+              "micro_f1": 0.5,
+              "negative_bags_with_fp": 0,
+              "precision": 1.0,
+              "recall": 0.333
+            },
+            "relex_large": {
+              "FN": 0,
+              "FP": 11,
+              "TP": 12,
+              "micro_f1": 0.686,
+              "negative_bags_with_fp": 4,
+              "precision": 0.522,
+              "recall": 1.0
+            }
+          },
+          "previously_reviewed_12": {
+            "base_large_gliformer_original_2_of_3": {
+              "FN": 4,
+              "FP": 1,
+              "TP": 7,
+              "micro_f1": 0.737,
+              "negative_bags_with_fp": 0,
+              "precision": 0.875,
+              "recall": 0.636
+            },
+            "base_large_gliformer_qualifier_2_of_3": {
+              "FN": 4,
+              "FP": 1,
+              "TP": 7,
+              "micro_f1": 0.737,
+              "negative_bags_with_fp": 0,
+              "precision": 0.875,
+              "recall": 0.636
+            },
+            "gliformer_location_qualifier": {
+              "FN": 7,
+              "FP": 0,
+              "TP": 4,
+              "micro_f1": 0.533,
+              "negative_bags_with_fp": 0,
+              "precision": 1.0,
+              "recall": 0.364
+            },
+            "gliformer_original_exact": {
+              "FN": 7,
+              "FP": 0,
+              "TP": 4,
+              "micro_f1": 0.533,
+              "negative_bags_with_fp": 0,
+              "precision": 1.0,
+              "recall": 0.364
+            },
+            "relex_large": {
+              "FN": 1,
+              "FP": 6,
+              "TP": 10,
+              "micro_f1": 0.741,
+              "negative_bags_with_fp": 0,
+              "precision": 0.625,
+              "recall": 0.909
+            }
+          }
+        },
+        "vote_changed_bags": []
+      }
+    },
+    {
+      "id": "joint_full_validation",
+      "title": "Historical joint-recognition full validation",
+      "sample": "36,266 validation bags; same 20-record cap; reviewed 30 rescore separately",
+      "limitations": "Entity threshold 0.3, relation cutoff 0.5, directed name matching. Source checkpoint/model settings match current run; differences concern entity handling, including boundary refinement.",
+      "tables": [
+        [
+          {
+            "cohort": "all_validation_distant_labels",
+            "system": "intersection",
+            "FN": 2262,
+            "FP": 3330,
+            "TP": 1800,
+            "bags": 36266,
+            "micro_f1": 0.3916,
+            "negative_bags_with_fp": 2547,
+            "precision": 0.3509,
+            "recall": 0.4431
+          },
+          {
+            "cohort": "all_validation_distant_labels",
+            "system": "relex_base",
+            "FN": 1929,
+            "FP": 6980,
+            "TP": 2133,
+            "bags": 36266,
+            "micro_f1": 0.3238,
+            "negative_bags_with_fp": 4788,
+            "precision": 0.2341,
+            "recall": 0.5251
+          },
+          {
+            "cohort": "all_validation_distant_labels",
+            "system": "relex_large",
+            "FN": 1365,
+            "FP": 9346,
+            "TP": 2697,
+            "bags": 36266,
+            "micro_f1": 0.3349,
+            "negative_bags_with_fp": 5560,
+            "precision": 0.2239,
+            "recall": 0.664
+          },
+          {
+            "cohort": "all_validation_distant_labels",
+            "system": "union",
+            "FN": 1032,
+            "FP": 12996,
+            "TP": 3030,
+            "bags": 36266,
+            "micro_f1": 0.3017,
+            "negative_bags_with_fp": 7503,
+            "precision": 0.1891,
+            "recall": 0.7459
+          },
+          {
+            "cohort": "bags_above_20_records",
+            "system": "intersection",
+            "FN": 12,
+            "FP": 66,
+            "TP": 60,
+            "bags": 75,
+            "micro_f1": 0.6061,
+            "negative_bags_with_fp": 16,
+            "precision": 0.4762,
+            "recall": 0.8333
+          },
+          {
+            "cohort": "bags_above_20_records",
+            "system": "relex_base",
+            "FN": 9,
+            "FP": 117,
+            "TP": 63,
+            "bags": 75,
+            "micro_f1": 0.5,
+            "negative_bags_with_fp": 19,
+            "precision": 0.35,
+            "recall": 0.875
+          },
+          {
+            "cohort": "bags_above_20_records",
+            "system": "relex_large",
+            "FN": 6,
+            "FP": 129,
+            "TP": 66,
+            "bags": 75,
+            "micro_f1": 0.4944,
+            "negative_bags_with_fp": 20,
+            "precision": 0.3385,
+            "recall": 0.9167
+          },
+          {
+            "cohort": "bags_above_20_records",
+            "system": "union",
+            "FN": 3,
+            "FP": 180,
+            "TP": 69,
+            "bags": 75,
+            "micro_f1": 0.4299,
+            "negative_bags_with_fp": 22,
+            "precision": 0.2771,
+            "recall": 0.9583
+          },
+          {
+            "cohort": "bags_with_2_to_20_records",
+            "system": "intersection",
+            "FN": 479,
+            "FP": 752,
+            "TP": 770,
+            "bags": 2974,
+            "micro_f1": 0.5558,
+            "negative_bags_with_fp": 436,
+            "precision": 0.5059,
+            "recall": 0.6165
+          },
+          {
+            "cohort": "bags_with_2_to_20_records",
+            "system": "relex_base",
+            "FN": 406,
+            "FP": 1426,
+            "TP": 843,
+            "bags": 2974,
+            "micro_f1": 0.4792,
+            "negative_bags_with_fp": 676,
+            "precision": 0.3715,
+            "recall": 0.6749
+          },
+          {
+            "cohort": "bags_with_2_to_20_records",
+            "system": "relex_large",
+            "FN": 232,
+            "FP": 2202,
+            "TP": 1017,
+            "bags": 2974,
+            "micro_f1": 0.4552,
+            "negative_bags_with_fp": 794,
+            "precision": 0.3159,
+            "recall": 0.8143
+          },
+          {
+            "cohort": "bags_with_2_to_20_records",
+            "system": "union",
+            "FN": 159,
+            "FP": 2876,
+            "TP": 1090,
+            "bags": 2974,
+            "micro_f1": 0.418,
+            "negative_bags_with_fp": 980,
+            "precision": 0.2748,
+            "recall": 0.8727
+          },
+          {
+            "cohort": "distant_NA_only",
+            "system": "intersection",
+            "FN": 0,
+            "FP": 2773,
+            "TP": 0,
+            "bags": 32392,
+            "micro_f1": 0.0,
+            "negative_bags_with_fp": 2547,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          {
+            "cohort": "distant_NA_only",
+            "system": "relex_base",
+            "FN": 0,
+            "FP": 5651,
+            "TP": 0,
+            "bags": 32392,
+            "micro_f1": 0.0,
+            "negative_bags_with_fp": 4788,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          {
+            "cohort": "distant_NA_only",
+            "system": "relex_large",
+            "FN": 0,
+            "FP": 7068,
+            "TP": 0,
+            "bags": 32392,
+            "micro_f1": 0.0,
+            "negative_bags_with_fp": 5560,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          {
+            "cohort": "distant_NA_only",
+            "system": "union",
+            "FN": 0,
+            "FP": 9946,
+            "TP": 0,
+            "bags": 32392,
+            "micro_f1": 0.0,
+            "negative_bags_with_fp": 7503,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          {
+            "cohort": "distant_positive",
+            "system": "intersection",
+            "FN": 2262,
+            "FP": 557,
+            "TP": 1800,
+            "bags": 3874,
+            "micro_f1": 0.5608,
+            "negative_bags_with_fp": 0,
+            "precision": 0.7637,
+            "recall": 0.4431
+          },
+          {
+            "cohort": "distant_positive",
+            "system": "relex_base",
+            "FN": 1929,
+            "FP": 1329,
+            "TP": 2133,
+            "bags": 3874,
+            "micro_f1": 0.567,
+            "negative_bags_with_fp": 0,
+            "precision": 0.6161,
+            "recall": 0.5251
+          },
+          {
+            "cohort": "distant_positive",
+            "system": "relex_large",
+            "FN": 1365,
+            "FP": 2278,
+            "TP": 2697,
+            "bags": 3874,
+            "micro_f1": 0.5969,
+            "negative_bags_with_fp": 0,
+            "precision": 0.5421,
+            "recall": 0.664
+          },
+          {
+            "cohort": "distant_positive",
+            "system": "union",
+            "FN": 1032,
+            "FP": 3050,
+            "TP": 3030,
+            "bags": 3874,
+            "micro_f1": 0.5975,
+            "negative_bags_with_fp": 0,
+            "precision": 0.4984,
+            "recall": 0.7459
+          },
+          {
+            "cohort": "singleton_bags",
+            "system": "intersection",
+            "FN": 1771,
+            "FP": 2512,
+            "TP": 970,
+            "bags": 33217,
+            "micro_f1": 0.3117,
+            "negative_bags_with_fp": 2095,
+            "precision": 0.2786,
+            "recall": 0.3539
+          },
+          {
+            "cohort": "singleton_bags",
+            "system": "relex_base",
+            "FN": 1514,
+            "FP": 5437,
+            "TP": 1227,
+            "bags": 33217,
+            "micro_f1": 0.2609,
+            "negative_bags_with_fp": 4093,
+            "precision": 0.1841,
+            "recall": 0.4476
+          },
+          {
+            "cohort": "singleton_bags",
+            "system": "relex_large",
+            "FN": 1127,
+            "FP": 7015,
+            "TP": 1614,
+            "bags": 33217,
+            "micro_f1": 0.2839,
+            "negative_bags_with_fp": 4746,
+            "precision": 0.187,
+            "recall": 0.5888
+          },
+          {
+            "cohort": "singleton_bags",
+            "system": "union",
+            "FN": 870,
+            "FP": 9940,
+            "TP": 1871,
+            "bags": 33217,
+            "micro_f1": 0.2571,
+            "negative_bags_with_fp": 6501,
+            "precision": 0.1584,
+            "recall": 0.6826
+          }
+        ],
+        [
+          {
+            "system": "intersection",
+            "FN": 9,
+            "FP": 5,
+            "TP": 14,
+            "bags": 30,
+            "micro_f1": 0.6667,
+            "negative_bags_with_fp": 3,
+            "precision": 0.7368,
+            "recall": 0.6087
+          },
+          {
+            "system": "relex_base",
+            "FN": 9,
+            "FP": 14,
+            "TP": 14,
+            "bags": 30,
+            "micro_f1": 0.549,
+            "negative_bags_with_fp": 5,
+            "precision": 0.5,
+            "recall": 0.6087
+          },
+          {
+            "system": "relex_large",
+            "FN": 1,
+            "FP": 17,
+            "TP": 22,
+            "bags": 30,
+            "micro_f1": 0.7097,
+            "negative_bags_with_fp": 4,
+            "precision": 0.5641,
+            "recall": 0.9565
+          },
+          {
+            "system": "union",
+            "FN": 1,
+            "FP": 26,
+            "TP": 22,
+            "bags": 30,
+            "micro_f1": 0.6197,
+            "negative_bags_with_fp": 6,
+            "precision": 0.4583,
+            "recall": 0.9565
+          }
+        ],
+        [
+          {
+            "gliner_relex_base": 3541.66,
+            "gliner_relex_large": 12227.68
+          }
+        ]
+      ],
+      "table_titles": [
+        "Distant-label cohorts",
+        "Reviewed-30 text diagnostic",
+        "Summed inference seconds; loading excluded"
+      ],
+      "settings": {
+        "fingerprint": "a478aeb660204f35a1b8b92419b3d7e19e0a46992cd256098ae98962c9dae674",
+        "settings": {
+          "bag_cap": 20,
+          "device": "cpu",
+          "entity_labels": [
+            "person",
+            "organization",
+            "location",
+            "other"
+          ],
+          "entity_threshold": 0.3,
+          "label_name": {
+            "/business/company/advisors": "company has advisor",
+            "/business/company/founders": "company has founder",
+            "/business/company/majorshareholders": "company has major shareholder",
+            "/business/company/place_founded": "company was founded in place",
+            "/business/location": "business is located in place",
+            "/business/person/company": "person is associated with company",
+            "/film/film/featured_film_locations": "film features location",
+            "/location/administrative_division/country": "administrative division belongs to country",
+            "/location/country/administrative_divisions": "country has administrative division",
+            "/location/country/capital": "country has capital city",
+            "/location/location/contains": "location contains location",
+            "/location/neighborhood/neighborhood_of": "neighborhood belongs to location",
+            "/location/region/capital": "region has capital city",
+            "/location/us_county/county_seat": "US county has county seat",
+            "/people/deceasedperson/place_of_burial": "deceased person was buried in place",
+            "/people/deceasedperson/place_of_death": "deceased person died in place",
+            "/people/ethnicity/geographic_distribution": "ethnicity is distributed in location",
+            "/people/person/children": "person has child",
+            "/people/person/ethnicity": "person belongs to ethnicity",
+            "/people/person/nationality": "person has nationality",
+            "/people/person/place_lived": "person lived in place",
+            "/people/person/place_of_birth": "person was born in place",
+            "/people/person/religion": "person follows religion",
+            "/time/event/locations": "event occurred in location"
+          },
+          "manifest_count": 36266,
+          "manual_test_access": false,
+          "mapping": "exact casefolded whitespace-normalized head and tail, directed; union over sentences",
+          "models": [
+            {
+              "name": "GLiNER-relex-base",
+              "repo": "knowledgator/gliner-relex-base-v1.0",
+              "revision": "e6a880049a19c5cc222a7a479c32e84b0d8cdd9a",
+              "slug": "gliner_relex_base",
+              "weights_sha256": "7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5"
+            },
+            {
+              "name": "GLiNER-relex-large",
+              "repo": "knowledgator/gliner-relex-large-v1.0",
+              "revision": "4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290",
+              "slug": "gliner_relex_large",
+              "weights_sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+            }
+          ],
+          "purpose": "Full NYT10m validation comparison of GLiNER-relex base and large",
+          "rel2id_sha256": "c6996ba3f1491bc5ca887fdec2e38f46b81420eab41f805727ebaf5fc757d5c8",
+          "relation_threshold": 0.5,
+          "runner_sha256": "a4e4c1b939e29fff64867958c393bff39873446c46e7fc9d2035ddb36bfbc582",
+          "selection": "same first-and-last-inclusive evenly spaced record indices as extended pilot",
+          "train_sha256": "33900650c692279adbe0a041b5c6a90e9216c905c73975905a04669695f7f2af",
+          "validation_sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c",
+          "versions": {
+            "gliner": "0.2.29",
+            "huggingface_hub": "0.36.2",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          }
+        }
+      }
+    }
+  ],
+  "source_hashes": {
+    "data/pilot_runs/slm_zero_shot_q8_schema_v2/summary.json": "358d79af0fc4c0e99d62971022d5e03718c52e6c8d2add09ac8f49541a738309",
+    "data/pilot_runs/slm_zero_shot_q8_schema_v2/settings.json": "c366f87fe27dc2192a9b29741aa3c8682c8ecc28574f6f9e85a76b6ad0baebe2",
+    "data/pilot_runs/slm_roster_smoke_q8_explicit_v3_20260929/summary.json": "932c665af1c0f4979bbcded0ec11db833f28a030d392a41c651d441234e6154a",
+    "data/pilot_runs/slm_roster_smoke_q8_explicit_v3_20260929/settings.json": "20c0fd10eb9554d113e3949a63a1a3a174734dda9b3eb4c6c9225ecda2dd8b8d",
+    "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1/summary.json": "708bb2dd7b4236336d2fbcfe43e443b983139f737c4c3fcd6b1a81fd432e9ad4",
+    "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1/settings.json": "01cce4af086378d1b1e1b6bf414db5153f75ecbda3cb3389eed79242a247bb40",
+    "data/pilot_runs/gentune_contract_smoke_nyt11_clean_20260930_v1/summary.json": "d3b18e89560502509fd57d67f979be730bbddfe28c16ebc2eabdbd8c2ccb9bcc",
+    "data/pilot_runs/gentune_contract_smoke_nyt11_clean_20260930_v1/settings.json": "cb3c3695f664fc127a8b2cd39ac228fe2d7e590718f854079c39eb9024b37453",
+    "source/EDA.ipynb": "a2796420c1ad329f71c029ea61c140c993f587ee3922ab7ae98216f4af2e7d68",
+    "source/relex_given_entities.py": "239c94e39764e61df77194bca3efb3c5d1dc52a6ff5deedefdadbac7c0515c38",
+    "source/run_gliformer_reviewed_30.py": "ebfca0ce979e2d86cea1ac3e3e524e7e0195a2b1cb76067b5723968c27946a64",
+    "source/GenTune_contract_smoke.ipynb": "bd15c7c0b3c8cec366b16a645033fd8c6fea753d4f74084f52fc1e85e28d408f",
+    "source/run_full_validation_relex_given_entities.py": "0cd124c5faf928de950a85e08e049b29b636395572c9a62c127803352f66747e",
+    "source/run_extended_gliner_relex.py": "ef8e5f430a8a55628e212772bf445242b1abd5b6a8e247e3b0c729d0c51d30f8",
+    "source/audit_gliformer_pair_matching.py": "ccee19a27cfa48ad175218920213564b89d5c8fef8c284b141e3972ea1c4af35",
+    "source/Full_validation_relex_joint_archive.ipynb": "1388df4419a868413706f4897c470c75eba5391cf20a5d0080939b5163113eb6",
+    "source/build_extended_validation_report.py": "e5a722ef2b69c5151ffcf9fb7bb8696416e3d44a91306806c4b89bb529e089e6",
+    "source/Full_validation_relex.ipynb": "7619fa40d634e6f0970ff864b7e04a9d4c28adc7777d45ba92515b50d3ac66cc",
+    "source/build_clean_validation_sample.py": "44f4f9e36bb2bab1be8015122c1e14fc769fc2ee5eb5b506d3ae43e0894a4e0c",
+    "source/run_full_validation_relex.py": "a4e4c1b939e29fff64867958c393bff39873446c46e7fc9d2035ddb36bfbc582",
+    "source/run_extended_validation.py": "e39f77ae71050e5ce948f343e3f2a54120970498b53e3263e875f1312a43d7f6",
+    "source/report_full_validation_relex.py": "0cbce309d233e51f511d1cace5a97caccf8abe843663517e57192425abedff30",
+    "source/Reviewed_validation_30.ipynb": "6abf3eb284826cc6666f2154bc9b023507d1a2cd7efcc7f3c4707ee6b716d50a",
+    "source/SLM_roster_smoke.ipynb": "20a43837f5face8fb2abfdf6ee815c5445dcba977f2dbc321fe64ab32560e59b",
+    "source/RE_specialist_screen.ipynb": "6c652e2351e4fd300b584f6b1f54dd3dadf7df52d16ea2c71f42d0e4cfd6ee6a",
+    "source/Extended_validation.ipynb": "dfeb4ad5e0cf56444e297592eb5c37e9f98b0b35e9e5ffbd1f42eeac07d8d52d",
+    "source/nyt11_overlap_audit.py": "e435ecbb09f7ee20fbb504efb25cdda6996eebc6e745225be5403ee0adacaed5",
+    "source/SLM_pilot.ipynb": "257127a1c8cc41283f080c5645a639fef0fd3a827fdcd761c2b702168cea828f",
+    "source/nyt11_test_near_duplicate_audit.py": "ba4fd972e323425bfcbd40d2eea00180f47e49718a03ab5a676151ecf38af88e",
+    "source/run_extended_other_encoders.py": "63c7c829a0d3f7e2c2ac853353a54d44bd606adc131fae2cb50ce61229b8f964",
+    "source/data.ipynb": "4526ee305caa77a3871600d267634a4594c254894bbef59cc547612d1a292ae4",
+    "source/run_extended_gliner_relex_large.py": "6d73001627e7d2a3965edbd2b8644b28bccd7b233537d0b95c51a1192a4f39e2",
+    "source/GLiFormer_reviewed_30.ipynb": "aa94e42177b0586f95fe7dd0bc0ee46c4dd4f75f66658554dc106f96a8d7fd30",
+    "source/run_reviewed_30_encoder.py": "152b840f97b6278e4ddab0958a65af05683f9ded2cc3c432d71c53d66768f09e",
+    "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/settings.json": "a4486a2d110111ed80f3fc59acd63343a13326c1c1712984228de62e0cdb3233",
+    "data/pilot_runs/slm_extended_validation_q8_v1_20260930/settings.json": "b1ed2539c9898bd269632aa02cb29663242fa0526074563b54d86dea666fcd6d",
+    "data/pilot_runs/slm_extended_validation_q8_v1_20260930/gliner_relex_base/settings.json": "30c725a4b1e00533730fff1e1069a93d514a7d86904836c013180c67e195c265",
+    "data/pilot_runs/slm_extended_validation_q8_v1_20260930/gliner25_base/settings.json": "652945ee8a45082870806a1910edbdc160e91c1a97f9536f1979ee7b72f55b06",
+    "data/pilot_runs/slm_extended_validation_q8_v1_20260930/glirel_large/settings.json": "20a3d679203b1fd15ca232a15f79f5186310bd421ebcc942da99bfbd59e6c34f",
+    "data/pilot_runs/slm_extended_validation_q8_v1_20260930/gliner_relex_large/settings.json": "e0167e89b594aa8837fb26f9e1db7a0f0a685f54bbd2fb0f5e62c309c5ead153",
+    "data/pilot_runs/relex_full_validation_v1_20261002/settings.json": "af7ffb045adee539e809678496eda15079b5036baedb51007b834db4797cfccb",
+    "data/pilot_runs/reviewed_validation_30_gliformer_large_v1_20261001/gliformer_large/settings.json": "e021bcea2a6c8b210981e4b035362f84b42e2edda4b7f878b1eaca7caa22e9b1",
+    "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/settings.json": "06c67d342ae1b97d3d88e71f81f32b9662de6740991a4d07f5da82e48f1bd522",
+    "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner_relex_base/settings.json": "bb148102d579168003fef5244f6a26de1da77aa1adf901e001ffb5e4982895cd",
+    "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner25_base/settings.json": "7a5fdefc7434a2e448eef2e17ff4002f8ae1228e97f278a955f80edf863500d1",
+    "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/glirel_large/settings.json": "da93bd27fb031739051b54d7c36f410aa414db2ed76a7834e68b837a57c32c93",
+    "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner_relex_large/settings.json": "b33ec2286358160bbb6fdfb580668794fd12ee3fee1f6115da2269276884ded5"
+  },
+  "model_registry": [
+    {
+      "experiment": "relex_full_validation_given_entities_v1_20261004",
+      "artifact": "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/gliner_relex_base/model.json",
+      "device": "cpu",
+      "load_wall_s": 2.193,
+      "repo": "knowledgator/gliner-relex-base-v1.0",
+      "revision": "e6a880049a19c5cc222a7a479c32e84b0d8cdd9a",
+      "weight_bytes": 900377716,
+      "weights_sha256": "7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5"
+    },
+    {
+      "experiment": "relex_full_validation_given_entities_v1_20261004",
+      "artifact": "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/gliner_relex_large/model.json",
+      "device": "cpu",
+      "load_wall_s": 4.669,
+      "repo": "knowledgator/gliner-relex-large-v1.0",
+      "revision": "4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290",
+      "weight_bytes": 1866369448,
+      "weights_sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+    },
+    {
+      "experiment": "slm_extended_validation_q8_v1_20260930",
+      "artifact": "data/pilot_runs/slm_extended_validation_q8_v1_20260930/falcon_h1_05b_instruct_q8/model.json",
+      "file": "Falcon-H1-0.5B-Instruct-Q8_0.gguf",
+      "gguf_bytes": 556316832,
+      "gguf_sha256": "93f36c2423ea5481c00a7aa5711c25558740bb7319be187619b70ed122719290",
+      "name": "Falcon-H1-0.5B-Instruct",
+      "repo": "tiiuae/Falcon-H1-0.5B-Instruct-GGUF",
+      "revision": "9bf0c2d4391cf4850aa62bfee1d8fe71afba8be2",
+      "slug": "falcon_h1_05b_instruct_q8"
+    },
+    {
+      "experiment": "slm_extended_validation_q8_v1_20260930",
+      "artifact": "data/pilot_runs/slm_extended_validation_q8_v1_20260930/qwen35_08b_q8/model.json",
+      "file": "Qwen3.5-0.8B-Q8_0.gguf",
+      "gguf_bytes": 833592096,
+      "gguf_sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+      "name": "Qwen3.5-0.8B",
+      "repo": "ggml-org/Qwen3.5-0.8B-GGUF",
+      "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+      "slug": "qwen35_08b_q8"
+    },
+    {
+      "experiment": "slm_extended_validation_q8_v1_20260930",
+      "artifact": "data/pilot_runs/slm_extended_validation_q8_v1_20260930/gliner_relex_base/model.json",
+      "device": "cpu",
+      "load_wall_s": 3.21,
+      "repo": "knowledgator/gliner-relex-base-v1.0",
+      "revision": "e6a880049a19c5cc222a7a479c32e84b0d8cdd9a",
+      "weights_sha256": "7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5"
+    },
+    {
+      "experiment": "slm_extended_validation_q8_v1_20260930",
+      "artifact": "data/pilot_runs/slm_extended_validation_q8_v1_20260930/gliner25_base/model.json",
+      "device": "mps",
+      "kind": "gliner25",
+      "load_wall_s": 3.77,
+      "name": "GLiNER2.5-base",
+      "repo": "fastino/gliner2.5-base-v1",
+      "revision": "ca906247640776a07753514055be9726f9080ead",
+      "slug": "gliner25_base",
+      "weights_file": "model.safetensors",
+      "weights_sha256": "7274094de2e0c2a37a386f55fc4e23061a954da5bd7a335e7dfe56f2743c277a"
+    },
+    {
+      "experiment": "slm_extended_validation_q8_v1_20260930",
+      "artifact": "data/pilot_runs/slm_extended_validation_q8_v1_20260930/glirel_large/model.json",
+      "device": "library default",
+      "kind": "glirel",
+      "load_wall_s": 4.52,
+      "name": "GLiREL-large",
+      "repo": "jackboyla/glirel-large-v0",
+      "revision": "40a523e12a8432d6da364cf2a195a28755ff04d3",
+      "slug": "glirel_large",
+      "threshold": 0.25,
+      "top_k": 5,
+      "weights_file": "pytorch_model.bin",
+      "weights_sha256": "840aa21bb68a676ebe17451aa2ce8a7e5b987af8db1c0e28850bf0e395b713de"
+    },
+    {
+      "experiment": "slm_extended_validation_q8_v1_20260930",
+      "artifact": "data/pilot_runs/slm_extended_validation_q8_v1_20260930/granite40_350m_q8/model.json",
+      "file": "granite-4.0-350m-Q8_0.gguf",
+      "gguf_bytes": 378138016,
+      "gguf_sha256": "9595dafb4ed15aa02512c8ea26188744192a6f09530eae0a2747bd3ada96cd36",
+      "name": "Granite-4.0-350M",
+      "repo": "ibm-granite/granite-4.0-350m-GGUF",
+      "revision": "b8208a86a58427e1739265318028eb5895b74bf2",
+      "slug": "granite40_350m_q8"
+    },
+    {
+      "experiment": "slm_extended_validation_q8_v1_20260930",
+      "artifact": "data/pilot_runs/slm_extended_validation_q8_v1_20260930/gliner_relex_large/model.json",
+      "device": "cpu",
+      "load_wall_s": 7.15,
+      "repo": "knowledgator/gliner-relex-large-v1.0",
+      "revision": "4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290",
+      "weights_sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+    },
+    {
+      "experiment": "slm_zero_shot_q8_schema_v2",
+      "artifact": "data/pilot_runs/slm_zero_shot_q8_schema_v2/falcon_h1_05b_instruct_q8/model.json",
+      "file": "Falcon-H1-0.5B-Instruct-Q8_0.gguf",
+      "gguf_bytes": 556316832,
+      "gguf_sha256": "93f36c2423ea5481c00a7aa5711c25558740bb7319be187619b70ed122719290",
+      "llama_server": "/opt/homebrew/bin/llama-server",
+      "name": "Falcon-H1-0.5B-Instruct",
+      "repo": "tiiuae/Falcon-H1-0.5B-Instruct-GGUF",
+      "revision": "9bf0c2d4391cf4850aa62bfee1d8fe71afba8be2",
+      "slug": "falcon_h1_05b_instruct_q8"
+    },
+    {
+      "experiment": "slm_zero_shot_q8_schema_v2",
+      "artifact": "data/pilot_runs/slm_zero_shot_q8_schema_v2/qwen35_08b_q8/model.json",
+      "file": "Qwen3.5-0.8B-Q8_0.gguf",
+      "gguf_bytes": 833592096,
+      "gguf_sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+      "llama_server": "/opt/homebrew/bin/llama-server",
+      "name": "Qwen3.5-0.8B",
+      "repo": "ggml-org/Qwen3.5-0.8B-GGUF",
+      "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+      "slug": "qwen35_08b_q8"
+    },
+    {
+      "experiment": "slm_zero_shot_q8_schema_v2",
+      "artifact": "data/pilot_runs/slm_zero_shot_q8_schema_v2/lfm25_350m_q8/model.json",
+      "file": "LFM2.5-350M-Q8_0.gguf",
+      "gguf_bytes": 379217632,
+      "gguf_sha256": "be036a757295e550098b85e13f6af2735d0fa73b41e1156a40c7d8e8e32a5766",
+      "llama_server": "/opt/homebrew/bin/llama-server",
+      "name": "LFM2.5-350M",
+      "repo": "LiquidAI/LFM2.5-350M-GGUF",
+      "revision": "657e078c94084481950a2d555a941481f715536b",
+      "slug": "lfm25_350m_q8"
+    },
+    {
+      "experiment": "gentune_contract_smoke_nyt11_clean_20260930_v1",
+      "artifact": "data/pilot_runs/gentune_contract_smoke_nyt11_clean_20260930_v1/model.json",
+      "adapter_repo": "Despina/Qwen2.5-0.5B-Instruct-re_gentune-2-shot",
+      "adapter_revision": "5b9c14e6730ac4e65547fa6025c452670d9e53a5",
+      "adapter_sha256": "5afab7118cde4cf5fd2b6d64ac728922803739964074f4fc6b47578e77508fbb",
+      "base_repo": "Qwen/Qwen2.5-0.5B-Instruct",
+      "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "device": "mps",
+      "load_wall_s": 2.92
+    },
+    {
+      "experiment": "relex_full_validation_v1_20261002",
+      "artifact": "data/pilot_runs/relex_full_validation_v1_20261002/gliner_relex_base/model.json",
+      "device": "cpu",
+      "load_wall_s": 2.558,
+      "repo": "knowledgator/gliner-relex-base-v1.0",
+      "revision": "e6a880049a19c5cc222a7a479c32e84b0d8cdd9a",
+      "weight_bytes": 900377716,
+      "weights_sha256": "7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5"
+    },
+    {
+      "experiment": "relex_full_validation_v1_20261002",
+      "artifact": "data/pilot_runs/relex_full_validation_v1_20261002/gliner_relex_large/model.json",
+      "device": "cpu",
+      "load_wall_s": 4.887,
+      "repo": "knowledgator/gliner-relex-large-v1.0",
+      "revision": "4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290",
+      "weight_bytes": 1866369448,
+      "weights_sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+    },
+    {
+      "experiment": "slm_roster_smoke_q8_explicit_v3_20260929",
+      "artifact": "data/pilot_runs/slm_roster_smoke_q8_explicit_v3_20260929/falcon_h1_05b_instruct_q8/model.json",
+      "file": "Falcon-H1-0.5B-Instruct-Q8_0.gguf",
+      "gguf_bytes": 556316832,
+      "gguf_sha256": "93f36c2423ea5481c00a7aa5711c25558740bb7319be187619b70ed122719290",
+      "llama_server": "/opt/homebrew/bin/llama-server",
+      "name": "Falcon-H1-0.5B-Instruct",
+      "repo": "tiiuae/Falcon-H1-0.5B-Instruct-GGUF",
+      "revision": "9bf0c2d4391cf4850aa62bfee1d8fe71afba8be2",
+      "slug": "falcon_h1_05b_instruct_q8"
+    },
+    {
+      "experiment": "slm_roster_smoke_q8_explicit_v3_20260929",
+      "artifact": "data/pilot_runs/slm_roster_smoke_q8_explicit_v3_20260929/qwen35_08b_q8/model.json",
+      "file": "Qwen3.5-0.8B-Q8_0.gguf",
+      "gguf_bytes": 833592096,
+      "gguf_sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+      "llama_server": "/opt/homebrew/bin/llama-server",
+      "name": "Qwen3.5-0.8B",
+      "repo": "ggml-org/Qwen3.5-0.8B-GGUF",
+      "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+      "slug": "qwen35_08b_q8"
+    },
+    {
+      "experiment": "slm_roster_smoke_q8_explicit_v3_20260929",
+      "artifact": "data/pilot_runs/slm_roster_smoke_q8_explicit_v3_20260929/gemma3_1b_it_q8/model.json",
+      "file": "gemma-3-1b-it-Q8_0.gguf",
+      "gguf_bytes": 1069306368,
+      "gguf_sha256": "b205840c5dcef55078e37d344677869a714ffd42a4ae448c48dcfb52e4bb10d5",
+      "llama_server": "/opt/homebrew/bin/llama-server",
+      "name": "Gemma-3-1B-IT",
+      "repo": "ggml-org/gemma-3-1b-it-GGUF",
+      "revision": "f9c28bcd85737ffc5aef028638d3341d49869c27",
+      "slug": "gemma3_1b_it_q8"
+    },
+    {
+      "experiment": "slm_roster_smoke_q8_explicit_v3_20260929",
+      "artifact": "data/pilot_runs/slm_roster_smoke_q8_explicit_v3_20260929/lfm25_350m_q8/model.json",
+      "file": "LFM2.5-350M-Q8_0.gguf",
+      "gguf_bytes": 379217632,
+      "gguf_sha256": "be036a757295e550098b85e13f6af2735d0fa73b41e1156a40c7d8e8e32a5766",
+      "llama_server": "/opt/homebrew/bin/llama-server",
+      "name": "LFM2.5-350M",
+      "repo": "LiquidAI/LFM2.5-350M-GGUF",
+      "revision": "657e078c94084481950a2d555a941481f715536b",
+      "slug": "lfm25_350m_q8"
+    },
+    {
+      "experiment": "reviewed_validation_30_gliformer_large_v1_20261001",
+      "artifact": "data/pilot_runs/reviewed_validation_30_gliformer_large_v1_20261001/gliformer_large/model.json",
+      "device": "cpu",
+      "load_wall_s": 7.61,
+      "repo": "knowledgator/gliformer-large-v1",
+      "revision": "d0a4e53d09cebe6bc963dd9be319d4279084bb2d",
+      "weights_bytes": 2302735855,
+      "weights_sha256": "f80b29199d66f878669f283703e4dba9fd726755dcc20aba1ed0d24fce4a23f1"
+    },
+    {
+      "experiment": "re_specialist_screen_nyt11_clean_20260929_v1",
+      "artifact": "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1/text2graph_r1_q8/model.json",
+      "load_wall_s": 9.91,
+      "repo": "mradermacher/Text2Graph-R1-Qwen2.5-0.5b-GGUF",
+      "revision": "38b232a88fd73fa0db0cf80bb95edd99b4449d0c",
+      "weights_bytes": 531068672,
+      "weights_sha256": "2cab8466ed9001fe6a128357e8c2288baf34ac5b378ea9c5c1a015e933ec5a07"
+    },
+    {
+      "experiment": "re_specialist_screen_nyt11_clean_20260929_v1",
+      "artifact": "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1/gliner25_small/model.json",
+      "load_wall_s": 2.391,
+      "repo": "fastino/gliner2.5-small-v1",
+      "revision": "7132dc4561c3f94563c6147e75ffa8ef34c4964a",
+      "snapshot_path": "/Users/alessandro/Progetti/Ensembling/data/model_cache/models--fastino--gliner2.5-small-v1/snapshots/7132dc4561c3f94563c6147e75ffa8ef34c4964a"
+    },
+    {
+      "experiment": "re_specialist_screen_nyt11_clean_20260929_v1",
+      "artifact": "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1/gliner_relex_base/model.json",
+      "load_wall_s": 21.352,
+      "repo": "knowledgator/gliner-relex-base-v1.0",
+      "revision": "e6a880049a19c5cc222a7a479c32e84b0d8cdd9a",
+      "snapshot_path": "/Users/alessandro/Progetti/Ensembling/data/model_cache/models--knowledgator--gliner-relex-base-v1.0/snapshots/e6a880049a19c5cc222a7a479c32e84b0d8cdd9a"
+    },
+    {
+      "experiment": "re_specialist_screen_nyt11_clean_20260929_v1",
+      "artifact": "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1/gentune_adapter_exploratory/model.json",
+      "adapter_config_sha256": "a5bba9e768f683afcdf91f6003e05f9a1c908236f2f0b07d079c05645859d7af",
+      "adapter_sha256": "5afab7118cde4cf5fd2b6d64ac728922803739964074f4fc6b47578e77508fbb",
+      "base_repo": "Qwen/Qwen2.5-0.5B-Instruct",
+      "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "load_wall_s": 22.136,
+      "repo": "Despina/Qwen2.5-0.5B-Instruct-re_gentune-2-shot",
+      "revision": "5b9c14e6730ac4e65547fa6025c452670d9e53a5"
+    },
+    {
+      "experiment": "re_specialist_screen_nyt11_clean_20260929_v1",
+      "artifact": "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1/gliner25_base/model.json",
+      "load_wall_s": 3.991,
+      "repo": "fastino/gliner2.5-base-v1",
+      "revision": "ca906247640776a07753514055be9726f9080ead",
+      "snapshot_path": "/Users/alessandro/Progetti/Ensembling/data/model_cache/models--fastino--gliner2.5-base-v1/snapshots/ca906247640776a07753514055be9726f9080ead"
+    },
+    {
+      "experiment": "re_specialist_screen_nyt11_clean_20260929_v1",
+      "artifact": "data/pilot_runs/re_specialist_screen_nyt11_clean_20260929_v1/glirel_large/model.json",
+      "load_wall_s": 25.834,
+      "repo": "jackboyla/glirel-large-v0",
+      "revision": "40a523e12a8432d6da364cf2a195a28755ff04d3",
+      "snapshot_path": "/Users/alessandro/Progetti/Ensembling/data/model_cache/models--jackboyla--glirel-large-v0/snapshots/40a523e12a8432d6da364cf2a195a28755ff04d3"
+    },
+    {
+      "experiment": "reviewed_validation_30_encoder_v1_20261001",
+      "artifact": "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner_relex_base/model.json",
+      "device": "mps",
+      "load_wall_s": 5.06,
+      "repo": "knowledgator/gliner-relex-base-v1.0",
+      "revision": "e6a880049a19c5cc222a7a479c32e84b0d8cdd9a",
+      "weights_sha256": "7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5"
+    },
+    {
+      "experiment": "reviewed_validation_30_encoder_v1_20261001",
+      "artifact": "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner25_base/model.json",
+      "device": "mps",
+      "kind": "gliner25",
+      "load_wall_s": 3.84,
+      "name": "GLiNER2.5-base",
+      "repo": "fastino/gliner2.5-base-v1",
+      "revision": "ca906247640776a07753514055be9726f9080ead",
+      "slug": "gliner25_base",
+      "weights_file": "model.safetensors",
+      "weights_sha256": "7274094de2e0c2a37a386f55fc4e23061a954da5bd7a335e7dfe56f2743c277a"
+    },
+    {
+      "experiment": "reviewed_validation_30_encoder_v1_20261001",
+      "artifact": "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/glirel_large/model.json",
+      "device": "library default",
+      "kind": "glirel",
+      "load_wall_s": 4.25,
+      "name": "GLiREL-large",
+      "repo": "jackboyla/glirel-large-v0",
+      "revision": "40a523e12a8432d6da364cf2a195a28755ff04d3",
+      "slug": "glirel_large",
+      "threshold": 0.25,
+      "top_k": 5,
+      "weights_file": "pytorch_model.bin",
+      "weights_sha256": "840aa21bb68a676ebe17451aa2ce8a7e5b987af8db1c0e28850bf0e395b713de"
+    },
+    {
+      "experiment": "reviewed_validation_30_encoder_v1_20261001",
+      "artifact": "data/pilot_runs/reviewed_validation_30_encoder_v1_20261001/gliner_relex_large/model.json",
+      "device": "mps",
+      "load_wall_s": 8.4,
+      "repo": "knowledgator/gliner-relex-large-v1.0",
+      "revision": "4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290",
+      "weights_sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+    }
+  ],
+  "verification": {
+    "current_prediction_count": 72532,
+    "historical_tables_recomputed_before_deletion": true,
+    "generative_extended_counts_match_original_summaries": true,
+    "reviewed_30_and_gliformer_checks_passed": true
+  },
+  "overlap_audits": {
+    "nyt10m_capital_contains_convention.json": {
+      "label_source": "relation field in the supplied NYT10m files; anno_relation_list absent from every test record.",
+      "purpose": "User-requested aggregate audit of capital and contains label co-occurrence; no test examples, names, IDs, or model outputs inspected or saved. This uses held-out test labels and must be disclosed as a protocol-design peek.",
+      "splits": {
+        "test": {
+          "bags": 5174,
+          "country_capital_by_bag": {
+            "also_contains": 18,
+            "units_with_capital": 18,
+            "without_contains": 0
+          },
+          "country_capital_by_sentence_pair": {
+            "also_contains": 30,
+            "units_with_capital": 30,
+            "without_contains": 0
+          },
+          "county_seat_by_bag": {
+            "also_contains": 3,
+            "units_with_capital": 4,
+            "without_contains": 1
+          },
+          "file": "nyt10m_test.txt",
+          "keysets": [
+            [
+              "h",
+              "relation",
+              "t",
+              "text"
+            ]
+          ],
+          "records": 11086,
+          "region_capital_by_bag": {
+            "also_contains": 7,
+            "units_with_capital": 9,
+            "without_contains": 2
+          },
+          "sha256": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9",
+          "unique_sentence_pair_units": 9744
+        },
+        "train": {
+          "bags": 255526,
+          "country_capital_by_bag": {
+            "also_contains": 117,
+            "units_with_capital": 133,
+            "without_contains": 16
+          },
+          "country_capital_by_sentence_pair": {
+            "also_contains": 4090,
+            "units_with_capital": 4796,
+            "without_contains": 706
+          },
+          "county_seat_by_bag": {
+            "also_contains": 21,
+            "units_with_capital": 22,
+            "without_contains": 1
+          },
+          "file": "nyt10m_train.txt",
+          "keysets": [
+            [
+              "h",
+              "relation",
+              "t",
+              "text"
+            ]
+          ],
+          "records": 417893,
+          "region_capital_by_bag": {
+            "also_contains": 30,
+            "units_with_capital": 30,
+            "without_contains": 0
+          },
+          "sha256": "33900650c692279adbe0a041b5c6a90e9216c905c73975905a04669695f7f2af",
+          "unique_sentence_pair_units": 406813
+        },
+        "val": {
+          "bags": 36266,
+          "country_capital_by_bag": {
+            "also_contains": 59,
+            "units_with_capital": 80,
+            "without_contains": 21
+          },
+          "country_capital_by_sentence_pair": {
+            "also_contains": 50,
+            "units_with_capital": 532,
+            "without_contains": 482
+          },
+          "county_seat_by_bag": {
+            "also_contains": 2,
+            "units_with_capital": 6,
+            "without_contains": 4
+          },
+          "file": "nyt10m_val.txt",
+          "keysets": [
+            [
+              "h",
+              "relation",
+              "t",
+              "text"
+            ]
+          ],
+          "records": 46422,
+          "region_capital_by_bag": {
+            "also_contains": 6,
+            "units_with_capital": 10,
+            "without_contains": 4
+          },
+          "sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c",
+          "unique_sentence_pair_units": 46266
+        }
+      }
+    },
+    "nyt11_all_vs_nyt10m.json": {
+      "comparisons": {
+        "test": {
+          "test": {
+            "distinct_exact_sentences": 0,
+            "distinct_normalized_sentences": 0,
+            "distinct_nyt10m_bags": 5174,
+            "distinct_nyt10m_bags_with_normalized_sentence": 0,
+            "exact_sentence_records": 0,
+            "file": "nyt10m_test.txt",
+            "lexical_sentence_records": 0,
+            "normalized_sentence_and_ordered_pair_records": 0,
+            "normalized_sentence_records": 0,
+            "ordered_name_pair_records": 3380,
+            "records": 11086,
+            "sha256": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9"
+          },
+          "train": {
+            "distinct_exact_sentences": 4118,
+            "distinct_normalized_sentences": 4118,
+            "distinct_nyt10m_bags": 255526,
+            "distinct_nyt10m_bags_with_normalized_sentence": 5732,
+            "exact_sentence_records": 9383,
+            "file": "nyt10m_train.txt",
+            "lexical_sentence_records": 9405,
+            "normalized_sentence_and_ordered_pair_records": 5914,
+            "normalized_sentence_records": 9386,
+            "ordered_name_pair_records": 55411,
+            "records": 417893,
+            "sha256": "33900650c692279adbe0a041b5c6a90e9216c905c73975905a04669695f7f2af"
+          },
+          "val": {
+            "distinct_exact_sentences": 877,
+            "distinct_normalized_sentences": 877,
+            "distinct_nyt10m_bags": 36266,
+            "distinct_nyt10m_bags_with_normalized_sentence": 815,
+            "exact_sentence_records": 1026,
+            "file": "nyt10m_val.txt",
+            "lexical_sentence_records": 1027,
+            "normalized_sentence_and_ordered_pair_records": 657,
+            "normalized_sentence_records": 1026,
+            "ordered_name_pair_records": 6170,
+            "records": 46422,
+            "sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+          }
+        },
+        "train": {
+          "test": {
+            "distinct_exact_sentences": 1,
+            "distinct_normalized_sentences": 1,
+            "distinct_nyt10m_bags": 5174,
+            "distinct_nyt10m_bags_with_normalized_sentence": 1,
+            "exact_sentence_records": 1,
+            "file": "nyt10m_test.txt",
+            "lexical_sentence_records": 2,
+            "normalized_sentence_and_ordered_pair_records": 1,
+            "normalized_sentence_records": 1,
+            "ordered_name_pair_records": 4730,
+            "records": 11086,
+            "sha256": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9"
+          },
+          "train": {
+            "distinct_exact_sentences": 45533,
+            "distinct_normalized_sentences": 45526,
+            "distinct_nyt10m_bags": 255526,
+            "distinct_nyt10m_bags_with_normalized_sentence": 40794,
+            "exact_sentence_records": 99787,
+            "file": "nyt10m_train.txt",
+            "lexical_sentence_records": 99826,
+            "normalized_sentence_and_ordered_pair_records": 63898,
+            "normalized_sentence_records": 99814,
+            "ordered_name_pair_records": 79378,
+            "records": 417893,
+            "sha256": "33900650c692279adbe0a041b5c6a90e9216c905c73975905a04669695f7f2af"
+          },
+          "val": {
+            "distinct_exact_sentences": 9710,
+            "distinct_normalized_sentences": 9709,
+            "distinct_nyt10m_bags": 36266,
+            "distinct_nyt10m_bags_with_normalized_sentence": 6769,
+            "exact_sentence_records": 11153,
+            "file": "nyt10m_val.txt",
+            "lexical_sentence_records": 11157,
+            "normalized_sentence_and_ordered_pair_records": 7084,
+            "normalized_sentence_records": 11157,
+            "ordered_name_pair_records": 8803,
+            "records": 46422,
+            "sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+          }
+        },
+        "validation": {
+          "test": {
+            "distinct_exact_sentences": 0,
+            "distinct_normalized_sentences": 0,
+            "distinct_nyt10m_bags": 5174,
+            "distinct_nyt10m_bags_with_normalized_sentence": 0,
+            "exact_sentence_records": 0,
+            "file": "nyt10m_test.txt",
+            "lexical_sentence_records": 0,
+            "normalized_sentence_and_ordered_pair_records": 0,
+            "normalized_sentence_records": 0,
+            "ordered_name_pair_records": 3476,
+            "records": 11086,
+            "sha256": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9"
+          },
+          "train": {
+            "distinct_exact_sentences": 4151,
+            "distinct_normalized_sentences": 4150,
+            "distinct_nyt10m_bags": 255526,
+            "distinct_nyt10m_bags_with_normalized_sentence": 5728,
+            "exact_sentence_records": 9385,
+            "file": "nyt10m_train.txt",
+            "lexical_sentence_records": 9451,
+            "normalized_sentence_and_ordered_pair_records": 5923,
+            "normalized_sentence_records": 9419,
+            "ordered_name_pair_records": 55553,
+            "records": 417893,
+            "sha256": "33900650c692279adbe0a041b5c6a90e9216c905c73975905a04669695f7f2af"
+          },
+          "val": {
+            "distinct_exact_sentences": 871,
+            "distinct_normalized_sentences": 872,
+            "distinct_nyt10m_bags": 36266,
+            "distinct_nyt10m_bags_with_normalized_sentence": 800,
+            "exact_sentence_records": 998,
+            "file": "nyt10m_val.txt",
+            "lexical_sentence_records": 1005,
+            "normalized_sentence_and_ordered_pair_records": 635,
+            "normalized_sentence_records": 1005,
+            "ordered_name_pair_records": 6131,
+            "records": 46422,
+            "sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+          }
+        }
+      },
+      "matching": "Exact text, NFKC+casefold+whitespace text, punctuation-insensitive words, ordered entity names, and normalized text plus ordered names.",
+      "meaning": "NYT11 train is the possible GenTune fine-tuning source; other NYT11 splits are dataset-wide context only.",
+      "nyt11": {
+        "test": {
+          "file": "test-00000-of-00001.parquet",
+          "rows": 8616,
+          "sha256": "2c976c838e956556a9f5f58d91a718a3a1a08d7a56861776b8e382a6d4246606",
+          "unique_pairs": 3129,
+          "unique_sentences": 4985
+        },
+        "train": {
+          "file": "train-00000-of-00001.parquet",
+          "rows": 94222,
+          "sha256": "45cdd73a004157aa42994a1a3f7f25de727a7841d0a529e6032bace4148ab15c",
+          "unique_pairs": 14884,
+          "unique_sentences": 54643
+        },
+        "validation": {
+          "file": "validation-00000-of-00001.parquet",
+          "rows": 8489,
+          "sha256": "0f1e908285f6143b173539bb9e247529225d81d0aa6b2601f1eea4eee628d737",
+          "unique_pairs": 3170,
+          "unique_sentences": 4975
+        }
+      },
+      "restriction": "Aggregate counts only; NYT10m test labels and example text never output."
+    },
+    "nyt11_train_vs_nyt10m.json": {
+      "comparisons": {
+        "train": {
+          "test": {
+            "distinct_exact_sentences": 1,
+            "distinct_normalized_sentences": 1,
+            "distinct_nyt10m_bags_with_normalized_sentence": 1,
+            "exact_sentence_records": 1,
+            "file": "nyt10m_test.txt",
+            "lexical_sentence_records": 2,
+            "normalized_sentence_and_ordered_pair_records": 1,
+            "normalized_sentence_records": 1,
+            "ordered_name_pair_records": 4730,
+            "records": 11086,
+            "sha256": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9"
+          },
+          "train": {
+            "distinct_exact_sentences": 45533,
+            "distinct_normalized_sentences": 45526,
+            "distinct_nyt10m_bags_with_normalized_sentence": 40794,
+            "exact_sentence_records": 99787,
+            "file": "nyt10m_train.txt",
+            "lexical_sentence_records": 99826,
+            "normalized_sentence_and_ordered_pair_records": 63898,
+            "normalized_sentence_records": 99814,
+            "ordered_name_pair_records": 79378,
+            "records": 417893,
+            "sha256": "33900650c692279adbe0a041b5c6a90e9216c905c73975905a04669695f7f2af"
+          },
+          "val": {
+            "distinct_exact_sentences": 9710,
+            "distinct_normalized_sentences": 9709,
+            "distinct_nyt10m_bags_with_normalized_sentence": 6769,
+            "exact_sentence_records": 11153,
+            "file": "nyt10m_val.txt",
+            "lexical_sentence_records": 11157,
+            "normalized_sentence_and_ordered_pair_records": 7084,
+            "normalized_sentence_records": 11157,
+            "ordered_name_pair_records": 8803,
+            "records": 46422,
+            "sha256": "614aa5be9dd678d146cf8d44029e4c993f82add560ef7c00dfcb366416bed18c"
+          }
+        }
+      },
+      "matching": "Exact text, NFKC+casefold+whitespace text, punctuation-insensitive words, ordered entity names, and normalized text plus ordered names.",
+      "meaning": "NYT11 train is the possible GenTune fine-tuning source; other NYT11 splits are dataset-wide context only.",
+      "nyt11": {
+        "train": {
+          "file": "train-00000-of-00001.parquet",
+          "rows": 94222,
+          "sha256": "45cdd73a004157aa42994a1a3f7f25de727a7841d0a529e6032bace4148ab15c",
+          "unique_pairs": 14884,
+          "unique_sentences": 54643
+        }
+      },
+      "restriction": "Aggregate counts only; NYT10m test labels and example text never output."
+    },
+    "nyt11_train_vs_nyt10m_test_fuzzy.json": {
+      "bag_hash_method": "SHA-256 of UTF-8 head_id + '|' + tail_id",
+      "checkpoint_caveat": "NYT11 source-row overlap does not establish that a row was in GenTune's capped fine-tuning sample.",
+      "high_similarity_feature_summary": {
+        "candidate_records": 3,
+        "max_token_symmetric_difference": 5,
+        "median_character_ratio": 0.9790209790209791,
+        "min_character_ratio": 0.9530201342281879,
+        "records_with_changed_negation_terms": 0,
+        "records_with_changed_numbers": 0,
+        "semantic_equivalence_verified": false
+      },
+      "matches": {
+        "exact_text": {
+          "bag_id_sha256": [
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b"
+          ],
+          "distinct_bags": 1,
+          "records": 1
+        },
+        "normalized_text": {
+          "bag_id_sha256": [
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b"
+          ],
+          "distinct_bags": 1,
+          "records": 1
+        },
+        "normalized_text_and_same_ordered_pair": {
+          "bag_id_sha256": [
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b"
+          ],
+          "distinct_bags": 1,
+          "records": 1
+        },
+        "punctuation_insensitive_text": {
+          "bag_id_sha256": [
+            "4d9f141a500d72f9e81185243db125556be86d4a9a8573bd9707938cd45b346f",
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b"
+          ],
+          "distinct_bags": 2,
+          "records": 2
+        },
+        "punctuation_insensitive_text_and_same_ordered_pair": {
+          "bag_id_sha256": [
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b"
+          ],
+          "distinct_bags": 1,
+          "records": 1
+        },
+        "same_pair_jaccard_080_char_ratio_090": {
+          "bag_id_sha256": [
+            "2763538786ad4480b35d05f737f5e5d8347d91021ba8b1c9f41a8ec2b29e0351",
+            "4b5722a97acc804f09ed8300ac4c0abb2ed312dc4ebe6eefc7088ff4e41d72c1",
+            "63a117cb2a01c3bdd1613069836afd65ac52c3df964fbd066153e18a1974dbaa",
+            "a8da78594b62417af14bcfeafd70bbafc8b403a403aac7068bfa70f763ea56ef",
+            "e4aa785762441d7b4329f357c0555f6dc31a190689d014850ce126c0b29e967e",
+            "e87b55e0e4ed51ea17b7b4f0d4c5e348e15f5e80b9a3adae7c11aa9ff470a979"
+          ],
+          "distinct_bags": 6,
+          "records": 6
+        },
+        "same_pair_jaccard_085_char_ratio_095": {
+          "bag_id_sha256": [
+            "2763538786ad4480b35d05f737f5e5d8347d91021ba8b1c9f41a8ec2b29e0351",
+            "63a117cb2a01c3bdd1613069836afd65ac52c3df964fbd066153e18a1974dbaa",
+            "e4aa785762441d7b4329f357c0555f6dc31a190689d014850ce126c0b29e967e"
+          ],
+          "distinct_bags": 3,
+          "records": 3
+        }
+      },
+      "method": "Exact text; NFKC+casefold+whitespace text; punctuation-insensitive word sequence; ordered normalized entity names; additional same-pair near matches at token-set Jaccard/SequenceMatcher thresholds. Fuzzy candidates are heuristic and not semantically verified. No NYT10m test label or annotation field is read.",
+      "near_duplicate_thresholds": {
+        "same_pair_jaccard_080_char_ratio_090": {
+          "additional_bags_beyond_punctuation_insensitive": 6,
+          "character_sequence_ratio_at_least": 0.9,
+          "same_ordered_entity_names_required": true,
+          "token_set_jaccard_at_least": 0.8
+        },
+        "same_pair_jaccard_085_char_ratio_095": {
+          "additional_bags_beyond_punctuation_insensitive": 3,
+          "character_sequence_ratio_at_least": 0.95,
+          "same_ordered_entity_names_required": true,
+          "token_set_jaccard_at_least": 0.85
+        }
+      },
+      "possible_exclusions": {
+        "exact_only": {
+          "bag_id_sha256": [
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b"
+          ],
+          "excluded_bags": 1,
+          "remaining_bags": 5173
+        },
+        "punctuation_insensitive": {
+          "bag_id_sha256": [
+            "4d9f141a500d72f9e81185243db125556be86d4a9a8573bd9707938cd45b346f",
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b"
+          ],
+          "excluded_bags": 2,
+          "remaining_bags": 5172
+        },
+        "punctuation_plus_broad_similarity_same_pair": {
+          "bag_id_sha256": [
+            "2763538786ad4480b35d05f737f5e5d8347d91021ba8b1c9f41a8ec2b29e0351",
+            "4b5722a97acc804f09ed8300ac4c0abb2ed312dc4ebe6eefc7088ff4e41d72c1",
+            "4d9f141a500d72f9e81185243db125556be86d4a9a8573bd9707938cd45b346f",
+            "63a117cb2a01c3bdd1613069836afd65ac52c3df964fbd066153e18a1974dbaa",
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b",
+            "a8da78594b62417af14bcfeafd70bbafc8b403a403aac7068bfa70f763ea56ef",
+            "e4aa785762441d7b4329f357c0555f6dc31a190689d014850ce126c0b29e967e",
+            "e87b55e0e4ed51ea17b7b4f0d4c5e348e15f5e80b9a3adae7c11aa9ff470a979"
+          ],
+          "excluded_bags": 8,
+          "remaining_bags": 5166
+        },
+        "punctuation_plus_high_similarity_same_pair": {
+          "bag_id_sha256": [
+            "2763538786ad4480b35d05f737f5e5d8347d91021ba8b1c9f41a8ec2b29e0351",
+            "4d9f141a500d72f9e81185243db125556be86d4a9a8573bd9707938cd45b346f",
+            "63a117cb2a01c3bdd1613069836afd65ac52c3df964fbd066153e18a1974dbaa",
+            "8612095638e7c3aa702bb18330f7fd41be5ecb36c9ad4dacbc4bec6cdf1f974b",
+            "e4aa785762441d7b4329f357c0555f6dc31a190689d014850ce126c0b29e967e"
+          ],
+          "excluded_bags": 5,
+          "remaining_bags": 5169
+        }
+      },
+      "sources": {
+        "nyt10m_test": {
+          "distinct_bags": 5174,
+          "file": "nyt10m_test.txt",
+          "records": 11086,
+          "sha256": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9"
+        },
+        "nyt11_train": {
+          "file": "train-00000-of-00001.parquet",
+          "records": 94222,
+          "sha256": "45cdd73a004157aa42994a1a3f7f25de727a7841d0a529e6032bace4148ab15c"
+        }
+      }
+    },
+    "nyt10m_children_contains_convention_20261001.json": {
+      "purpose": "User-requested test-label convention audit for proposed validation annotations N06 and N15; not used for model or method selection.",
+      "source": "data/nyt10m/nyt10m_test.txt",
+      "source_sha256": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9",
+      "method": "Group test records by ordered (h.id,t.id), collect relation labels, then count reversed ordered-pair label sets. No sentence text, entity names, pair IDs, predictions, or per-bag outcomes are saved in this report.",
+      "inspection_scope": "Targeted relevant test sentence excerpts and pair names were inspected locally to interpret direction and entity type; they are not retained in this report. No model outputs were accessed.",
+      "children": {
+        "test_records_with_label": 63,
+        "ordered_bags_with_label": 54,
+        "reciprocal_unordered_pairs_labeled_children_both_directions": 9,
+        "reverse_pair_label_sets": {
+          "/location/location/contains": 1,
+          "/people/person/children": 13,
+          "/people/person/children+NA": 5,
+          "NA": 10,
+          "absent": 25
+        }
+      },
+      "business_location": {
+        "test_records_with_label": 159,
+        "ordered_bags_with_label": 129,
+        "reverse_pair_label_sets": {
+          "/location/location/contains": 9,
+          "/location/location/contains+NA": 4,
+          "NA": 7,
+          "absent": 109
+        }
+      },
+      "contains": {
+        "test_records_with_label": 2702,
+        "ordered_bags_with_label": 1153
+      },
+      "proposed_validation_pairs_present_in_test": {
+        "N06": false,
+        "N15": false
+      },
+      "N15_either_entity_present_in_test": false,
+      "interpretation_limit": "Reciprocal labels reveal inconsistent or broader annotation usage; they do not define a bidirectional semantic relation. Business/location reversals have mixed contains/NA labels, so they cannot decide N15 by majority."
+    }
+  },
+  "cached_checkpoints": [
+    {
+      "repository": "Despina/Qwen2.5-0.5B-Instruct-re_gentune-2-shot",
+      "revision": "5b9c14e6730ac4e65547fa6025c452670d9e53a5",
+      "weights": [
+        {
+          "filename": "adapter_model.safetensors",
+          "bytes": 70430032,
+          "sha256": "5afab7118cde4cf5fd2b6d64ac728922803739964074f4fc6b47578e77508fbb",
+          "resolved_cache_file": "data/model_cache/models--Despina--Qwen2.5-0.5B-Instruct-re_gentune-2-shot/blobs/5afab7118cde4cf5fd2b6d64ac728922803739964074f4fc6b47578e77508fbb"
+        }
+      ]
+    },
+    {
+      "repository": "LiquidAI/LFM2.5-350M-GGUF",
+      "revision": "657e078c94084481950a2d555a941481f715536b",
+      "weights": [
+        {
+          "filename": "LFM2.5-350M-Q8_0.gguf",
+          "bytes": 379217632,
+          "sha256": "be036a757295e550098b85e13f6af2735d0fa73b41e1156a40c7d8e8e32a5766",
+          "resolved_cache_file": "data/model_cache/blobs/4f/4f27b8fc43d487adcadcf0d5cbf578c12a632a62c5160a0f5bdf6bffa4f2e9a2"
+        }
+      ]
+    },
+    {
+      "repository": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "weights": [
+        {
+          "filename": "model.safetensors",
+          "bytes": 988097824,
+          "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+          "resolved_cache_file": "data/model_cache/models--Qwen--Qwen2.5-0.5B-Instruct/blobs/fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+        }
+      ]
+    },
+    {
+      "repository": "fastino/gliner2.5-base-v1",
+      "revision": "ca906247640776a07753514055be9726f9080ead",
+      "weights": [
+        {
+          "filename": "model.safetensors",
+          "bytes": 774366564,
+          "sha256": "7274094de2e0c2a37a386f55fc4e23061a954da5bd7a335e7dfe56f2743c277a",
+          "resolved_cache_file": "data/model_cache/models--fastino--gliner2.5-base-v1/blobs/7274094de2e0c2a37a386f55fc4e23061a954da5bd7a335e7dfe56f2743c277a"
+        }
+      ]
+    },
+    {
+      "repository": "fastino/gliner2.5-small-v1",
+      "revision": "7132dc4561c3f94563c6147e75ffa8ef34c4964a",
+      "weights": [
+        {
+          "filename": "model.safetensors",
+          "bytes": 295567700,
+          "sha256": "4ee982787ace270d4bf15dbcb28ced38e0aa201372347114ceedd6336055de2b",
+          "resolved_cache_file": "data/model_cache/models--fastino--gliner2.5-small-v1/blobs/4ee982787ace270d4bf15dbcb28ced38e0aa201372347114ceedd6336055de2b"
+        }
+      ]
+    },
+    {
+      "repository": "ggml-org/Qwen3.5-0.8B-GGUF",
+      "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+      "weights": [
+        {
+          "filename": "Qwen3.5-0.8B-Q8_0.gguf",
+          "bytes": 833592096,
+          "sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+          "resolved_cache_file": "data/model_cache/blobs/13/13358c1c6932c23d9b618e499681d873bb0aa0876fdd5136e906f86ff08c1d16"
+        }
+      ]
+    },
+    {
+      "repository": "ggml-org/gemma-3-1b-it-GGUF",
+      "revision": "f9c28bcd85737ffc5aef028638d3341d49869c27",
+      "weights": [
+        {
+          "filename": "gemma-3-1b-it-Q8_0.gguf",
+          "bytes": 1069306368,
+          "sha256": "b205840c5dcef55078e37d344677869a714ffd42a4ae448c48dcfb52e4bb10d5",
+          "resolved_cache_file": "data/model_cache/blobs/b0/b00dfdd4f2492857e16ceec5f386f01dee6d816c68876851e1072f0ed136a399"
+        }
+      ]
+    },
+    {
+      "repository": "ibm-granite/granite-4.0-350m-GGUF",
+      "revision": "b8208a86a58427e1739265318028eb5895b74bf2",
+      "weights": [
+        {
+          "filename": "granite-4.0-350m-Q8_0.gguf",
+          "bytes": 378138016,
+          "sha256": "9595dafb4ed15aa02512c8ea26188744192a6f09530eae0a2747bd3ada96cd36",
+          "resolved_cache_file": "data/model_cache/models--ibm-granite--granite-4.0-350m-GGUF/blobs/9595dafb4ed15aa02512c8ea26188744192a6f09530eae0a2747bd3ada96cd36"
+        }
+      ]
+    },
+    {
+      "repository": "jackboyla/glirel-large-v0",
+      "revision": "40a523e12a8432d6da364cf2a195a28755ff04d3",
+      "weights": [
+        {
+          "filename": "pytorch_model.bin",
+          "bytes": 1866504702,
+          "sha256": "840aa21bb68a676ebe17451aa2ce8a7e5b987af8db1c0e28850bf0e395b713de",
+          "resolved_cache_file": "data/model_cache/models--jackboyla--glirel-large-v0/blobs/840aa21bb68a676ebe17451aa2ce8a7e5b987af8db1c0e28850bf0e395b713de"
+        }
+      ]
+    },
+    {
+      "repository": "knowledgator/gliformer-large-v1",
+      "revision": "d0a4e53d09cebe6bc963dd9be319d4279084bb2d",
+      "weights": [
+        {
+          "filename": "pytorch_model.bin",
+          "bytes": 2302735855,
+          "sha256": "f80b29199d66f878669f283703e4dba9fd726755dcc20aba1ed0d24fce4a23f1",
+          "resolved_cache_file": "data/model_cache/models--knowledgator--gliformer-large-v1/blobs/f80b29199d66f878669f283703e4dba9fd726755dcc20aba1ed0d24fce4a23f1"
+        }
+      ]
+    },
+    {
+      "repository": "knowledgator/gliner-relex-base-v1.0",
+      "revision": "e6a880049a19c5cc222a7a479c32e84b0d8cdd9a",
+      "weights": [
+        {
+          "filename": "model.safetensors",
+          "bytes": 900377716,
+          "sha256": "7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5",
+          "resolved_cache_file": "data/model_cache/models--knowledgator--gliner-relex-base-v1.0/blobs/7186a83eb61b067bfc9fdfbe542a07c69cd39a446be0cfec170bd83f8a5b12b5"
+        }
+      ]
+    },
+    {
+      "repository": "knowledgator/gliner-relex-large-v1.0",
+      "revision": "4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290",
+      "weights": [
+        {
+          "filename": "model.safetensors",
+          "bytes": 1866369448,
+          "sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a",
+          "resolved_cache_file": "data/model_cache/models--knowledgator--gliner-relex-large-v1.0/blobs/7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+        }
+      ]
+    },
+    {
+      "repository": "mradermacher/Text2Graph-R1-Qwen2.5-0.5b-GGUF",
+      "revision": "38b232a88fd73fa0db0cf80bb95edd99b4449d0c",
+      "weights": [
+        {
+          "filename": "Text2Graph-R1-Qwen2.5-0.5b.Q8_0.gguf",
+          "bytes": 531068672,
+          "sha256": "2cab8466ed9001fe6a128357e8c2288baf34ac5b378ea9c5c1a015e933ec5a07",
+          "resolved_cache_file": "data/model_cache/models--mradermacher--Text2Graph-R1-Qwen2.5-0.5b-GGUF/blobs/2cab8466ed9001fe6a128357e8c2288baf34ac5b378ea9c5c1a015e933ec5a07"
+        }
+      ]
+    },
+    {
+      "repository": "tiiuae/Falcon-H1-0.5B-Instruct-GGUF",
+      "revision": "9bf0c2d4391cf4850aa62bfee1d8fe71afba8be2",
+      "weights": [
+        {
+          "filename": "Falcon-H1-0.5B-Instruct-Q8_0.gguf",
+          "bytes": 556316832,
+          "sha256": "93f36c2423ea5481c00a7aa5711c25558740bb7319be187619b70ed122719290",
+          "resolved_cache_file": "data/model_cache/blobs/37/37362f9aa1d6c2af8f08edab15d3a6a48755df4158d66f8ee9aa2babea60a5b6"
+        }
+      ]
+    }
+  ]
+}

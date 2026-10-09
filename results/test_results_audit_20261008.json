@@ -1,0 +1,636 @@
+{
+  "date": "2026-10-08",
+  "fingerprint": "b7ab3463602ffb361ff4ecdbc37ce947b0bca7b9cbcfa0221e7761ab3de3f6a3",
+  "verification": "All 15,522 encoder and 5,174 API results checked; frozen source/input/reference identities, sentence score maxima, fixed cutoffs, API parser and response journals verified. Independently recomputed TP/FP/FN and primary metrics match all published rows; usage and tariff/cache accounting match. No new inference or API requests.",
+  "primary_rows": [
+    {
+      "FN": 1973,
+      "FP": 1543,
+      "TP": 1926,
+      "bags": 5174,
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "mean_wall_s": 0.37833728888934276,
+      "micro_f1": 0.5228013029315961,
+      "positive_predictions_on_reference_empty_bags": 526,
+      "precision": 0.5552032285961372,
+      "recall": 0.49397281354193384,
+      "reference_empty_bags": 1855,
+      "successful_exact_match_bags": 2410,
+      "system": "large_0.7",
+      "timing_scope": "sum of CPU bag attempts plus session label encoding; loading/preflight separate",
+      "total_wall_s": 1957.5171327134594
+    },
+    {
+      "FN": 2366,
+      "FP": 688,
+      "TP": 1533,
+      "bags": 5174,
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "mean_wall_s": 0.7351941151049107,
+      "micro_f1": 0.5009803921568627,
+      "positive_predictions_on_reference_empty_bags": 308,
+      "precision": 0.6902296262944619,
+      "recall": 0.39317773788150806,
+      "reference_empty_bags": 1855,
+      "successful_exact_match_bags": 2588,
+      "system": "majority_0.5_0.7_0.7",
+      "timing_scope": "sum of CPU bag attempts plus session label encoding; loading/preflight separate",
+      "total_wall_s": 3803.894351552808
+    },
+    {
+      "FN": 1721,
+      "FP": 390,
+      "TP": 2178,
+      "bags": 5174,
+      "invalid": 78,
+      "invalid_rate": 0.01507537688442211,
+      "mean_wall_s": 4.256658026397129,
+      "micro_f1": 0.6735735271377764,
+      "positive_predictions_on_reference_empty_bags": 270,
+      "precision": 0.8481308411214953,
+      "recall": 0.5586047704539625,
+      "reference_empty_bags": 1855,
+      "successful_exact_match_bags": 3317,
+      "system": "deepseek_low",
+      "timing_scope": "sum of API request attempts; includes service/network; excludes backoff and idle time",
+      "token_charge_USD_estimate": 2.40966831,
+      "total_wall_s": 22023.948628578743
+    }
+  ],
+  "api_status": {
+    "valid": 2506,
+    "valid_empty": 2590,
+    "invalid": 78
+  },
+  "invalid_errors": {
+    "finish_reason=length": 78
+  },
+  "finish_reasons": {
+    "stop": 5096,
+    "length": 78
+  },
+  "invalid_gold_distribution": {
+    "positive_bags": 64,
+    "gold_positive_instances": 81,
+    "negative_bags": 14
+  },
+  "invalid_completion_tokens": 319487,
+  "ledger_states": {
+    "completed": 5174,
+    "acknowledged_unknown": 2
+  },
+  "vote_changes_relative_to_large": {
+    "changed_bags": 1200,
+    "removed_true_positives": 468,
+    "removed_false_positives": 897,
+    "added_true_positives": 75,
+    "added_false_positives": 42
+  },
+  "deepseek_vs_large_correct_facts": {
+    "shared_true_positives": 1488,
+    "large_only_true_positives": 438,
+    "deepseek_only_true_positives": 690,
+    "both_miss_gold": 1283
+  },
+  "returned_model_names": {
+    "deepseek-flash": 5174
+  },
+  "returned_backends": {
+    "aeb56401ca74e127821c4f9126dcb669": 5174
+  },
+  "accounting": {
+    "expected_bags": 5174,
+    "status_counts": {
+      "valid": 2506,
+      "valid_empty": 2590,
+      "invalid": 78
+    },
+    "attempts": 5176,
+    "completed_with_usage": 5174,
+    "unknown_charge_attempts": 2,
+    "unknown_charge_reserve_USD": 0.012102599999999998,
+    "token_charge_USD_estimate": 2.40966831,
+    "prompt_tokens": 3952505,
+    "completion_tokens_including_reasoning": 3598426,
+    "request_wall_s_including_attempts": 22023.948628578743,
+    "peak_rate_attempts": 0,
+    "backend_fingerprints": [
+      "aeb56401ca74e127821c4f9126dcb669"
+    ]
+  },
+  "cache_hit_prompt_tokens": 2328320,
+  "preflights": {
+    "base": {
+      "selected_sentences_checked": 9001,
+      "boundary_refined_sentences": 94,
+      "ner_bypassed": true,
+      "longest_input_forward_pass": true,
+      "wall_s": 11.811153165996075
+    },
+    "large": {
+      "selected_sentences_checked": 9001,
+      "boundary_refined_sentences": 94,
+      "ner_bypassed": true,
+      "longest_input_forward_pass": true,
+      "wall_s": 18.627738250012044
+    },
+    "glidre": {
+      "selected_sentences_checked": 9001,
+      "boundary_refined_sentences": 94,
+      "ner_bypassed": true,
+      "longest_input_forward_pass": true,
+      "wall_s": 23.618387666007038
+    }
+  },
+  "per_relation": {
+    "large_0.7": {
+      "/business/company/advisors": {
+        "FN": 48,
+        "TP": 4,
+        "support": 52,
+        "f1": 0.14285714285714285
+      },
+      "/business/company/founders": {
+        "TP": 39,
+        "FP": 22,
+        "FN": 1,
+        "support": 40,
+        "f1": 0.7722772277227723
+      },
+      "/business/company/majorshareholders": {
+        "FP": 7,
+        "FN": 2,
+        "TP": 2,
+        "support": 4,
+        "f1": 0.3076923076923077
+      },
+      "/business/company/place_founded": {
+        "FN": 2,
+        "FP": 25,
+        "TP": 2,
+        "support": 4,
+        "f1": 0.12903225806451613
+      },
+      "/business/location": {
+        "TP": 73,
+        "FN": 56,
+        "FP": 39,
+        "support": 129,
+        "f1": 0.6058091286307054
+      },
+      "/business/person/company": {
+        "TP": 247,
+        "FN": 220,
+        "FP": 35,
+        "support": 467,
+        "f1": 0.6595460614152203
+      },
+      "/film/film/featured_film_locations": {
+        "FP": 4,
+        "FN": 1,
+        "support": 1,
+        "f1": 0.0
+      },
+      "/location/administrative_division/country": {
+        "TP": 91,
+        "FN": 11,
+        "FP": 48,
+        "support": 102,
+        "f1": 0.7551867219917012
+      },
+      "/location/country/administrative_divisions": {
+        "FP": 228,
+        "FN": 46,
+        "TP": 128,
+        "support": 174,
+        "f1": 0.4830188679245283
+      },
+      "/location/country/capital": {
+        "FP": 193,
+        "TP": 18,
+        "support": 18,
+        "f1": 0.1572052401746725
+      },
+      "/location/location/contains": {
+        "FP": 267,
+        "TP": 742,
+        "FN": 411,
+        "support": 1153,
+        "f1": 0.6864014801110083
+      },
+      "/location/neighborhood/neighborhood_of": {
+        "TP": 17,
+        "FN": 11,
+        "FP": 35,
+        "support": 28,
+        "f1": 0.425
+      },
+      "/location/region/capital": {
+        "FP": 162,
+        "FN": 2,
+        "TP": 7,
+        "support": 9,
+        "f1": 0.07865168539325842
+      },
+      "/location/us_county/county_seat": {
+        "FP": 6,
+        "FN": 4,
+        "support": 4,
+        "f1": 0.0
+      },
+      "/people/deceasedperson/place_of_burial": {
+        "FP": 4,
+        "TP": 2,
+        "FN": 2,
+        "support": 4,
+        "f1": 0.4
+      },
+      "/people/deceasedperson/place_of_death": {
+        "FP": 26,
+        "TP": 22,
+        "FN": 35,
+        "support": 57,
+        "f1": 0.41904761904761906
+      },
+      "/people/ethnicity/geographic_distribution": {
+        "FN": 6,
+        "FP": 2,
+        "support": 6,
+        "f1": 0.0
+      },
+      "/people/person/children": {
+        "FN": 16,
+        "TP": 38,
+        "FP": 3,
+        "support": 54,
+        "f1": 0.8
+      },
+      "/people/person/ethnicity": {
+        "FP": 137,
+        "TP": 11,
+        "FN": 2,
+        "support": 13,
+        "f1": 0.13664596273291926
+      },
+      "/people/person/nationality": {
+        "FP": 133,
+        "TP": 242,
+        "FN": 61,
+        "support": 303,
+        "f1": 0.7138643067846607
+      },
+      "/people/person/place_lived": {
+        "FN": 966,
+        "TP": 196,
+        "FP": 73,
+        "support": 1162,
+        "f1": 0.27393431167016075
+      },
+      "/people/person/place_of_birth": {
+        "FN": 65,
+        "FP": 34,
+        "TP": 32,
+        "support": 97,
+        "f1": 0.39263803680981596
+      },
+      "/people/person/religion": {
+        "TP": 11,
+        "FN": 5,
+        "FP": 3,
+        "support": 16,
+        "f1": 0.7333333333333333
+      },
+      "/time/event/locations": {
+        "FP": 57,
+        "TP": 2,
+        "support": 2,
+        "f1": 0.06557377049180328
+      }
+    },
+    "majority_0.5_0.7_0.7": {
+      "/business/company/advisors": {
+        "FN": 49,
+        "TP": 3,
+        "support": 52,
+        "f1": 0.10909090909090909
+      },
+      "/business/company/founders": {
+        "TP": 40,
+        "FP": 20,
+        "support": 40,
+        "f1": 0.8
+      },
+      "/business/company/majorshareholders": {
+        "FP": 6,
+        "FN": 2,
+        "TP": 2,
+        "support": 4,
+        "f1": 0.3333333333333333
+      },
+      "/business/company/place_founded": {
+        "FN": 3,
+        "FP": 4,
+        "TP": 1,
+        "support": 4,
+        "f1": 0.2222222222222222
+      },
+      "/business/location": {
+        "TP": 54,
+        "FN": 75,
+        "FP": 28,
+        "support": 129,
+        "f1": 0.5118483412322274
+      },
+      "/business/person/company": {
+        "TP": 274,
+        "FN": 193,
+        "FP": 31,
+        "support": 467,
+        "f1": 0.7098445595854922
+      },
+      "/film/film/featured_film_locations": {
+        "FP": 4,
+        "FN": 1,
+        "support": 1,
+        "f1": 0.0
+      },
+      "/location/administrative_division/country": {
+        "FN": 30,
+        "TP": 72,
+        "FP": 28,
+        "support": 102,
+        "f1": 0.7128712871287128
+      },
+      "/location/country/administrative_divisions": {
+        "FP": 47,
+        "FN": 135,
+        "TP": 39,
+        "support": 174,
+        "f1": 0.3
+      },
+      "/location/country/capital": {
+        "FP": 33,
+        "TP": 17,
+        "FN": 1,
+        "support": 18,
+        "f1": 0.5
+      },
+      "/location/location/contains": {
+        "FN": 685,
+        "TP": 468,
+        "FP": 122,
+        "support": 1153,
+        "f1": 0.5370051635111877
+      },
+      "/location/neighborhood/neighborhood_of": {
+        "TP": 10,
+        "FN": 18,
+        "FP": 12,
+        "support": 28,
+        "f1": 0.4
+      },
+      "/location/region/capital": {
+        "FP": 26,
+        "FN": 3,
+        "TP": 6,
+        "support": 9,
+        "f1": 0.2926829268292683
+      },
+      "/location/us_county/county_seat": {
+        "FP": 1,
+        "FN": 4,
+        "support": 4,
+        "f1": 0.0
+      },
+      "/people/deceasedperson/place_of_burial": {
+        "FP": 10,
+        "TP": 2,
+        "FN": 2,
+        "support": 4,
+        "f1": 0.25
+      },
+      "/people/deceasedperson/place_of_death": {
+        "TP": 37,
+        "FP": 9,
+        "FN": 20,
+        "support": 57,
+        "f1": 0.7184466019417476
+      },
+      "/people/ethnicity/geographic_distribution": {
+        "FN": 6,
+        "FP": 3,
+        "support": 6,
+        "f1": 0.0
+      },
+      "/people/person/children": {
+        "FN": 27,
+        "TP": 27,
+        "support": 54,
+        "f1": 0.6666666666666666
+      },
+      "/people/person/ethnicity": {
+        "FP": 84,
+        "TP": 7,
+        "FN": 6,
+        "support": 13,
+        "f1": 0.1346153846153846
+      },
+      "/people/person/nationality": {
+        "FP": 120,
+        "FN": 76,
+        "TP": 227,
+        "support": 303,
+        "f1": 0.6984615384615385
+      },
+      "/people/person/place_lived": {
+        "FN": 962,
+        "TP": 200,
+        "FP": 61,
+        "support": 1162,
+        "f1": 0.28109627547434995
+      },
+      "/people/person/place_of_birth": {
+        "FN": 62,
+        "FP": 24,
+        "TP": 35,
+        "support": 97,
+        "f1": 0.44871794871794873
+      },
+      "/people/person/religion": {
+        "FN": 6,
+        "TP": 10,
+        "FP": 3,
+        "support": 16,
+        "f1": 0.6896551724137931
+      },
+      "/time/event/locations": {
+        "TP": 2,
+        "FP": 12,
+        "support": 2,
+        "f1": 0.25
+      }
+    },
+    "deepseek_low": {
+      "/business/company/advisors": {
+        "FN": 52,
+        "support": 52,
+        "f1": 0.0
+      },
+      "/business/company/founders": {
+        "TP": 39,
+        "FP": 2,
+        "FN": 1,
+        "support": 40,
+        "f1": 0.9629629629629629
+      },
+      "/business/company/majorshareholders": {
+        "FN": 2,
+        "TP": 2,
+        "FP": 2,
+        "support": 4,
+        "f1": 0.5
+      },
+      "/business/company/place_founded": {
+        "FN": 4,
+        "FP": 2,
+        "support": 4,
+        "f1": 0.0
+      },
+      "/business/location": {
+        "TP": 81,
+        "FP": 22,
+        "FN": 48,
+        "support": 129,
+        "f1": 0.6982758620689655
+      },
+      "/business/person/company": {
+        "TP": 334,
+        "FN": 133,
+        "FP": 37,
+        "support": 467,
+        "f1": 0.7971360381861575
+      },
+      "/film/film/featured_film_locations": {
+        "FP": 2,
+        "FN": 1,
+        "support": 1,
+        "f1": 0.0
+      },
+      "/location/administrative_division/country": {
+        "TP": 81,
+        "FN": 21,
+        "FP": 18,
+        "support": 102,
+        "f1": 0.8059701492537313
+      },
+      "/location/country/administrative_divisions": {
+        "FP": 6,
+        "FN": 147,
+        "TP": 27,
+        "support": 174,
+        "f1": 0.2608695652173913
+      },
+      "/location/country/capital": {
+        "TP": 16,
+        "FN": 2,
+        "support": 18,
+        "f1": 0.9411764705882353
+      },
+      "/location/location/contains": {
+        "FN": 310,
+        "TP": 843,
+        "FP": 142,
+        "support": 1153,
+        "f1": 0.7885874649204865
+      },
+      "/location/neighborhood/neighborhood_of": {
+        "FP": 27,
+        "TP": 16,
+        "FN": 12,
+        "support": 28,
+        "f1": 0.4507042253521127
+      },
+      "/location/region/capital": {
+        "FN": 5,
+        "TP": 4,
+        "support": 9,
+        "f1": 0.6153846153846154
+      },
+      "/location/us_county/county_seat": {
+        "FN": 4,
+        "support": 4,
+        "f1": 0.0
+      },
+      "/people/deceasedperson/place_of_burial": {
+        "FP": 3,
+        "TP": 3,
+        "FN": 1,
+        "support": 4,
+        "f1": 0.6
+      },
+      "/people/deceasedperson/place_of_death": {
+        "TP": 51,
+        "FN": 6,
+        "FP": 4,
+        "support": 57,
+        "f1": 0.9107142857142857
+      },
+      "/people/ethnicity/geographic_distribution": {
+        "FN": 5,
+        "TP": 1,
+        "FP": 3,
+        "support": 6,
+        "f1": 0.2
+      },
+      "/people/person/children": {
+        "FN": 21,
+        "TP": 33,
+        "FP": 1,
+        "support": 54,
+        "f1": 0.75
+      },
+      "/people/person/ethnicity": {
+        "FN": 10,
+        "FP": 3,
+        "TP": 3,
+        "support": 13,
+        "f1": 0.3157894736842105
+      },
+      "/people/person/nationality": {
+        "FP": 50,
+        "TP": 193,
+        "FN": 110,
+        "support": 303,
+        "f1": 0.706959706959707
+      },
+      "/people/person/place_lived": {
+        "FN": 757,
+        "TP": 405,
+        "FP": 58,
+        "support": 1162,
+        "f1": 0.49846153846153846
+      },
+      "/people/person/place_of_birth": {
+        "FN": 59,
+        "FP": 7,
+        "TP": 38,
+        "support": 97,
+        "f1": 0.5352112676056338
+      },
+      "/people/person/religion": {
+        "FN": 10,
+        "TP": 6,
+        "support": 16,
+        "f1": 0.5454545454545454
+      },
+      "/time/event/locations": {
+        "TP": 2,
+        "FP": 1,
+        "support": 2,
+        "f1": 0.8
+      }
+    }
+  }
+}

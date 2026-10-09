@@ -1,0 +1,682 @@
+[
+  {
+    "entity_positions": [
+      {
+        "head": [
+          67,
+          83
+        ],
+        "tail": [
+          114,
+          122
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Lorenzo Ghiberti",
+    "pair_ids": [
+      "m.01596r",
+      "m.031y2"
+    ],
+    "sample_id": "A01",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "Despite this , the House & Garden critique in 1904 noted that even Lorenzo Ghiberti 's gates at the baptistery in Florence '' are sober and restrained beside this daring and interesting bronze work . ''"
+    ],
+    "tail": "Florence"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          60,
+          70
+        ],
+        "tail": [
+          167,
+          179
+        ]
+      },
+      {
+        "head": [
+          186,
+          196
+        ],
+        "tail": [
+          118,
+          130
+        ]
+      }
+    ],
+    "full_bag_size": 2,
+    "head": "Jacob Zuma",
+    "pair_ids": [
+      "m.0466k4",
+      "m.0hzlz"
+    ],
+    "sample_id": "A02",
+    "selected_indices_zero_based": [
+      0,
+      1
+    ],
+    "sentences": [
+      "There , a judge threw out public corruption charges against Jacob Zuma , the deputy president of the African National Congress who had been former deputy president of South Africa and , until he became mired in scandal , Mr. Mbeki 's heir apparent .",
+      "Correction : June 17 , 2005 , Friday Because of an editing error , an article on Wednesday about a bribery scandal in South Africa that led President Thabo Mbeki to dismiss his deputy , Jacob Zuma , misstated the full name of a South African expert on corruption who commented on the development ."
+    ],
+    "tail": "South Africa"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          204,
+          211
+        ],
+        "tail": [
+          92,
+          97
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "America",
+    "pair_ids": [
+      "m.04922jr",
+      "m.02k54"
+    ],
+    "sample_id": "A03",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "Two weeks after the Muslim Brotherhood won 88 seats in Parliament and established itself as Egypt 's only significant political opposition organization , its leader issued a statement Thursday condemning America while declaring that the Holocaust was a '' myth . ''"
+    ],
+    "tail": "Egypt"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          133,
+          153
+        ],
+        "tail": [
+          61,
+          71
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Nursultan Nazarbayev",
+    "pair_ids": [
+      "m.0ft68",
+      "m.047lj"
+    ],
+    "sample_id": "A04",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "A8 Incumbent Leads Kazakh Vote The election for president in Kazakhstan passed peacefully , and early signs indicated that President Nursultan Nazarbayev , the former Communist boss who has ruled this country since it declared independence from the Soviet Union , was heading to a landslide victory over four opponents ."
+    ],
+    "tail": "Kazakhstan"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          77,
+          85
+        ],
+        "tail": [
+          90,
+          98
+        ]
+      },
+      {
+        "head": [
+          84,
+          92
+        ],
+        "tail": [
+          12,
+          20
+        ]
+      }
+    ],
+    "full_bag_size": 2,
+    "head": "Brittany",
+    "pair_ids": [
+      "m.09nyf",
+      "m.05g56"
+    ],
+    "sample_id": "A05",
+    "selected_indices_zero_based": [
+      0,
+      1
+    ],
+    "sentences": [
+      "Our mussels are the best and the fattest because the water is warmer than in Brittany and Normandy , '' France 's other major mussel-growing regions , said Hugo Bordin , a 25-year-old chef at Au Bord ` un Zinc in the Île de Ré town of St. - Martin . ''",
+      "A native of Normandy , Sergeant Brunet graduated last year from a police academy in Brittany before being sent to work in the Paris area ."
+    ],
+    "tail": "Normandy"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          78,
+          89
+        ],
+        "tail": [
+          118,
+          122
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Joe Marengi",
+    "pair_ids": [
+      "m.02_whb6",
+      "m.0py9b"
+    ],
+    "sample_id": "A06",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "The time to answer the phone has been cut in half in the last month , '' said Joe Marengi , senior vice president for Dell 's Americas business ."
+    ],
+    "tail": "Dell"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          164,
+          174
+        ],
+        "tail": [
+          86,
+          92
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Kazakhstan",
+    "pair_ids": [
+      "m.047lj",
+      "m.0fn08"
+    ],
+    "sample_id": "A07",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "The foreign ministry spokesman , Yerzhan N. Ashykbayev , said in an interview here in Astana , the country 's capital , that '' what we are concerned about is that Kazakhstan -- terra incognita for many in the West -- is depicted in this way . ''"
+    ],
+    "tail": "Astana"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          31,
+          43
+        ],
+        "tail": [
+          81,
+          87
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Ahmed Ressam",
+    "pair_ids": [
+      "m.01bl2d",
+      "m.0d060g"
+    ],
+    "sample_id": "A08",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "The arrest in December 1999 of Ahmed Ressam as he tried to carry explosives from Canada into Washington State helped unravel the so-called Millennium terrorist plot , and Canadian authorities have kept suspected radicals in the large South Asian populations in big Canadian cities under surveillance ."
+    ],
+    "tail": "Canada"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          482,
+          495
+        ],
+        "tail": [
+          258,
+          268
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Ulster County",
+    "pair_ids": [
+      "m.0fpn8",
+      "m.01mgvr"
+    ],
+    "sample_id": "A09",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "The day after the shooting in the Hudson Valley Mall , in which two people were wounded , details emerged about the suspect , Robert Bonelli Jr. , who was described as a loner who secluded himself in his bedroom at his father 's home in Glasco , a hamlet in Saugerties , N.Y. In Mr. Bonelli 's room , the police found piles of news articles and other accounts , photographs and documents printed from the Internet , all related to the 1999 shootings , said Donald A. Williams , the Ulster County district attorney . ''"
+    ],
+    "tail": "Saugerties"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          70,
+          76
+        ],
+        "tail": [
+          53,
+          57
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Rachel",
+    "pair_ids": [
+      "m.01xlj_",
+      "m.01wd7tk"
+    ],
+    "sample_id": "A10",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "Adoring grandfather of Jennifer , Allison , Andrew , Lisa , Tracy and Rachel ."
+    ],
+    "tail": "Lisa"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          189,
+          193
+        ],
+        "tail": [
+          54,
+          60
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Joel",
+    "pair_ids": [
+      "m.048z68g",
+      "m.04zndwx"
+    ],
+    "sample_id": "A11",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "His parents still keep kosher , and their son learned Hebrew partly from a grandfather who lived with the family -- enough Hebrew to officiate at the bar and bat mitzvahs of his children , Joel and Alyssa , without the help of a rabbi ."
+    ],
+    "tail": "Hebrew"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          148,
+          165
+        ],
+        "tail": [
+          135,
+          144
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Rensselaer County",
+    "pair_ids": [
+      "m.0f6_4",
+      "m.0rwq6"
+    ],
+    "sample_id": "A12",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "The other is that the stadium 's fate will be decided by two legislators -- one from the Lower East Side of Manhattan , the other from Brunswick in Rensselaer County ."
+    ],
+    "tail": "Brunswick"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          47,
+          51
+        ],
+        "tail": [
+          169,
+          175
+        ]
+      },
+      {
+        "head": [
+          101,
+          105
+        ],
+        "tail": [
+          23,
+          29
+        ]
+      },
+      {
+        "head": [
+          155,
+          159
+        ],
+        "tail": [
+          267,
+          273
+        ]
+      }
+    ],
+    "full_bag_size": 3,
+    "head": "Iraq",
+    "pair_ids": [
+      "m.0d05q4",
+      "m.0dg3n1"
+    ],
+    "sample_id": "A13",
+    "selected_indices_zero_based": [
+      0,
+      1,
+      2
+    ],
+    "sentences": [
+      "The article criticized the Bush administration Iraq policy , voicing serious doubts about assertions in the months before the war that Iraq had sought uranium fuel from Africa as part of a suspected program to develop unconventional weapons .",
+      "Mr. Wilson traveled to Africa on a mission sponsored by the C.I.A. in 2002 to look into reports that Iraq had acquired nuclear material in Niger .",
+      "Military planners suggest that the Pentagon take a page out of Hezbollah 's book about small-unit , agile operations as it battles insurgents and cells in Iraq and Afghanistan and plans for countering more cells and their state sponsors across the Middle East and in Africa , Southeast Asia and Latin America ."
+    ],
+    "tail": "Africa"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          200,
+          208
+        ],
+        "tail": [
+          164,
+          169
+        ]
+      },
+      {
+        "head": [
+          132,
+          140
+        ],
+        "tail": [
+          57,
+          62
+        ]
+      }
+    ],
+    "full_bag_size": 2,
+    "head": "Atlantic",
+    "pair_ids": [
+      "m.0ssn8",
+      "m.0f2v0"
+    ],
+    "sample_id": "A14",
+    "selected_indices_zero_based": [
+      0,
+      1
+    ],
+    "sentences": [
+      "People in Florida have been following the progress of Hurricane Wilma since last Wednesday , when its winds reached 175 m.p.h. and the National Hurricane Center in Miami declared it the most powerful Atlantic hurricane ever .",
+      "Ms. Liberoff , who was raised in Great Neck , N.Y. , and Miami , found that people generally consumed less on the other side of the Atlantic ."
+    ],
+    "tail": "Miami"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          107,
+          119
+        ],
+        "tail": [
+          124,
+          134
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Florida Keys",
+    "pair_ids": [
+      "m.01qgv7",
+      "m.01n7q"
+    ],
+    "sample_id": "A15",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "Year-round warm , clear water makes freediving and spearfishing especially popular in North Carolina , the Florida Keys and California ."
+    ],
+    "tail": "California"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          20,
+          26
+        ],
+        "tail": [
+          39,
+          45
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Dahmer",
+    "pair_ids": [
+      "m.08p70v",
+      "m.07dmx4"
+    ],
+    "sample_id": "A16",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "A few years later , Dahmer 's father , Lionel , published a memoir of life with the monster he loved , and still loves , as a son ."
+    ],
+    "tail": "Lionel"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          71,
+          87
+        ],
+        "tail": [
+          137,
+          143
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Hackensack River",
+    "pair_ids": [
+      "m.02w792",
+      "m.0hptm"
+    ],
+    "sample_id": "A17",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "Once through , the highway is planned to hurdle the Jersey meadows and Hackensack River , gradually descend to grade in the outskirts of Newark , and , bypassing that city , sweep down to Elizabeth . ''"
+    ],
+    "tail": "Newark"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          41,
+          61
+        ],
+        "tail": [
+          98,
+          107
+        ]
+      },
+      {
+        "head": [
+          192,
+          212
+        ],
+        "tail": [
+          33,
+          42
+        ]
+      },
+      {
+        "head": [
+          238,
+          258
+        ],
+        "tail": [
+          226,
+          235
+        ]
+      }
+    ],
+    "full_bag_size": 3,
+    "head": "United Arab Emirates",
+    "pair_ids": [
+      "m.0j1z8",
+      "m.0gxj"
+    ],
+    "sample_id": "A18",
+    "selected_indices_zero_based": [
+      0,
+      1,
+      2
+    ],
+    "sentences": [
+      "Ms. Rice , who is scheduled to visit the United Arab Emirates next week , described one of them , Abu Dhabi , as '' a very good friend '' of the United States , according to Bloomberg News .",
+      "Far from Dubai 's high-rises and Abu Dhabi 's luxurious lifestyles , thousands of young boys like Salih endure Dickensian conditions as jockeys in camel races in the desert hinterlands of the United Arab Emirates .",
+      "Emily Lark Jeary , a daughter of Kathleen Morgan Jeary and Michael Joseph Jeary of Rumson , N.J. , was married last evening to Scott James Ryan , a son of Catherine Fujiwara Ryan and Frank James Ryan of Westport , Conn. , and Abu Dhabi , United Arab Emirates ."
+    ],
+    "tail": "Abu Dhabi"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          0,
+          13
+        ],
+        "tail": [
+          36,
+          41
+        ]
+      },
+      {
+        "head": [
+          103,
+          116
+        ],
+        "tail": [
+          65,
+          70
+        ]
+      },
+      {
+        "head": [
+          365,
+          378
+        ],
+        "tail": [
+          280,
+          285
+        ]
+      },
+      {
+        "head": [
+          312,
+          325
+        ],
+        "tail": [
+          42,
+          47
+        ]
+      }
+    ],
+    "full_bag_size": 4,
+    "head": "Deng Xiaoping",
+    "pair_ids": [
+      "m.028_0",
+      "m.0d05w3"
+    ],
+    "sample_id": "A19",
+    "selected_indices_zero_based": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "sentences": [
+      "Deng Xiaoping once famously said of China 's economy : '' Black cat , white cat , all that matters is that it catches mice '' -- i.e. , forget about communist ideology , all that matters is that China grows .",
+      "Rong Yiren , a wealthy entrepreneur and former vice president of China who in the 1970 's was asked by Deng Xiaoping to help initiate some of the nation 's earliest economic reforms , died Wednesday in Beijing .",
+      "Howard Stringer , once a CBS producer who traveled extensively with Mr. Bradley and now the chairman of the Sony Corporation of America , told a story of Mr. Bradley falling asleep at a performance of Beethoven 's Fifth Symphony during a visit by the Boston Symphony Orchestra to China in the 1970s , only to miss an interview he had scheduled at intermission with Deng Xiaoping .",
+      "By day this small village in the midst of China 's industrial heartland seems to be a picture of normalcy : children play in their yards , workers in uniform sweep the tidy streets and a red flag flutters proudly above an elementary school with a facade bearing a poster of the hero of Chinese economic reform , Deng Xiaoping ."
+    ],
+    "tail": "China"
+  },
+  {
+    "entity_positions": [
+      {
+        "head": [
+          434,
+          439
+        ],
+        "tail": [
+          48,
+          58
+        ]
+      }
+    ],
+    "full_bag_size": 1,
+    "head": "Steen",
+    "pair_ids": [
+      "m.04by03j",
+      "m.043_z35"
+    ],
+    "sample_id": "A20",
+    "selected_indices_zero_based": [
+      0
+    ],
+    "sentences": [
+      "Terri Pischoff Wuerthner , another semi-adopted Southerner -LRB- she grew up in San Francisco , but has spent a lot of time in her father 's native Louisiana -RRB- , uses IN A CAJUN KITCHEN : Authentic Cajun Recipes and Stories From a Family Farm on the Bayou -LRB- St. Martin 's , $ 29.95 -RRB- to share sometimes complicated but always rewarding recipes like cornmeal pancakes with crumbled bacon fried in bacon fat and drenched in Steen 's cane syrup -LRB- a tooth-aching but great Louisiana beverage -RRB- and lard-based chicken gravy with onion powder and cayenne -LRB- another state beverage -RRB- . ''"
+    ],
+    "tail": "Southerner"
+  }
+]

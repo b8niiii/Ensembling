@@ -1,0 +1,44 @@
+{
+  "fingerprint": "b7ab3463602ffb361ff4ecdbc37ce947b0bca7b9cbcfa0221e7761ab3de3f6a3",
+  "matplotlib": "3.11.2",
+  "plot_source_sha256": "acfd82922ddac775ff555882688b48026dc2a5394344c1a0e9e26e3b91951f69",
+  "analysis_report_sha256": "ff5b17b8495268f62e33ad47830ae8a9780380975f91b6c39b540caaece470fa",
+  "files": [
+    {
+      "path": "results/figures/test_quality_latency_20261008.png",
+      "sha256": "6cf3171d18bc7add069330cc9d8ae7b5f5ec77a2742ebd5f042e272e3f890959"
+    },
+    {
+      "path": "results/figures/test_quality_latency_20261008.svg",
+      "sha256": "90cb18acb21098e375104890fa3cb476af2d8d8708fae48b893d3609d5e04718"
+    },
+    {
+      "path": "results/figures/test_quality_latency_20261008.pdf",
+      "sha256": "01f338fe79dcc00b266d469c9702b776cabbdc458fade2232003fa48cdcb118e"
+    },
+    {
+      "path": "results/figures/test_precision_recall_20261008.png",
+      "sha256": "4c378ff7271542d1565d9204a1744fc1ead36cef5b801b32b932b3a392f41def"
+    },
+    {
+      "path": "results/figures/test_precision_recall_20261008.svg",
+      "sha256": "d84380791987d005b13f1770d6d347144a4113012c4369fafe13995a874784f2"
+    },
+    {
+      "path": "results/figures/test_precision_recall_20261008.pdf",
+      "sha256": "7380e653bfdd70eb660c97c18b5b665b224c98d73c0b93107081ced4b17f9f67"
+    },
+    {
+      "path": "results/figures/test_paired_f1_differences_20261008.png",
+      "sha256": "d026a769158fa6fe052f9516d86911e991868e667d1a612c80463f123d5dcec5"
+    },
+    {
+      "path": "results/figures/test_paired_f1_differences_20261008.svg",
+      "sha256": "c1b6e1c996b3077c1bbffba47ba43a26e66eede77af0ec3c1b04827be8adbabd"
+    },
+    {
+      "path": "results/figures/test_paired_f1_differences_20261008.pdf",
+      "sha256": "5afa29215086d567f34687a0ff5435f24c169bbc73e60401c61e4a81d79a560c"
+    }
+  ]
+}

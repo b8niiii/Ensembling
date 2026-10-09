@@ -1,0 +1,1708 @@
+{
+  "created_date": "2026-10-06",
+  "status": "human_confirmed_applied_2026-10-06",
+  "annotation_policy_selected_by_user": "Text-supported relations including motivated inference; external factual correctness recorded separately.",
+  "policy_note": "This is an operational proposal inspired by the papers, not a recovered NYT10m annotation manual. Pragmatic national-team and institutional-location inferences require human adjudication.",
+  "summary": {
+    "reviewed_bags": 42,
+    "reviewed_selected_sentences": 121,
+    "current_comparison_bags": 30,
+    "historical_bags": 12,
+    "proposed_label_changes": 2,
+    "retain_proposals": 40,
+    "human_confirmed_changes": 2,
+    "excluded_unannotated_packet": "support/validation_audit_20_review_2026-10-06.md",
+    "scope": "Only the selected supplied sentences; no new official-test inspection, predictions, or distant labels used."
+  },
+  "provenance": [
+    {
+      "cohort": "blind12",
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "sample_sha256": "2654b2645ba506f7549e3276ba8ba3182366ad0612a0d581981411a4bb85188a",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "annotation_sha256": "cc7f17b6c2487266f1f3e3c4ba99d5f4bc584917ce35109490d69856608bda90",
+      "bag_count": 12,
+      "previous_annotation_file": "/Users/alessandro/Progetti/Ensembling/support/archive/annotations_before_inference_revision_2026-10-06/validation_blind_annotations_2026-09-28.json",
+      "current_annotation_sha256": "2ee256468a0c41bd5298e5b59ac38e108e5e850f298537428fedf3146453e5ce"
+    },
+    {
+      "cohort": "clean12",
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "sample_sha256": "00dd4aa10878b6aed80134cc575b88879bd45bf35f2e32fd71b06cc113f23b9e",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "annotation_sha256": "0d1a981dccd3318ae41f8c7fe0a0580442f023af099f3b0e070f46feae5e4e29",
+      "bag_count": 12,
+      "previous_annotation_file": "/Users/alessandro/Progetti/Ensembling/support/archive/annotations_before_inference_revision_2026-10-06/validation_clean_annotations_2026-09-29.json",
+      "current_annotation_sha256": "cd48853a1ee86fee66336e002fb770b26b129bb825aa725c975cd36081978b43"
+    },
+    {
+      "cohort": "expanded18",
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "sample_sha256": "756fa0184d7c2c6bb1c4b97ce3e4fb0521ad3c09487250c1419a21cfb542d6e8",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "annotation_sha256": "1d51816d93ab66b98f0ad83f14c7ef681e20bb871e83d7004f346d3b0d017571",
+      "bag_count": 18,
+      "previous_annotation_file": "/Users/alessandro/Progetti/Ensembling/support/archive/annotations_before_inference_revision_2026-10-06/validation_expanded_18_annotations_2026-10-01.json",
+      "current_annotation_sha256": "88d17eef49c8de819b4894245ea0b7881f75ec756776fcf3499e29f71efeaece"
+    }
+  ],
+  "reviews": [
+    {
+      "sample_id": "B01",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.013yq",
+        "m.020fp1"
+      ],
+      "head": "Atlanta",
+      "tail": "Turner Field",
+      "selected_sentence_count": 2,
+      "original_relations": [
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "I",
+      "confidence": "medium",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "In Atlanta , a statue of Ty Cobb , sliding into a base , is located outside the northern entrance to Turner Field ."
+        }
+      ],
+      "rationale": "La locuzione iniziale In Atlanta localizza la statua all’ingresso del campo: un’inferenza spaziale locale sostiene contains. Già la vecchia annotazione ammetteva quindi un’inferenza; la regola precedente non era puramente letterale.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": [
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "B02",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.02hrh0_",
+        "m.02lz3v"
+      ],
+      "head": "Honolulu",
+      "tail": "Hawaii Kai",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "near Honolulu esprime prossimità; un luogo vicino può essere interno o esterno alla città. Non basta per contains.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "contains",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: appartenenza geografica effettiva di Hawaii Kai a Honolulu."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "B03",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.05gnf",
+        "m.01w6dw"
+      ],
+      "head": "NBC",
+      "tail": "American Express",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Product placement e co-occorrenza non identificano una relazione ammessa tra le due aziende.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "B04",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.02rq9n",
+        "m.056ws9"
+      ],
+      "head": "Jeffrey Katzenberg",
+      "tail": "DreamWorks Animation",
+      "selected_sentence_count": 3,
+      "original_relations": [
+        "/business/person/company"
+      ],
+      "proposed_relations": [
+        "/business/person/company"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1,
+        2,
+        3
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Inside the theater , Jeffrey Katzenberg , the chief executive of DreamWorks Animation , was more subdued , having taken something of a beating himself in recent days ."
+        },
+        {
+          "sentence_number": 2,
+          "text": "One Disney veteran not likely to return is Jeffrey Katzenberg , a former Disney executive and the chief executive of rival DreamWorks Animation , although he still has a keen interest in the company ."
+        },
+        {
+          "sentence_number": 3,
+          "text": "Jeffrey Katzenberg , chief executive of DreamWorks Animation , said the film would be released in 2008 ."
+        }
+      ],
+      "rationale": "Katzenberg è indicato come chief executive di DreamWorks Animation. Persona → azienda è la direzione corretta; non si aggiungono ruoli aziendali non descritti.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": [
+        "/business/person/company"
+      ]
+    },
+    {
+      "sample_id": "B05",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.0ccvx",
+        "m.01qcx_"
+      ],
+      "head": "Queens",
+      "tail": "Astoria",
+      "selected_sentence_count": 20,
+      "original_relations": [
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1,
+        14
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "MARSHA AND EDWARD LAMADRID took the less-traveled route to suburbia : first they raised two sons in an apartment in Astoria , Queens ; then , as empty-nesters , they moved to a quiet neighborhood of single-family homes in Tappan , a hamlet of Orangeburg in Rockland County . ''"
+        },
+        {
+          "sentence_number": 14,
+          "text": "-LRB- Another large-scale operation in Queens , Schaller & Weber , is in Astoria , but its retail flagship is on the Upper East Side . -RRB-"
+        }
+      ],
+      "rationale": "Astoria, Queens e la localizzazione di un’attività in Queens, precisamente in Astoria, supportano contains. neighborhood_of avrebbe direzione Astoria → Queens.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": [
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "B06",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.05ns41",
+        "m.0cr3d"
+      ],
+      "head": "Betty Smith",
+      "tail": "Brooklyn",
+      "selected_sentence_count": 4,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Brooklyn compare nel titolo dell’opera di Betty Smith. Autrice e ambientazione/titolo non implicano nascita, residenza o morte dell’autrice.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "place_of_birth",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: biografia di Betty Smith."
+        },
+        {
+          "candidate": "place_lived",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: residenza di Betty Smith."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "B07",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.02vzc",
+        "m.03khn"
+      ],
+      "head": "Finland",
+      "tail": "Helsinki",
+      "selected_sentence_count": 7,
+      "original_relations": [
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "In August , aboard a cruise ship off Helsinki , Finland , Mr. Hemment remixed a short set of house and electroclash beats in a live performance for a party of about 1,000 ."
+        },
+        {
+          "sentence_number": 2,
+          "text": "The world championships will be run in August in Helsinki , Finland , and the winning 4x100 team here -- Coby Miller , Leonard Scott , Shawn Crawford and Gatlin -- could well be the United States ' relay team there ."
+        },
+        {
+          "sentence_number": 3,
+          "text": "The Indonesian government and rebels from the province of Aceh are set to end their decades-long conflict with the signing of a peace treaty on Monday in Helsinki , Finland , cementing a deal that came together in the aftermath of the tsunami that devastated the region in December ."
+        },
+        {
+          "sentence_number": 4,
+          "text": "The Indonesian government and separatists from the tsunami-devastated province of Aceh , meeting in Helsinki , Finland , agreed Sunday to end a 30-year conflict , one of the longest in Southeast Asia , which has killed some 15,000 people ."
+        },
+        {
+          "sentence_number": 5,
+          "text": "Malkin signed a one-year contract with Metallurg in August reportedly worth $ 3.45 million -- but then bolted the team a few days later in Helsinki , Finland , and was spirited off to Los Angeles and then Pittsburgh ."
+        }
+      ],
+      "rationale": "Helsinki, Finland supporta contains. Non identifica Helsinki come capitale; capital richiede un’informazione ulteriore.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "capital",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: status di Helsinki; non deducibile dalla sola localizzazione."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": [
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "B08",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.03shp",
+        "m.0ftlx"
+      ],
+      "head": "Iran",
+      "tail": "Tehran",
+      "selected_sentence_count": 20,
+      "original_relations": [],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "change_proposed": true,
+      "decision_status": "human_confirmed_applied",
+      "support_class": "I",
+      "confidence": "low_to_medium",
+      "evidence_sentence_numbers": [
+        5,
+        11,
+        13,
+        18,
+        20
+      ],
+      "evidence": [
+        {
+          "sentence_number": 5,
+          "text": "The United States gave its explicit support on Friday to a European proposal to defuse the West 's confrontation with Iran over what is suspected of being its nuclear weapons program , while in Tehran the Iranian government received the proposal and said it would study its contents before commenting . ''"
+        },
+        {
+          "sentence_number": 11,
+          "text": "The Swiss ambassador to Iran received the proposal on behalf of the United States , which does not have a representative in Tehran ."
+        },
+        {
+          "sentence_number": 13,
+          "text": "In Tehran on Monday , Mr. Ahmadinejad portrayed Iran 's position not as obstinate or rigid but as a reflection of strength . ''"
+        },
+        {
+          "sentence_number": 18,
+          "text": "We are sure that there are no such documents in Iran , '' Ali A. Larijani , secretary of the Supreme National Security Council and the country 's chief nuclear negotiator , said in an interview in Tehran . ''"
+        },
+        {
+          "sentence_number": 20,
+          "text": "A Western diplomat based in Tehran said that Iran 's recent behavior has been infuriating , an apparent effort to undermine the diplomatic process ."
+        }
+      ],
+      "rationale": "Proposta dubbia: i riferimenti al governo iraniano a Tehran, all’assenza di una rappresentanza statunitense e ai colloqui con funzionari del paese suggeriscono Tehran come luogo interno all’Iran. È un’inferenza pragmatica del contesto istituzionale, non una deduzione necessaria. La sola metonimia Tehran = governo iraniano non basterebbe. Non aggiungere capital.",
+      "uncertain_inference": true,
+      "alternative_relations": [],
+      "external_candidates": [
+        {
+          "candidate": "capital",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: status di Tehran; il contesto istituzionale non lo enuncia."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": [
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "B09",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.059rby",
+        "m.0ccvx"
+      ],
+      "head": "New York",
+      "tail": "Queens",
+      "selected_sentence_count": 20,
+      "original_relations": [
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        12,
+        13,
+        14
+      ],
+      "evidence": [
+        {
+          "sentence_number": 12,
+          "text": "That , according to a recent report from the advocacy group Transportation Alternatives , is just how life is in New York neighborhoods with clusters of government offices , from Jamaica in Queens , to Concourse Village in the Bronx , to St. George in Staten Island ."
+        },
+        {
+          "sentence_number": 13,
+          "text": "Interment to follow at Calvary Cemetery , Queens , New York ."
+        },
+        {
+          "sentence_number": 14,
+          "text": "In contrast , New York now has three Chinatowns -- one each for Manhattan , Brooklyn and Queens , though only the original can claim the name ."
+        }
+      ],
+      "rationale": "Queens, New York e i quartieri descritti come parte di New York supportano contains. Nessun bisogno di sapere dalla memoria dove si trova Queens.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": [
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "B10",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.048_950",
+        "m.0484mzq"
+      ],
+      "head": "Sam",
+      "tail": "Jon",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Robin/Sam sono figli della persona dell’epigrafe; Melissa/Jon sono nipoti. Non è specificato di quale figlio siano figli: Sam → Jon non è stabilito.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "B11",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.06q1r",
+        "m.02m77"
+      ],
+      "head": "Scotland",
+      "tail": "Edinburgh",
+      "selected_sentence_count": 6,
+      "original_relations": [
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "After performing their dance in private last Saturday , the All Blacks romped all over Wales , 45-10 , for their fourth straight victory on the trip , a tune-up for September 's World Cup , to be based mostly in France but with a few matches in Edinburgh , Scotland , and Cardiff ."
+        },
+        {
+          "sentence_number": 2,
+          "text": "A card attached to it reads : '' From Liz and Hugh , Edinburgh , Scotland ."
+        },
+        {
+          "sentence_number": 3,
+          "text": "We 're very impressed with their dedication , talent and organizational skills , '' said Mr. Philip , whose school sends a small group to Edinburgh , Scotland , every other year for the international Fringe Festival ."
+        },
+        {
+          "sentence_number": 4,
+          "text": "I have been away from Florida for a long time , '' wrote Nicole Brandon of Edinburgh , Scotland , '' but my memories as a little kid are punctuated at all the most random times by the Rice brothers . ''"
+        },
+        {
+          "sentence_number": 6,
+          "text": "A card attached to it reads : '' From Liz and Hugh , Edinburgh , Scotland ."
+        }
+      ],
+      "rationale": "Edinburgh, Scotland supporta contains. Lo status di capitale non è enunciato e il solo nome del luogo non lo dimostra.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "capital",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: status di Edinburgh e corretta distinzione country/region."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": [
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "B12",
+      "cohort": "blind12",
+      "current_comparison_cohort": false,
+      "pair_ids": [
+        "m.0nzw2",
+        "m.0767_6"
+      ],
+      "head": "DeKalb County",
+      "tail": "Derwin Brown",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "La carica di sheriff-elect nella contea non ha una relazione corrispondente nell’inventario per contea → persona. Non si converte la persona in un luogo o in un evento.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_sample_2026-09-28.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_blind_annotations_2026-09-28.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "C01",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.05qkp",
+        "m.0fs0v"
+      ],
+      "head": "Papua New Guinea",
+      "tail": "Port Moresby",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E+I",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Port Moresby , the capital of Papua New Guinea , has for decades been portrayed in the Western press as a lawless place overrun by ferocious gangs of '' raskols . ''"
+        }
+      ],
+      "rationale": "Port Moresby è chiamata capitale di Papua New Guinea. contains è l’implicazione/convenzione già dichiarata per capital; conservarla senza nuovi controlli del test.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "C02",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.07ym0",
+        "m.05qtj"
+      ],
+      "head": "Voltaire",
+      "tail": "Paris",
+      "selected_sentence_count": 3,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Le menzioni riguardano un titolo, un ristorante e un confronto con Voltaire. Nessuna relazione biografica Voltaire → Paris emerge. Resta anche un problema di allineamento delle menzioni al personaggio.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "biographical_relations",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare solo dopo controllo di identità delle menzioni: il nome nel testo non identifica sempre il filosofo."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "C03",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.02w9slf",
+        "m.0841v"
+      ],
+      "head": "West Side",
+      "tail": "Wal-Mart",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Una futura sede commerciale è sul West Side, ma la coppia è luogo → azienda. business/location ha direzione opposta; contains nel contratto attuale è luogo → luogo, non luogo → persona giuridica.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "C04",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.015fr",
+        "m.01hy_"
+      ],
+      "head": "Brazil",
+      "tail": "Brasília",
+      "selected_sentence_count": 4,
+      "original_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E+I",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        3,
+        4
+      ],
+      "evidence": [
+        {
+          "sentence_number": 3,
+          "text": "On Friday , lawyers representing the husband of a crash victim asked a court in Brasília , the capital , to order that the Legacy remain in Brazil for now ."
+        },
+        {
+          "sentence_number": 4,
+          "text": "In '' Brasília 18 % , '' a distinguished medical examiner , summoned to Brazil 's administrative capital to confirm the identity of a beautiful congressional aide found dead , finds himself a pawn in a political conspiracy that extends to the highest levels of government ."
+        }
+      ],
+      "rationale": "Brasília è definita capitale e capitale amministrativa del Brasile. contains conserva l’implicazione/convenzione dichiarata per capital.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "C05",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.02ygr1",
+        "m.02vsjy0"
+      ],
+      "head": "Carlos Slim Helú",
+      "tail": "Carlos Slim Domit",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/person/children"
+      ],
+      "proposed_relations": [
+        "/people/person/children"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "LAST week , Carlos Slim Domit , the eldest son of Carlos Slim Helú , the Mexican billionaire , confirmed what had earlier been largely dismissed as a rumor : he had acquired a stake in Univision , the big Spanish-language television and radio company that recently put itself on the block ."
+        }
+      ],
+      "rationale": "eldest son esplicita Helú → Domit come genitore → figlio.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": [
+        "/people/person/children"
+      ]
+    },
+    {
+      "sample_id": "C06",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.01pt2r",
+        "m.01g3rx"
+      ],
+      "head": "Evo Morales",
+      "tail": "Aymara",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/person/ethnicity"
+      ],
+      "proposed_relations": [
+        "/people/person/ethnicity"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "To judge by the overwhelming victory of Evo Morales , an Aymara , in Bolivia 's elections on Dec. 18 , he kept his promise ."
+        }
+      ],
+      "rationale": "Evo Morales è descritto come an Aymara: ethnicity è direttamente supportata.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": [
+        "/people/person/ethnicity"
+      ]
+    },
+    {
+      "sample_id": "C07",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.03j0v_",
+        "m.0930r6"
+      ],
+      "head": "Lowry Mays",
+      "tail": "Mark Mays",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/person/children"
+      ],
+      "proposed_relations": [
+        "/people/person/children"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Mark Mays , Clear Channel 's chief executive and the son of Lowry Mays , the company 's founder , said on a conference call with analysts yesterday that the company wanted to allow '' our business units to grow as fast as they possibly can , and as we have looked at different ways to accomplish that over the last couple of years , we believe that this absolutely does that . ''"
+        }
+      ],
+      "rationale": "Mark Mays è detto son of Lowry Mays: children nella direzione Lowry → Mark, indipendentemente dalle etichette distanti.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": [
+        "/people/person/children"
+      ]
+    },
+    {
+      "sample_id": "C08",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.0169dl",
+        "m.0dvmd"
+      ],
+      "head": "Matt Damon",
+      "tail": "Leonardo DiCaprio",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Recitare nello stesso film non è una delle relazioni ammesse per Damon → DiCaprio.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "C09",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.03_80b",
+        "m.04vmp"
+      ],
+      "head": "Ismail Merchant",
+      "tail": "Mumbai",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/deceasedperson/place_of_burial",
+        "/people/person/place_of_birth"
+      ],
+      "proposed_relations": [
+        "/people/deceasedperson/place_of_burial",
+        "/people/person/place_of_birth"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Ismail Merchant Buried At a ceremony attended by relatives and friends , Ismail Merchant , the producer of award-winning films like '' Howards End , '' '' A Room With a View '' and '' The Remains of the Day , '' was buried on Saturday in Mumbai , formerly Bombay , where he was born in 1936 , the BBC reported ."
+        }
+      ],
+      "rationale": "La frase specifica sepoltura a Mumbai e nascita nello stesso luogo tramite where. Non specifica né morte né residenza.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": [
+        "/people/deceasedperson/place_of_burial",
+        "/people/person/place_of_birth"
+      ]
+    },
+    {
+      "sample_id": "C10",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.06bnz",
+        "m.01z215"
+      ],
+      "head": "Russia",
+      "tail": "Saudi Arabia",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Russia e Saudi Arabia sono elementi di una lista di paesi; non è espressa una relazione ammessa fra loro.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "C11",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.01qhsj",
+        "m.0cy07"
+      ],
+      "head": "Mo Mowlam",
+      "tail": "Canterbury",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/deceasedperson/place_of_death"
+      ],
+      "proposed_relations": [
+        "/people/deceasedperson/place_of_death"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Mo Mowlam , the earthy , straight-talking politician who as Britain 's Northern Ireland secretary helped negotiate the Good Friday peace settlement in 1998 , died Friday morning at a hospice in Canterbury , her family said ."
+        }
+      ],
+      "rationale": "died ... at a hospice in Canterbury supporta place_of_death, inclusa la normale risoluzione spaziale ospizio → città.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": [
+        "/people/deceasedperson/place_of_death"
+      ]
+    },
+    {
+      "sample_id": "C12",
+      "cohort": "clean12",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.02y1vz",
+        "m.086dny"
+      ],
+      "head": "Facebook",
+      "tail": "Mark Zuckerberg",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/business/company/founders"
+      ],
+      "proposed_relations": [
+        "/business/company/founders"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "YAHOO BIDS FOR FACEBOOK -- To woo Mark Zuckerberg , the 22-year-old founder of the social networking Web site Facebook , Yahoo has offered about $ 900 million for the company and said it would keep Mr. Zuckerberg in charge ."
+        }
+      ],
+      "rationale": "Zuckerberg è chiamato founder di Facebook: company → founder.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_sample_2026-09-29.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_clean_annotations_2026-09-29.json",
+      "current_relations": [
+        "/business/company/founders"
+      ]
+    },
+    {
+      "sample_id": "N01",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.04wcf",
+        "m.05vw7"
+      ],
+      "head": "Montserrat",
+      "tail": "Plymouth",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E+I",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "The eruptions demolished much of Montserrat , a British colony , including its capital , Plymouth , and forced the evacuation of two-thirds of the island 's inhabitants ."
+        }
+      ],
+      "rationale": "Plymouth è chiamata capitale di Montserrat. Si conservano la classificazione e la convenzione capital/contains già adottate; il passo non giustifica da solo un cambio della tassonomia country/region.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/location/country/capital",
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "N02",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.0d060g",
+        "m.0154gx"
+      ],
+      "head": "Canada",
+      "tail": "Mississauga",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/location/location/contains"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Vincor is based in Mississauga , Canada , which is near Toronto ."
+        }
+      ],
+      "rationale": "Mississauga, Canada supporta Canada → Mississauga contains.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/location/location/contains"
+      ]
+    },
+    {
+      "sample_id": "N03",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.026tkbc",
+        "m.02z2m_"
+      ],
+      "head": "Mike Jeffries",
+      "tail": "Abercrombie & Fitch",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/business/person/company"
+      ],
+      "proposed_relations": [
+        "/business/person/company"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Mike Jeffries , the chief executive of Abercrombie & Fitch , does n't want you in his clothing stores . ''"
+        }
+      ],
+      "rationale": "chief executive of Abercrombie & Fitch supporta Jeffries → azienda.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/business/person/company"
+      ]
+    },
+    {
+      "sample_id": "N04",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.026g4n0",
+        "m.0wdjl"
+      ],
+      "head": "Jane Elizabeth Hodgson",
+      "tail": "Crookston",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/person/place_of_birth"
+      ],
+      "proposed_relations": [
+        "/people/person/place_of_birth"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Jane Elizabeth Hodgson was born on Jan. 23 , 1915 , in Crookston , Minn. ."
+        }
+      ],
+      "rationale": "was born ... in Crookston supporta place_of_birth.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/people/person/place_of_birth"
+      ]
+    },
+    {
+      "sample_id": "N05",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.0674cw",
+        "m.04vmp"
+      ],
+      "head": "Hrishikesh Mukherjee",
+      "tail": "Mumbai",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/deceasedperson/place_of_death"
+      ],
+      "proposed_relations": [
+        "/people/deceasedperson/place_of_death"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Hrishikesh Mukherjee , who produced and directed memorable and successful Hindi films in a career of more than five decades , died on Aug. 27 in Mumbai ."
+        }
+      ],
+      "rationale": "died ... in Mumbai supporta place_of_death; non basta per nascita o residenza.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/people/deceasedperson/place_of_death"
+      ]
+    },
+    {
+      "sample_id": "N06",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.02l8jr",
+        "m.018pyg"
+      ],
+      "head": "Lloyd Maines",
+      "tail": "Natalie Maines",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/person/children"
+      ],
+      "proposed_relations": [
+        "/people/person/children"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "And his recent album , '' Good Times '' -LRB- Dualtone -RRB- , was produced by Lloyd Maines , father of Natalie Maines -- the third Chick ."
+        }
+      ],
+      "rationale": "father of Natalie Maines supporta Lloyd → Natalie children. Non occorre la parola children nel testo; si normalizza la relazione senza invertirla.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/people/person/children"
+      ]
+    },
+    {
+      "sample_id": "N07",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.03wpv91",
+        "m.0x67"
+      ],
+      "head": "Lloyd G. Trotter",
+      "tail": "African American",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/person/ethnicity"
+      ],
+      "proposed_relations": [
+        "/people/person/ethnicity"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Lloyd G. Trotter , an African American who has worked for G.E. for 35 years and is now chief executive of GE Consumer and Industrial , a $ 13 billion business , doubts that racism results in white employees getting jobs that their black colleagues covet . ''"
+        }
+      ],
+      "rationale": "an African American supporta ethnicity.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/people/person/ethnicity"
+      ]
+    },
+    {
+      "sample_id": "N08",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.015vw5",
+        "m.0ygbf"
+      ],
+      "head": "Krispy Kreme",
+      "tail": "Winston-Salem",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/business/location"
+      ],
+      "proposed_relations": [
+        "/business/location"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Mr. Jervik , 49 , will receive at least $ 400,000 in pay next year , but there is no sugar coating on one clause in his contract : he must relocate to be near Krispy Kreme 's headquarters in Winston-Salem , N.C. Patrick McGeehan OPENERS : SUITS"
+        }
+      ],
+      "rationale": "Krispy Kreme’s headquarters in Winston-Salem supporta business/location. Avere qui la sede non implica che qui sia stata fondata.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/business/location"
+      ]
+    },
+    {
+      "sample_id": "N09",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.027m0s",
+        "m.08wxz6"
+      ],
+      "head": "Calvin Klein",
+      "tail": "Barry Schwartz",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/business/company/founders"
+      ],
+      "proposed_relations": [
+        "/business/company/founders"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "medium",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "There is a hole in everyone 's heart , '' said Sheryl Schwartz , the wife of Barry Schwartz , a co-founder of Calvin Klein and a prominent thoroughbred owner and breeder . ''"
+        }
+      ],
+      "rationale": "Barry Schwartz è chiamato co-founder of Calvin Klein. La lettura aziendale del nome Calvin Klein è determinata dal ruolo co-founder; mantenere founders e segnalare l’ambiguità di entità.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/business/company/founders"
+      ]
+    },
+    {
+      "sample_id": "N10",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.02plttk",
+        "m.0d05w3"
+      ],
+      "head": "Lou Ye",
+      "tail": "China",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/person/nationality"
+      ],
+      "proposed_relations": [
+        "/people/person/nationality"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "China Punishes Filmmaker The Chinese director Lou Ye has been banned from filmmaking for five years because he submitted his '' Summer Palace '' to the Cannes Film Festival without official approval , Reuters reported ."
+        }
+      ],
+      "rationale": "Chinese director Lou Ye supporta nationality tramite normalizzazione del demònimo Chinese → China. Non occorre la parola nationality.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/people/person/nationality"
+      ]
+    },
+    {
+      "sample_id": "N11",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.05lsgj",
+        "m.0f04v"
+      ],
+      "head": "Theodor Uppman",
+      "tail": "San Jose",
+      "selected_sentence_count": 1,
+      "original_relations": [
+        "/people/person/place_of_birth"
+      ],
+      "proposed_relations": [
+        "/people/person/place_of_birth"
+      ],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "E",
+      "confidence": "high",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "Theodor Uppman was born in San Jose , Calif. , on Jan. 12 , 1920 , to a family of Swedish heritage ."
+        }
+      ],
+      "rationale": "was born in San Jose supporta place_of_birth. Nascita e origine familiare svedese non dimostrano residenza successiva né un’altra relazione per questa coppia.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/people/person/place_of_birth"
+      ]
+    },
+    {
+      "sample_id": "N12",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.052f_2",
+        "m.0c1d0"
+      ],
+      "head": "James Manning",
+      "tail": "Providence",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Providence descrive la Brown family; non è localizzato lì James Manning, né la sua morte. Un eventuale fatto biografico esterno resta distinto.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "place_of_death",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: biografia di James Manning e luogo del decesso."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "N13",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.02p10m",
+        "m.048yyh"
+      ],
+      "head": "Univision",
+      "tail": "Gustavo Cisneros",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "La frase dice member of Univision’s board. Essere nel consiglio non implica essere un major shareholder; la relazione persona → azienda avrebbe direzione opposta.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "majorshareholders",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: partecipazione azionaria, dimensione della quota e data."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "N14",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.05cskg",
+        "m.0209vm"
+      ],
+      "head": "Dyson",
+      "tail": "James Dyson",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Inventore di un prodotto e fondatore di una società sono ruoli diversi. his product line non definisce la fondazione o la struttura proprietaria dell’azienda. Un fatto esterno verificato potrebbe essere vero senza essere estratto qui.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "founders",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: storia della società Dyson; inventore non basta come premessa testuale."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "N15",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.02079bk",
+        "m.04b2m_7"
+      ],
+      "head": "Woodcliff Lake",
+      "tail": "Barr",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Based in Woodcliff Lake localizza Barr, ma la query è luogo → azienda. Stessa decisione di C03: rispettare business/location azienda → luogo e contains luogo → luogo.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "N16",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.02qcy82",
+        "m.01wdsm"
+      ],
+      "head": "Silver Lake Partners",
+      "tail": "Seagate Technology",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "Il soggetto investitore è Silver Lake e l’impresa acquisita è Seagate. Un’eventuale company → major shareholder sarebbe Seagate → Silver Lake, direzione opposta. Inoltre la frase non quantifica la quota.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "N17",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.04jpl",
+        "m.0nczk"
+      ],
+      "head": "London",
+      "tail": "Woolwich",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [],
+      "change_proposed": false,
+      "decision_status": "retained",
+      "support_class": "N",
+      "confidence": "high",
+      "evidence_sentence_numbers": [],
+      "evidence": [],
+      "rationale": "about 10 miles east of central London dà una distanza dal centro; non stabilisce un confine amministrativo. L’appartenenza effettiva di Woolwich a London è un fatto geografico ulteriore.",
+      "uncertain_inference": false,
+      "alternative_relations": null,
+      "external_candidates": [
+        {
+          "candidate": "contains",
+          "status": "unverified_candidate_not_a_gold_label",
+          "note": "Da verificare: appartenenza geografica e livello territoriale London/Woolwich."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": []
+    },
+    {
+      "sample_id": "N18",
+      "cohort": "expanded18",
+      "current_comparison_cohort": true,
+      "pair_ids": [
+        "m.09bvds",
+        "m.03rjj"
+      ],
+      "head": "Andrea Barzagli",
+      "tail": "Italy",
+      "selected_sentence_count": 1,
+      "original_relations": [],
+      "proposed_relations": [
+        "/people/person/nationality"
+      ],
+      "change_proposed": true,
+      "decision_status": "human_confirmed_applied",
+      "support_class": "I",
+      "confidence": "medium",
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "evidence": [
+        {
+          "sentence_number": 1,
+          "text": "So Italy will use 25-year-old Andrea Barzagli in Nesta 's spot ."
+        }
+      ],
+      "rationale": "Proporre nationality come inferenza pragmatica: Italy will use ... in Nesta’s spot è letto come la nazionale che schiera il giocatore. La convenzione ammessa collega la rappresentanza da giocatore di una nazionale identificabile al paese rappresentato. È un’assunzione di dominio esplicita, non una citazione di cittadinanza: non estenderla a club, allenatori, residenza o nascita. Una lettura più prudente della frase isolata può mantenere [].",
+      "uncertain_inference": true,
+      "alternative_relations": [],
+      "external_candidates": [
+        {
+          "candidate": "/people/person/nationality",
+          "status": "external_corroboration_verified_separate_from_text",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/0221-0e90d96734ec-096e37359e67-1000--barzagli-doubtful-for-champions-league-final/",
+          "note": "UEFA descrive Barzagli come Italian international. La fonte è esterna e non costituisce la premessa dell’annotazione testuale proposta."
+        }
+      ],
+      "sample_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_2026-10-01.json",
+      "annotation_file": "/Users/alessandro/Progetti/Ensembling/support/validation_expanded_18_annotations_2026-10-01.json",
+      "current_relations": [
+        "/people/person/nationality"
+      ]
+    }
+  ],
+  "annotation_version": "text_supported_inference_v2_20261006",
+  "confirmation_note": "The thesis author explicitly approved both additions in chat on 6 October 2026."
+}

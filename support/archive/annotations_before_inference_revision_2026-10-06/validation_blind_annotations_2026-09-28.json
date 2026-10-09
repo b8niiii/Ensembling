@@ -1,0 +1,205 @@
+{
+  "annotation_type": "text-only relation annotations for validation audit; not official test gold",
+  "created_date": "2026-09-28",
+  "sample_file": "support/validation_blind_sample_2026-09-28.json",
+  "sample_sha256": "2654b2645ba506f7549e3276ba8ba3182366ad0612a0d581981411a4bb85188a",
+  "policy": "Ordered head-to-tail pair; only the supplied sentences and the 24 allowed positive relation names; no model predictions or distant-supervision labels consulted for these twelve bags. Standard location apposition (e.g. Helsinki, Finland) supports broad containment; capital status requires explicit textual evidence. A missing supported relation is represented by an empty list. Every bag has a reviewed proposed answer; confidence still records interpretive uncertainty.",
+  "annotations": [
+    {
+      "sample_id": "B01",
+      "pair_ids": [
+        "m.013yq",
+        "m.020fp1"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "evidence_sentence_numbers": [
+        1,
+        2
+      ],
+      "confidence": "medium",
+      "scorable": true,
+      "rationale": "The text places Turner Field in the Atlanta setting. Sentence 1 locates a statue outside its entrance in Atlanta; sentence 2 links a meeting at the field to a home in an Atlanta suburb. Containment is supported but not stated as directly as a City, Country apposition."
+    },
+    {
+      "sample_id": "B02",
+      "pair_ids": [
+        "m.02hrh0_",
+        "m.02lz3v"
+      ],
+      "proposed_relations": [],
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "Hawaii Kai is said to be near Honolulu. Near does not establish containment or any other relation in the allowed inventory."
+    },
+    {
+      "sample_id": "B03",
+      "pair_ids": [
+        "m.05gnf",
+        "m.01w6dw"
+      ],
+      "proposed_relations": [],
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "An NBC show mentions an American Express card. Co-mention and product placement in a show do not establish an allowed direct company-to-company relation."
+    },
+    {
+      "sample_id": "B04",
+      "pair_ids": [
+        "m.02rq9n",
+        "m.056ws9"
+      ],
+      "proposed_relations": [
+        "/business/person/company"
+      ],
+      "evidence_sentence_numbers": [
+        1,
+        2,
+        3
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "Jeffrey Katzenberg is explicitly called the chief executive of DreamWorks Animation."
+    },
+    {
+      "sample_id": "B05",
+      "pair_ids": [
+        "m.0ccvx",
+        "m.01qcx_"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "evidence_sentence_numbers": [
+        1,
+        14
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "The repeated Astoria, Queens apposition and the statement that an operation in Queens is in Astoria support Queens containing Astoria. The neighborhood_of label would require the opposite head-to-tail direction."
+    },
+    {
+      "sample_id": "B06",
+      "pair_ids": [
+        "m.05ns41",
+        "m.0cr3d"
+      ],
+      "proposed_relations": [],
+      "evidence_sentence_numbers": [
+        1,
+        2,
+        4
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "Brooklyn appears in the title of a work by Betty Smith. The sentences do not state that she was born, lived, or died there."
+    },
+    {
+      "sample_id": "B07",
+      "pair_ids": [
+        "m.02vzc",
+        "m.03khn"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "evidence_sentence_numbers": [
+        1,
+        2,
+        3
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "Helsinki, Finland identifies Helsinki as a place in Finland. None of the supplied sentences says it is the capital, so the country/capital label is not assigned."
+    },
+    {
+      "sample_id": "B08",
+      "pair_ids": [
+        "m.03shp",
+        "m.0ftlx"
+      ],
+      "proposed_relations": [],
+      "evidence_sentence_numbers": [
+        5,
+        11,
+        13
+      ],
+      "confidence": "medium",
+      "scorable": true,
+      "rationale": "The sentences use Tehran as shorthand for the Iranian government but do not explicitly state a geographic containment or capital relation. Under the strict supplied-text rule, the relation set is empty; this interpretation was reviewed before inspecting model answers."
+    },
+    {
+      "sample_id": "B09",
+      "pair_ids": [
+        "m.059rby",
+        "m.0ccvx"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "evidence_sentence_numbers": [
+        12,
+        13,
+        14
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "The text calls places in Queens New York neighborhoods and lists Queens among New York subdivisions. The New York-to-Queens containment direction is supported."
+    },
+    {
+      "sample_id": "B10",
+      "pair_ids": [
+        "m.048_950",
+        "m.0484mzq"
+      ],
+      "proposed_relations": [],
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "Sam and Jon are both mentioned in an obituary, but the sentence does not establish a direct parent-child relation between them. No other allowed relation is stated."
+    },
+    {
+      "sample_id": "B11",
+      "pair_ids": [
+        "m.06q1r",
+        "m.02m77"
+      ],
+      "proposed_relations": [
+        "/location/location/contains"
+      ],
+      "evidence_sentence_numbers": [
+        1,
+        3,
+        5
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "Edinburgh, Scotland and the National Library of Scotland / Writers Museum in Edinburgh support Scotland containing Edinburgh. Capital status is not explicitly stated."
+    },
+    {
+      "sample_id": "B12",
+      "pair_ids": [
+        "m.0nzw2",
+        "m.0767_6"
+      ],
+      "proposed_relations": [],
+      "evidence_sentence_numbers": [
+        1
+      ],
+      "confidence": "high",
+      "scorable": true,
+      "rationale": "Derwin Brown is described as sheriff-elect in DeKalb County. The inventory has no relation for holding that office, and the sentence does not state an allowed person-location relation."
+    }
+  ],
+  "review_status": "reviewed before comparison with saved model answers",
+  "review_note": "B08 Iran -> Tehran was resolved as an empty relation set under the strict supplied-text rule. No saved model answers were inspected before this revision."
+}

@@ -1,0 +1,31 @@
+{
+  "models": {
+    "gliner_relex_base": {
+      "entity_selector_called": false,
+      "max_entity_words": 11,
+      "max_sentence_words": 732,
+      "native_relation_logit_max_difference": 0.0,
+      "ner_logits_produced": false,
+      "relations_scored": 24,
+      "selected_sentences_checked": 44751,
+      "sentences_with_word_boundary_refinement": 320,
+      "span_mode": "token_level",
+      "synthetic_head": "France",
+      "synthetic_tail": "Paris"
+    },
+    "gliner_relex_large": {
+      "entity_selector_called": false,
+      "max_entity_words": 11,
+      "max_sentence_words": 732,
+      "native_relation_logit_max_difference": 0.0,
+      "ner_logits_produced": false,
+      "relations_scored": 24,
+      "selected_sentences_checked": 44751,
+      "sentences_with_word_boundary_refinement": 320,
+      "span_mode": "markerV0",
+      "synthetic_head": "France",
+      "synthetic_tail": "Paris"
+    }
+  },
+  "run_fingerprint": "c9a68bf3bb8d0af2830fabbaa7948bb165077e4bea69e90b7233a744f4743793"
+}

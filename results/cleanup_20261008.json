@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-08",
+  "removed_regular_file_allocations_bytes": 3639984128,
+  "removed_GiB": 3.3899993896484375,
+  "removed_decimal_GB": 3.639984128,
+  "individual_removed_paths": [
+    {
+      "path": "data/model_cache/models--cea-list-ia--glidre_large/snapshots/d1ba1cf0f41d2849f1695c6acc67546700d721ba/pytorch_model.bin",
+      "bytes": 76,
+      "allocated_bytes": 0,
+      "symlink": true
+    },
+    {
+      "path": "data/model_cache/models--cea-list-ia--glidre_large/blobs/dc2fb3cf239ba898161fa9a9d6c27d8f4f51714b409d094f58c343ea12c52225",
+      "bytes": 3201265131,
+      "allocated_bytes": 3201265664,
+      "symlink": false,
+      "sha256": "dc2fb3cf239ba898161fa9a9d6c27d8f4f51714b409d094f58c343ea12c52225"
+    },
+    {
+      "path": "data/model_cache/glidre_runtime/5c3bee6698b4365224576459f9c8d48c9a6d3b6d/glidre_source.zip",
+      "bytes": 21613746,
+      "allocated_bytes": 21614592,
+      "symlink": false
+    },
+    {
+      "path": "data/model_cache/glidre_runtime/5c3bee6698b4365224576459f9c8d48c9a6d3b6d/gliner-0.2.13.whl",
+      "bytes": 47697,
+      "allocated_bytes": 49152,
+      "symlink": false
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/report_archive_before_annotation_revision_20261006/original/disagreements.json",
+      "bytes": 5796365,
+      "allocated_bytes": 5799936,
+      "symlink": false
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/report_archive_before_cohort_cleanup_20261005/disagreements.json",
+      "bytes": 6128611,
+      "allocated_bytes": 6131712,
+      "symlink": false
+    },
+    {
+      "path": "data/pilot_runs/report_archive_before_annotation_revision_20261006/Full_validation_relex.ipynb",
+      "bytes": 344285,
+      "allocated_bytes": 348160,
+      "symlink": false
+    },
+    {
+      "path": ".DS_Store",
+      "bytes": 8196,
+      "allocated_bytes": 12288,
+      "symlink": false
+    },
+    {
+      "path": ".venv/.DS_Store",
+      "bytes": 6148,
+      "allocated_bytes": 8192,
+      "symlink": false
+    },
+    {
+      "path": ".venv/lib/.DS_Store",
+      "bytes": 6148,
+      "allocated_bytes": 8192,
+      "symlink": false
+    },
+    {
+      "path": ".venv/lib/python3.14/.DS_Store",
+      "bytes": 6148,
+      "allocated_bytes": 8192,
+      "symlink": false
+    },
+    {
+      "path": ".venv/lib/python3.14/site-packages/.DS_Store",
+      "bytes": 8196,
+      "allocated_bytes": 12288,
+      "symlink": false
+    },
+    {
+      "path": ".venv/lib/python3.14/site-packages/torch/.DS_Store",
+      "bytes": 6148,
+      "allocated_bytes": 8192,
+      "symlink": false
+    },
+    {
+      "path": ".venv/lib/python3.14/site-packages/torch/include/.DS_Store",
+      "bytes": 6148,
+      "allocated_bytes": 8192,
+      "symlink": false
+    },
+    {
+      "path": "data/.DS_Store",
+      "bytes": 8196,
+      "allocated_bytes": 12288,
+      "symlink": false
+    },
+    {
+      "path": "data/pilot_runs/.DS_Store",
+      "bytes": 10244,
+      "allocated_bytes": 12288,
+      "symlink": false
+    },
+    {
+      "path": "data/pilot_runs/relex_full_validation_given_entities_v1_20261004/.DS_Store",
+      "bytes": 6148,
+      "allocated_bytes": 8192,
+      "symlink": false
+    }
+  ],
+  "python_bytecode_removal": {
+    "pattern": "**/__pycache__/**",
+    "directories": 2281,
+    "regular_files": 16570,
+    "symlinks": 0,
+    "bytes": 367292352,
+    "allocated_bytes": 404676608
+  },
+  "integrity": {
+    "success": true,
+    "protected_files": 134738,
+    "protected_inventory_sha256": "0a75a35a9a2b8a87aca2c5347ff5ca369bbb389e5e9b8295168d49e7289412d8",
+    "frozen_test_fingerprint": "b7ab3463602ffb361ff4ecdbc37ce947b0bca7b9cbcfa0221e7761ab3de3f6a3",
+    "all_protected_bytes_unchanged": true,
+    "frozen_metadata_verifies_without_glidre_weight": true,
+    "seconds": 18.09
+  },
+  "unit_tests_passed": 36,
+  "full_validation_regeneration": {
+    "success": true,
+    "bags": 36266,
+    "models": [
+      "base",
+      "large",
+      "glidre"
+    ],
+    "rows": 180,
+    "reviewed_bags": 30
+  },
+  "portable_notebook_checks": {
+    "success": true,
+    "notebooks": [
+      "SLM_test.ipynb",
+      "DeepSeek_test.ipynb",
+      "Full_validation_relex.ipynb",
+      "Preliminary_experiments.ipynb",
+      "data.ipynb"
+    ],
+    "data_weights_env_absent": true,
+    "network_and_worker_guard": true,
+    "api_calls": 0,
+    "model_inference": false
+  },
+  "preserved": {
+    "validation_bag_results": 108798,
+    "test_encoder_bag_results": 15522,
+    "test_API_results": 5174,
+    "test_API_attempts": 5176,
+    "relex_weights": "base and large retained",
+    "glidre_weights": "evicted; pinned metadata/tokenizers/receipt/helpers and all scores retained",
+    "datasets": "original NYT10m files retained",
+    "environment": "installed distributions unchanged; bytecode removed"
+  },
+  "git": {
+    "branch": "main",
+    "local_HEAD": "ff1e63e92444d0f1f3d1d00e43942f81073156b2",
+    "remote_main_verified": "ff1e63e92444d0f1f3d1d00e43942f81073156b2",
+    "staged_or_committed_or_pushed": false
+  },
+  "note": "Allocation sums are not a guarantee of immediate APFS free-space change. No actual inference, training, download or paid request occurred.",
+  "project_allocated_before_bytes_excluding_git": 8575807488,
+  "project_allocated_after_bytes_excluding_git": 4935319552,
+  "project_allocated_net_reduction_bytes": 3640487936
+}
