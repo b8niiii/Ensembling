@@ -8,6 +8,11 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+LOCAL_ROOTS = {"data", "models", "model_cache", ".venv", ".venv-report", "outputs", "local"}
+PERSONAL_DOCUMENT_NAMES = {
+    "thesis_outline.md", "background_related_work.md", "literature.md",
+    "evidence_matrix.md", "notes.md", "starter.md", "publication_files.md",
+}
 SECRET_PATTERNS = (
     re.compile(rb"sk-[A-Za-z0-9_-]{20,}"),
     re.compile(rb"hf_[A-Za-z0-9]{25,}"),
@@ -48,9 +53,11 @@ def check():
 
     for name in files:
         path = ROOT / name
-        if (name.split("/")[0] in {"data", "models", "model_cache", ".venv", "outputs"}
+        if (name.split("/")[0] in LOCAL_ROOTS
                 or (path.name.startswith(".env") and path.name != ".env.example")):
             issues.append({"path": name, "issue": "private/local artifact included"})
+        if path.name in PERSONAL_DOCUMENT_NAMES or (path.suffix == ".md" and path.name.startswith("cleanup_")):
+            issues.append({"path": name, "issue": "personal writing/workflow document included"})
         if path.stat().st_size >= 10 * 1024**2:
             issues.append({"path": name, "issue": "public file exceeds the project 10 MiB limit"})
         raw = path.read_bytes()
@@ -58,6 +65,8 @@ def check():
             issues.append({"path": name, "issue": "possible embedded credential; value withheld"})
         if path.suffix == ".py":
             ast.parse(raw.decode(), filename=name)
+        if path.suffix == ".json":
+            json.loads(raw)
         markdown = raw.decode() if path.suffix == ".md" else ""
         if path.suffix == ".ipynb":
             notebook = json.loads(raw)
@@ -87,6 +96,10 @@ def check():
             if "://" in target or target.startswith("#"):
                 continue
             target = target.strip("<>").split("#", 1)[0]
+            if Path(target).is_absolute():
+                issues.append({"path": name, "issue": "nonportable absolute documentation link",
+                               "target": target})
+                continue
             resolved = (path.parent / target).resolve()
             is_public = resolved in public_paths or (
                 resolved.is_dir() and any(p.is_relative_to(resolved) for p in public_paths)

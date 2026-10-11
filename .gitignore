@@ -6,6 +6,7 @@
 
 # Python environments and regenerable caches
 .venv/
+.venv-report/
 venv/
 env/
 __pycache__/
@@ -44,3 +45,6 @@ pytorch_model*.bin
 *.key
 .coverage
 htmlcov/
+
+# Personal thesis drafts, working notes and internal cleanup archives
+/local/

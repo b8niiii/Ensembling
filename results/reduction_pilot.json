@@ -1,0 +1,22 @@
+{
+  "bag_cap": 20,
+  "bags": 100,
+  "date": "2026-10-06",
+  "inference_run": false,
+  "manifest_sha256": "a25bd929bd41bc5d474e1cc6d2a54a8bdca004774f3ae9c6de172881dc379959",
+  "parent_model": {
+    "name": "GLiNER-relex-large",
+    "repo": "knowledgator/gliner-relex-large-v1.0",
+    "revision": "4aedc9226a5ac9e2f6b5ea3e91c1ee577c88a290",
+    "slug": "gliner_relex_large",
+    "weights_sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a"
+  },
+  "seed": 20261006,
+  "selected_records": 118,
+  "selection": "uniform sampling without replacement from sorted full-validation pairs",
+  "settings_sha256": "735c9a3c078a14d4899acc06981afd01e9c486ee54db962aec182c383b7657e7",
+  "source_manifest_sha256": "7401a243244e6a8972d2d5584a1fe308f638d1412f151ef5f24c77a0b69fd6f6",
+  "source_run_fingerprint": "c9a68bf3bb8d0af2830fabbaa7948bb165077e4bea69e90b7233a744f4743793",
+  "split": "validation",
+  "status": "inputs prepared; no reduced checkpoint or inference run"
+}

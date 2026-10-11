@@ -32,6 +32,20 @@ The ensemble has lower micro-F1 and requires 1.94× large's local inference time
 
 DeepSeek has higher measured precision, recall and F1. Its request-attempt time is 11.25× large's CPU inference sum, but these have different measurement scopes and do not establish an intrinsic compute-speed ratio. The 78 invalid/truncated completions remain failures under the frozen rule.
 
+## DeepSeek-relative reporting and next experiment
+
+The thesis uses DeepSeek thinking-low as the empirical upper quality reference normalized to **100**. Derived from the exact metrics in [test_comparison_summary.json](../results/test_comparison_summary.json), `100 × micro-F1(system) / 0.6735735271377764` gives:
+
+| Completed frozen system | Absolute micro-F1 | DeepSeek-relative F1 |
+|---|---:|---:|
+| GLiNER-relex large0.7 | 0.5228 | 77.62 |
+| Three-member majority | 0.5010 | 74.38 |
+| DeepSeek thinking-low | 0.6736 | 100.00 |
+
+These are reporting transformations of saved results, not new predictions, perfect F1, a mathematical ceiling or normalized confidence intervals. Retain absolute metrics and the existing paired uncertainty analysis. The [protocol](protocol.md#deepseek-relative-f1) requires matched cohorts/references and forbids using the test denominator for validation.
+
+The next main study is ONNX Runtime quantization of GLiNER-relex large at requested 4/8/16-bit levels, with exact supported weight/activation formats and paired FP32 controls. PEFT on limited modules and differentiated train-only subsets is exploratory. Export, quantized/adapted checkpoints and their metrics remain pending; select on validation before a later frozen test evaluation and report prior benchmark use. Completed test errors do not drive optimization choices.
+
 ## Lost and recovered relations
 
 Relative to large, voting changes 1,200 bags. It removes 468 correct facts and 897 false positives, while adding 75 correct facts and 42 false positives. Net: 393 fewer TP and 855 fewer FP. A label accepted only by large is removed because neither other member supports it. A correct label absent from large is recovered only when base and GLiDRE both accept it.

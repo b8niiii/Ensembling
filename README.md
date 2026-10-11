@@ -1,67 +1,68 @@
 # Cost-Aware Ensembling for News Relation Extraction
 
-A Data Science master's thesis at the Università degli Studi di Milano investigating:
+Data Science master's thesis at the Università degli Studi di Milano. The study asks **when combining small relation extractors improves quality enough to justify the additional computation, compared with individual models and a large model accessed through an API**.
 
-**When does combining small language models improve news relation extraction enough to justify the extra computation, compared with individual small models and a large model accessed through an API?**
+The current optimization objective is to measure **how closely compact systems approach DeepSeek's measured F1 while reducing local inference time, memory and storage**. The next main experiment uses **ONNX Runtime to quantize GLiNER-relex large**, investigating the requested **4-, 8- and 16-bit** levels against the unquantized parent. **PEFT on limited modules and differentiated training subsets** is an exploratory extension; neither optimization branch has produced results yet.
 
-Given an ordered entity pair and a bag of news sentences, the task is to predict a set of the 24 positive relations in **NYT10m**. An empty set represents no supported positive relation. Entity mentions and their direction are supplied; the encoder adapters bypass entity recognition.
+The task is bag-level, multi-label relation extraction on **NYT10m**: given news sentences and an ordered pair of supplied entity mentions, predict a set of 24 positive relation IDs. An empty set represents `NA`. The encoder adapters use the supplied spans and preserve head → tail direction.
 
-## Completed comparison
+## Main result
 
-Development used all **36,266 validation bags** with noisy distant labels, plus a separately reviewed 30-bag diagnostic reference. Checkpoints, thresholds, fusion, prompt and scoring were frozen before the first official manual-test comparison.
+The completed, frozen comparison evaluates **5,174 officially annotated test bags** under the same evidence and scoring rules.
 
-The completed test contains **5,174 bags**, **9,001 selected sentence/mention units**, and **3,899 positive manual bag facts**. Repeated rows that serialize multiple manual labels are merged before deterministic selection of at most 20 evidence units per pair. References use only selected evidence; in this release the selected and full-bag fact unions happen to coincide.
-
-| Frozen system | Precision | Recall | Micro-F1 | Accumulated time |
+| System | Precision | Recall | Micro-F1 | Recorded time |
 |---|---:|---:|---:|---:|
 | GLiNER-relex large, cutoff 0.7 | 0.5552 | 0.4940 | 0.5228 | 32.63 min |
-| Majority: base0.5 / large0.7 / GLiDRE0.7 | 0.6902 | 0.3932 | 0.5010 | 63.40 min |
+| Majority: base 0.5 / large 0.7 / GLiDRE 0.7 | 0.6902 | 0.3932 | 0.5010 | 63.40 min |
 | DeepSeek thinking-low | 0.8481 | 0.5586 | 0.6736 | 6.12 h |
 
-The tested majority improves precision but loses recall and F1 at 1.94× local inference time. DeepSeek has the highest measured quality, with 78 truncated/invalid answers retained in scoring. Its completed-response token charge reconstructs to approximately **$2.41**, with two interrupted attempts' charges unknown. This is not an invoice. Local CPU inference time excludes loading/preflight; API time includes network/service and request attempts, so these are distinct cost measurements.
+The tested majority improves precision but reduces recall and F1, using **1.94×** the large model's local inference time. DeepSeek achieves the highest measured F1; all **78 invalid/truncated answers** remain in scoring. Its completed-response token charge reconstructs to approximately **USD 2.41**, with two interrupted attempts' charges unknown. Local CPU inference and remote request time have different measurement scopes.
 
-See the [frozen specification](results/test_comparison_spec.json), [combined results](results/test_comparison_summary.json), [results audit](results/test_results_audit_20261008.json), and [working notes](support/notes.md). No test outcome is used to revise the evaluated configuration. Quantization/pruning and ensembles of reduced variants remain a separate, training/validation-based phase. ICL, routing, extra decoders and new fine-tuning are deferred.
+The paired bag-bootstrap 95% interval for majority minus large is **−2.18 F1 percentage points [−3.26, −1.11]**. This conclusion concerns the evaluated members, thresholds and voting rule. On the matched relative scale `100 × F1(system) / F1(DeepSeek)`, large scores **77.62**, majority **74.38** and DeepSeek **100.00**. This empirical upper reference is not a mathematical ceiling or perfect F1; absolute scores remain visible. See the [reporting convention](docs/protocol.md#deepseek-relative-f1).
 
-The [statistical analysis](source/Test_results_analysis.ipynb) adds paired whole-bag confidence intervals and quality–latency/precision–recall figures using saved predictions only. Majority minus large is **−2.18 F1 percentage points [95% CI: −3.26, −1.11]**; DeepSeek minus large is **+15.08 [13.65, 16.51]**. These intervals describe sampled-bag uncertainty, not repeated API-generation variability. API expenditure, local CPU time and unmeasured peak memory remain separate. See the [analysis write-up](support/test_results_analysis_2026-10-08.md).
+## Next experiments
 
-## Review the notebooks
+1. Validate ONNX FP32 export of the complete supplied-entity relation path and measure paired original PyTorch/ONNX FP32 controls.
+2. Implement dynamic INT8 and assess the requested 4-/16-bit levels, recording exact weight/activation formats and supported operations. ORT's documented INT4 route is weight-only; FP16 is floating-point conversion. Support for dynamic activation quantization at each requested level must be verified.
+3. Compare feasible variants on validation using P/R/F1, repeated timing, peak memory, artifact size and preparation cost; select and freeze before later test evaluation.
+4. Study compatible PEFT methods on limited modules and train-only subsets, comparing untuned controls and separating training cost from inference. Isolate adaptation from quantization before a combined experiment or ensemble.
 
-| Notebook | Purpose | Default execution |
-|---|---|---|
-| [Test_results_analysis.ipynb](source/Test_results_analysis.ipynb) | Paired F1 intervals, quality/latency figures, voting diagnostics and separate costs | Published analysis; no data, models or API access required |
-| [SLM_test.ipynb](source/SLM_test.ipynb) | Completed large/majority test and matching three-system comparison | Published reports; no local data or models required |
-| [DeepSeek_test.ipynb](source/DeepSeek_test.ipynb) | Completed low-reasoning test, API accounting and matching comparison | Published reports; no API key or local data required |
-| [Full_validation_relex.ipynb](source/Full_validation_relex.ipynb) | Three-encoder validation, competitive cutoffs and ensemble costs | Published report; no checkpoint loading |
-| [DeepSeek_flash_validation.ipynb](source/DeepSeek_flash_validation.ipynb) | Completed non-thinking/low/high development pilot | Paid calls disabled; execution requires local validation inputs/caches |
-| [Preliminary_experiments.ipynb](source/Preliminary_experiments.ipynb) | Eight historical experiments with embedded aggregate results and limitations | Analysis only; no datasets or models required |
-| [EDA.ipynb](source/EDA.ipynb) | Train/validation schema, bags, labels, lengths and duplicates | Requires local NYT10m data |
-| [data.ipynb](source/data.ipynb) | Obtain and inspect the official distribution | Downloads require `DOWNLOAD_DATA=True` |
+The [remaining-work protocol](docs/protocol.md#remaining-experimental-work) defines the experiment boundaries. Pruning remains optional later work; ICL, routing and extra decoders remain deferred.
 
-GitHub displays the saved notebook tables. For interactive report viewing, install `jupyterlab`, `pandas`, `nbformat` and `nbclient` in a Python environment and open a report notebook. Local inference uses the separately verified Python 3.14.3 environment pinned in [requirements.txt](requirements.txt); compatibility must be checked when installing it on another platform.
+## Reading guide
 
-## Local execution and reproducibility
+1. [Experimental protocol](docs/protocol.md): data splits, supplied entities, evidence selection, models and scoring.
+2. [Results and interpretation](docs/results.md): uncertainty, voting diagnostics, figures and separate cost measurements.
+3. [Reproducibility guide](docs/reproducibility.md): report viewing, local execution, dependencies and checks.
 
-1. Create a virtual environment and install [requirements.txt](requirements.txt) for inference, or the smaller analysis dependency set above for report viewing.
-2. Obtain NYT10m using the download notebook and the [official OpenNRE distribution](https://github.com/thunlp/OpenNRE#data), described by [Gao et al. (2021)](https://aclanthology.org/2021.findings-acl.112/).
-3. Use the explicit notebook controls. In test notebooks, `ANALYZE_LOCAL_RESULTS=True` verifies retained local caches without new inference; `RUN_LOCAL_INFERENCE=True` or `RUN_API=True` enables execution. Model flags select encoder workers, and asset prefetch is separately enabled before offline inference.
-4. Supply `DEEPSEEK_API_KEY` through the environment or a local `.env` based on [.env.example](.env.example) only for paid execution. The API notebook retains a $10 usage/reserve budget, durable request journals and explicit uncertain-attempt recovery.
+For the complete tables and figures, start with [Test_results_analysis.ipynb](source/Test_results_analysis.ipynb). The [SLM test](source/SLM_test.ipynb), [DeepSeek test](source/DeepSeek_test.ipynb) and [full-validation](source/Full_validation_relex.ipynb) notebooks also display published reports by default, without datasets, checkpoints or API access.
 
-The shared modules implement test reconstruction/scoring (`nyt10m_test_protocol.py`), isolated offline encoder workers (`nyt10m_test_encoders.py`), and fixed-prompt API execution/accounting (`nyt10m_test_api.py`). Published reports can be read separately through `publication_utils.py`.
+## Repository structure
 
-Checkpoint revisions, weight identities, tokenizer/config metadata and source hashes are recorded in the frozen specification. The GLiDRE implementation uses pinned author code, an isolated GLiNER 0.2.13 helper, and a compatibility bridge preserving pretrained layers. Native-parity and supplied-span preflights passed before inference. Original hash-bound runners/adapters remain unchanged.
+| Location | Contents |
+|---|---|
+| [docs/](docs/) | Public protocol, results, reproduction instructions and [bibliography](docs/references.bib) |
+| [source/](source/) | Inference/scoring modules, analysis scripts and notebooks |
+| [results/](results/README.md) | Frozen specifications, aggregate reports, bootstrap counts and figures |
+| [support/](support/README.md) | Reviewed development samples, annotation evidence and historical versions |
+| [tests/](tests/) | Synthetic checks for direction, reconstruction, parsing, caching and statistics |
 
-Datasets, weights, detailed score caches, API journals, environments and credentials are **local only and excluded from Git**. A fresh clone contains compact aggregate evidence and cannot reconstruct every per-bag result without obtaining assets and running inference. Cached results may be resumed only with matching frozen settings; a different runtime or method requires an explicitly versioned experiment.
+The published repository contains compact evidence. Datasets, model weights, detailed per-bag caches, request journals, credentials and personal thesis drafts are excluded from Git. A fresh clone can display the main reports and reproduce their bootstrap analysis; full inference requires the assets and runtime described in the [reproducibility guide](docs/reproducibility.md).
 
-Run the retained synthetic/stub checks and publication scan with:
+## Quick start: view the reports
+
+```bash
+python -m venv .venv-report
+source .venv-report/bin/activate
+python -m pip install -r requirements-report.txt
+jupyter lab
+```
+
+Open `source/Test_results_analysis.ipynb` and run its cells with the default flags. For verification in the full inference environment:
 
 ```bash
 python -m unittest discover -s tests -v
 python source/check_publication.py
 ```
 
-## Documentation
-
-- [Protocol](support/protocol.md), [notes and interpretation](support/notes.md), and [roadmap](support/starter.md).
-- [Literature review](support/literature.md), [evidence matrix](support/evidence_matrix.md), and [BibTeX references](support/references.bib).
-- [Thesis outline](support/thesis_outline.md) and [background chapter](support/background_related_work.md).
-- [Latest cleanup and publication checks](support/cleanup_2026-10-08.md).
+The full synthetic suite requires [requirements.txt](requirements.txt). Report-only dependencies support the published analysis and its statistical checks; see the [reproducibility guide](docs/reproducibility.md). Dataset references are [Gao et al. (2021)](https://aclanthology.org/2021.findings-acl.112/) and the [OpenNRE distribution](https://github.com/thunlp/OpenNRE#data).
