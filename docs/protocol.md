@@ -1,6 +1,6 @@
 # Experimental protocol
 
-The completed comparison is `nyt10m_selected_evidence_test_v1_20261007`. Its exact settings, checkpoint revisions, weight identities, prompt identity, input/reference hashes and nine inference-source hashes are in the [frozen specification](../results/test_comparison_spec.json). Published outcomes are in the [results report](results.md).
+The four official studies share the task, selected evidence and scoring rules below. The [result inventory](../results/README.md) links exact settings, identities, reports and audits for each study.
 
 ## Task and data splits
 
@@ -10,9 +10,10 @@ A bag groups sentences for one ordered `(head.id, tail.id)` pair. Each sentence 
 |---|---|---|
 | NYT10m train/validation distant labels | Development; full validation has 36,266 bags | Noisy database-derived supervision |
 | Reviewed 30 validation bags | Separate development diagnostic: C01–C12 and N01–N18 | Selected and repeatedly used text annotations; not a representative benchmark |
-| Official manually annotated test | Frozen final comparison: 5,174 bags | Official labels, without reassignment or added relation closure |
+| Expanded human-confirmed development | Random100 and previously selected42 | Design evidence for the late extension. Report the two groups separately. |
+| Official manually annotated test | Four separately frozen studies on 5,174 bags | Official labels with the same selected evidence across studies |
 
-Checkpoint, cutoff, fusion, prompt, completion cap and scoring choices were frozen before test inference. Test errors and rankings do not drive revisions of this comparison or the later reduction design. Dataset and toolkit references are [Gao et al. (2021)](https://aclanthology.org/2021.findings-acl.112/) and [OpenNRE](https://github.com/thunlp/OpenNRE).
+Each study fixed its conditions before evaluating them on the official test. The later studies reused the benchmark and retained the preceding test exposure. Dataset and toolkit references are [Gao et al. (2021)](https://aclanthology.org/2021.findings-acl.112/) and [OpenNRE](https://github.com/thunlp/OpenNRE).
 
 ## Evidence selection and manual-test reconstruction
 
@@ -49,32 +50,34 @@ The two development pilots are historical conditions: v1 compared non-thinking/h
 
 The development convention `text_supported_inference_v2_20261006` accepts direct textual evidence and documented motivated inference for head → tail. An inferred positive must record its sentence evidence, connecting assumption and uncertainty. Unsupported external facts, mere co-occurrence and distant labels alone do not establish a positive relation. The official test labels remain unchanged by this convention.
 
-The active diagnostic consists of 12 C bags and 18 N bags. N18's Andrea Barzagli → Italy nationality annotation was confirmed from the national-team reading, with uncertainty documented. Historical B08's Iran → Tehran containment revision is outside this active cohort. This is a project annotation convention, not a universal inference rule. [Canonical annotation files and revision evidence](../support/README.md) preserve the labels, samples, rationales and prior versions.
+The original Reviewed30 diagnostic consists of 12 C bags and 18 N bags. N18's Andrea Barzagli → Italy nationality annotation was confirmed from the national-team reading, with uncertainty documented. Historical B08's Iran → Tehran containment revision is outside this active cohort. This is a project annotation convention, not a universal inference rule. [Canonical annotation files and revision evidence](../support/README.md) preserve the labels, samples, rationales and prior versions.
 
 ## Metrics, uncertainty and costs
 
 Precision, recall and micro-F1 aggregate positive `(ordered entity pair, relation)` TP/FP/FN. Empty-reference bags remain included because unsupported positive predictions contribute false positives. Invalid responses receive no success credit, even when their empty prediction matches a negative reference.
 
-The statistical analysis uses 20,000 paired whole-bag bootstrap replicates, seed `20261008`. Every system receives the same sampled bag indices; each bag's label set stays together and micro-F1 is recomputed from summed counts. Nominal 95% percentile intervals describe sampled-bag uncertainty conditional on the saved predictions and references. They do not measure repeated generation, annotation or model-selection uncertainty; approximate bag exchangeability is assumed.
+Each test analysis uses 20,000 paired whole-bag bootstrap replicates with the seed and contrasts recorded in its specification. Every system receives the same sampled bag indices; each bag's label set stays together and micro-F1 is recomputed from summed counts. Nominal 95% percentile intervals describe sampled-bag uncertainty conditional on the saved predictions and references. They do not measure repeated generation, annotation or model-selection uncertainty; approximate bag exchangeability is assumed.
 
-Local CPU time includes required inference attempts and session label encoding, excluding loading/preflight. API time includes service/network and request attempts, excluding idle gaps/backoff. Reconstructed token charges and unknown-charge reserves remain separate. Peak runtime memory and local monetary/energy costs were not measured for the primary comparison. Artifact size is not a substitute for runtime memory.
+Local CPU time includes required inference attempts and session label encoding, excluding loading/preflight. API time includes service/network and request attempts, excluding idle gaps/backoff. Reconstructed token charges and unknown-charge reserves remain separate. The released-model comparison records no peak runtime memory. Later studies report sampled individual process RSS, model loading and deployment storage separately. The ensemble benchmark times are sums of individual means, with joint memory and fusion overhead unmeasured.
 
-## Remaining experimental work
+## Numerical reduction
 
-The primary next experiment is **ONNX Runtime quantization of GLiNER-relex large**, investigating the requested **Dynamic Weight and Activation Quantization at 4, 8 and 16 bits**. The fixed 100-bag/118-record validation pilot has prepared inputs, not reduced-model results. Preserve the original checkpoint/environment and version any new export wrapper separately from hash-bound baseline sources.
+The ONNX study compares dynamic INT8, symmetric block-128 INT4 weight-only, and mixed FP16 Linear conversion against matched ONNX FP32. The conversion targets 144 encoder Linear matrices. The extraction heads and supplied-span adapter remain in PyTorch. Dynamic INT8 derives activation scales per input, INT4 reduces constant weights, and mixed FP16 retains selected operations in FP32.
 
-Validate FP32 export of the full directed supplied-entity relation path, all 24 scores, variable lengths and longest inputs. Initially target eligible encoder linear operations; record converted/excluded nodes and exact weight, activation and accumulator formats. **ONNX introduces a new backend:** remeasure PyTorch FP32 and ONNX FP32 under identical inputs, preprocessing, batching, threads and timing boundaries, then compare ONNX reduced variants with ONNX FP32.
+The declared test comparisons center on INT8 and the equal mean of the three reduced bag scores. Both use strict >0.7. INT4 and FP16 are retained as individual controls. The within-ONNX comparison shares relation-description order. The historical PyTorch and ONNX controls use different description order, so their observed difference combines backend and prompt-serialization changes. See the [frozen reduction specification](../results/onnx_reduction_test_spec.json).
 
-The [official ORT documentation](https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html) distinguishes dynamic INT8 and blockwise INT4 weight-only routes; [FP16 conversion](https://onnxruntime.ai/docs/performance/model-optimizations/float16.html) is a separate floating-point method with provider limitations. They do not establish a uniform dynamic W4A4/W8A8/W16A16 sweep or GLiNER compatibility. Execute supported levels and record unsupported activation formats; never relabel a weight-only or FP16 artifact as dynamic weight-and-activation quantization.
+## LoRA adaptation
 
-Report P/R/micro-F1, changes from the matched parent, controlled repeated latency, peak process memory, executable artifact bytes and one-off preparation cost. No predefined acceptable F1 loss or composite quality–cost score is imposed. Evaluate each variant alone before ensembles, counting every member's inference. Select and freeze on validation before later test use, and disclose that the benchmark was already evaluated once.
+Last6 adapts Q/V projections in encoder blocks 18–23. Random6 uses one fixed draw of six blocks. Both use rank 8, alpha 8, dropout 0.05 and AdamW at 5e-5. The parent parameters and task head are frozen. Each placement completed three epochs on the same 5,000 train-only bags. Checkpoints were selected by distant-validation micro-F1 at strict >0.7, then by precision and earlier epoch.
 
-**PEFT on limited modules and differentiated NYT10m training subsets is an exploratory extension.** Study compatible methods, explicit target modules, a directed relation loss and deterministic train-subset manifests before a small training run. Compare adapted and untuned controls; record trainable parameters, subset size/coverage, noisy-label assumptions, hyperparameters, stopping/selection rules and training cost. Train/calibrate only on declared training inputs; validation selects/stops, while reviewed/test annotations are not training data. Isolate adaptation before combining it with quantization, verify any adapter merge/export and evaluate each member individually.
+The [LoRA test](../results/lora_test_spec_20261019.json) evaluates Last6 epoch 2 against a fresh matched original-large control. Random6 epoch 3, union and intersection are declared supporting systems. The API comparator reuses the original outputs. One random placement draw limits comparisons between placement strategies.
 
-Pruning remains optional later work; dense masks do not establish smaller executable dimensions or faster inference. ICL, routing, extra decoders and new fine-tuning were not evaluated in the frozen comparison. ONNX export, reduced-model inference and PEFT training remain pending.
+## Heuristic fusion
+
+The expanded development packet contains the earlier selected42 and a human-confirmed Random100. Its pooled result is descriptive because these examples informed the design. The completed extension pairs Last6 with GLiClass v4 Edge or ModernBERT-NLI. The [frozen specification](../results/heuristic_ensembles_test_spec_20261022.json) carries all six primary variants and eight controls to the previously used official benchmark.
+
+Each pair has global score weighting, specialist-label addition and specialist-label replacement. Global weights use normalized positive Jaccard on the inspected manual142 packet. The label-specific variants use the selected capital, birthplace and deathplace labels. Union and equal-score means are controls. Every pair runs both members on all bags and the base NLI cutoff of 0.7 is retained alongside the adopted 0.9 sensitivity condition. No rule, coefficient or cutoff was tuned on these official test outcomes.
 
 ## DeepSeek-relative F1
 
-The agreed empirical upper quality reference is DeepSeek thinking-low, normalized to **100**. On identical bags, selected evidence, reference and scoring, report `relative F1 = 100 × micro-F1(system) / micro-F1(DeepSeek)` alongside absolute precision, recall and micro-F1.
-
-The [completed test report](../results/test_comparison_summary.json) supplies denominator **0.6735735271377764**, yielding large **77.62**, majority **74.38** and DeepSeek **100.00**. The denominator is the saved unrounded value. A relative score of 100 means matching this measured comparator, not perfect extraction; scores above 100 are allowed. Validation normalization requires matched validation DeepSeek outputs, never the test denominator. Use the test reference for reporting after the later system is frozen, not as selection feedback.
+For matched test evidence, report 100 × F1(system) / F1(saved DeepSeek low) alongside absolute F1. The index expresses a measured ratio and can exceed 100 if a system exceeds that reference. Development cohorts use their own absolute metrics.

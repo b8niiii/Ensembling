@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-19",
+  "status": "passed_cached_official_test_audit",
+  "test_fingerprint": "d835ab3f098d1f81fc2a4891edd15284544e325fa25830616fce2cbb0c99e111",
+  "summary_sha256": "acc9781a09129e3b41fb317cfa663a2660eaeddeb98b7e67e60de5650e31695b",
+  "count_archive_sha256": "e98f39546762fd506d9b469e3d61022053dac06c42b16ae017f374469781fc93",
+  "cache_files_checked": 15522,
+  "selected_records_per_member": 9001,
+  "relation_scores_per_unit": 24,
+  "quality_rows_reproduced": 6,
+  "per_relation_rows_reproduced": 120,
+  "transition_rows_reproduced": 5,
+  "benchmark_observations_checked": 1500,
+  "preflight_receipts_checked": 3,
+  "complete_execution_sessions_checked": 6,
+  "failed_session_records": 0,
+  "paired_bootstrap_intervals_reproduced": 6,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20261019,
+  "bootstrap_unit": "paired whole bag",
+  "independent_bootstrap_batch_size": 64,
+  "original_parent_paired_counts_match_historical_parent": true,
+  "empty_reference_diagnostics": {
+    "reference_empty_bags": 1855,
+    "parent": {
+      "FP_facts_on_empty_reference_bags": 642,
+      "nonempty_predictions_on_empty_reference_bags": 526
+    },
+    "last6": {
+      "FP_facts_on_empty_reference_bags": 515,
+      "nonempty_predictions_on_empty_reference_bags": 513
+    },
+    "random6": {
+      "FP_facts_on_empty_reference_bags": 627,
+      "nonempty_predictions_on_empty_reference_bags": 624
+    },
+    "union": {
+      "FP_facts_on_empty_reference_bags": 689,
+      "nonempty_predictions_on_empty_reference_bags": 683
+    },
+    "intersection": {
+      "FP_facts_on_empty_reference_bags": 453,
+      "nonempty_predictions_on_empty_reference_bags": 453
+    }
+  },
+  "scope": "Existing inputs, official selected-evidence labels, hashes, finite sentence caches, derived scores, archived sufficient statistics, timing/preflight/session receipts. No new model loading, inference, training, network/API request or modification of frozen scientific evidence.",
+  "native_execution_performed_by_project_owner": true,
+  "new_model_executions_in_this_audit": 0,
+  "new_API_calls": 0,
+  "elapsed_audit_s": 5.196081582980696,
+  "limitations": [
+    "Existing benchmark has already been evaluated by earlier methods; this is a separately frozen extension, not a newly untouched holdout.",
+    "No checkpoint, threshold, ensemble rule or recipe may be selected using these test outcomes.",
+    "Two set rules are reported as declared, regardless of whether either improves test F1.",
+    "DeepSeek=100 is a matched empirical F1 ratio, not a theoretical upper bound.",
+    "Whole-bag intervals condition on fixed checkpoints/predictions; they do not measure generation or training-seed variation.",
+    "Historical original-large results are preserved; a new matched parent uses exactly the LoRA input/prompt order and forward.",
+    "Local CPU latency, sampled process RSS, deployment bytes, training cost and API expenditure are separate dimensions.",
+    "Successful cached inference time excludes loading, preflight, warmup, failures and disk writes; complete worker sessions are retained locally."
+  ]
+}

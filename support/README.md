@@ -21,6 +21,6 @@ The original B01–B12 diagnostic remains in [its input sample](validation_blind
 
 Personal writing outlines, chapter drafts, reading notes and internal workflow records are kept in the ignored local workspace. They are not part of the published evidence set.
 
-## Use in the next experiments
+## Role in the thesis
 
-The [current protocol](../docs/protocol.md#remaining-experimental-work) prioritises ONNX Runtime quantization of GLiNER-relex large at requested 4/8/16-bit levels and exploratory PEFT on limited modules/differentiated training subsets. These annotations remain selected validation diagnostics; they must not become PEFT training targets or official test gold. The [DeepSeek=100 convention](../docs/protocol.md#deepseek-relative-f1) requires matched inputs/references and keeps absolute F1 visible. No annotation change is introduced by the optimization plan.
+Reviewed30 supports the original development diagnostics. The later heuristic study used a separate expanded human-confirmed packet, with Random100 and selected42 reported separately. These development annotations are kept distinct from official test labels and LoRA training targets. See the [experimental protocol](../docs/protocol.md#reviewed-annotation-policy).

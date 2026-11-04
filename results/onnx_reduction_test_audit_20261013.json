@@ -1,0 +1,53 @@
+{
+  "summary_identity": "061ba12005cb74783031a8bdbe363c80ee1e118bb40e27fb75897b85cb1043da",
+  "detailed_report_identity": "e0b1350fa4142c1ca9b94a6358ea7b593eeaf57c666675d9afe353b66230ecc9",
+  "verified_member_caches": 20696,
+  "verified_timing_rows": 2000,
+  "verified_bootstrap_replicates": 20000,
+  "report_interval_rows": 5,
+  "source_description_order_changed": true,
+  "legacy_to_onnx_transitions": {
+    "lost_TP": 195,
+    "recovered_TP": 43,
+    "removed_FP": 434,
+    "added_FP": 120,
+    "changed_bags": 704,
+    "both_wrong_bags": 2542
+  },
+  "trio_pass_overhead_scalar_s": 0.0010139910591533408,
+  "member_inference_executed": false,
+  "API_calls": false,
+  "schema": "onnx_reduction_test_independent_audit_v1",
+  "audit_date": "2026-10-13",
+  "spec_identity": "74acea576df35ee8456f10748dc21c866ba722270342270e6a224898187f2e50",
+  "config_identity": "c6f039da219d308b08dec5c9f1fb37b722a75d3e86c8520e4d958cc8a77bf588",
+  "existing_test_fingerprint": "b7ab3463602ffb361ff4ecdbc37ce947b0bca7b9cbcfa0221e7761ab3de3f6a3",
+  "positive_reference_facts": 3899,
+  "selected_sentence_mention_units": 9001,
+  "checked_quality_rows": 7,
+  "checked_per_relation_rows": 120,
+  "complete_stage_sessions": 12,
+  "full_quality_peak_memory": [
+    {
+      "system": "fp32",
+      "sampled_full_quality_peak_rss_GiB": 2.0303955078125,
+      "source_sha256": "f5814fa150bc3514d76cc58948e52ae9e0b0afcb094693957f52607fedee7af3"
+    },
+    {
+      "system": "int8",
+      "sampled_full_quality_peak_rss_GiB": 1.30615234375,
+      "source_sha256": "183cbf15a34aa97edf242b79779be7571e7896a4e39bdffe3ae75ad765e590ca"
+    },
+    {
+      "system": "int4",
+      "sampled_full_quality_peak_rss_GiB": 1.0948028564453125,
+      "source_sha256": "8c8073afa22e8eeab75e25190e7cc11b4b6bb472980e90ffd6ccbfcc7b350877"
+    },
+    {
+      "system": "fp16",
+      "sampled_full_quality_peak_rss_GiB": 1.6196746826171875,
+      "source_sha256": "fd3b7ee7cccb1e46447a043a9d1017ae310127213c9ac1c4c909745c3a04bbb3"
+    }
+  ],
+  "note": "Recorded fusion timing rows are absent from the source report; member-only timing was independently reproduced and the aggregate fusion increment verified. No new inference or API call."
+}

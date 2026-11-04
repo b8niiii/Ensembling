@@ -1,0 +1,207 @@
+{
+  "acceptance": "strictly greater than cutoff",
+  "aggregation": "sentence scores -> per-label bag maximum -> equal mean or single -> strict cutoff",
+  "artifact_identities": {
+    "ort_fp16_linear": "6825a9aa47556ccdf8401c4e69527ee0aa6172cf92f13b7d6712e629634d3627",
+    "ort_fp32": "a4aa4f304b9ed251c81a070d0825c81e4cb6837e162661810f21802adc593c83",
+    "ort_int4_weight_only": "bc1f7ed81ddc53d95e8a1c6c2aa9fd269acc5f8fdba2b93d5371b391ac95eb26",
+    "ort_int8_dynamic": "f8deca70a875c80c649c191e0ed23b71261a9479ef3d5f5901089c21f0ec2170"
+  },
+  "artifact_record_sha256": {
+    "ort_fp16_linear": "257bdaf01a9d7693d68848722722158225cb7fef9f24441d8271550b7f1675e9",
+    "ort_fp32": "b5dfba347bc1c9e02374708d38aaec7ce64f4dd500644d576076a4f603bafe9f",
+    "ort_int4_weight_only": "7ae7fbb20cbc0a0ac8da59c2f861d9cad040750341347089589b2aec4ff678bd",
+    "ort_int8_dynamic": "b884e1cd0f65913737676e8924a2668145b282b4d786bc3c59a28f7b78749b9d"
+  },
+  "bags": 5174,
+  "benchmark": {
+    "bags": 100,
+    "repeats": 5,
+    "scope": "preprocessing, supplied-entity encoder/heads and bag maxima; loading and writes excluded",
+    "seed": 20261012,
+    "selection": "uniform random frozen test bags, without labels or predictions"
+  },
+  "bootstrap": {
+    "contrasts": [
+      [
+        "mean_int8_int4_fp16",
+        "int8"
+      ],
+      [
+        "int8",
+        "fp32"
+      ],
+      [
+        "mean_int8_int4_fp16",
+        "fp32"
+      ],
+      [
+        "int8",
+        "deepseek_low"
+      ],
+      [
+        "mean_int8_int4_fp16",
+        "deepseek_low"
+      ]
+    ],
+    "multiplicity_adjustment": null,
+    "replicates": 20000,
+    "seed": 20261012,
+    "unit": "whole bag, paired"
+  },
+  "cap": 20,
+  "comparator_hashes": {
+    "results/test_bag_counts_20261008.npz": "ca9b32a42fdd03f7037d8debfe619542fda16595d928ea167dd30d00f5eb09e8",
+    "results/test_comparison_spec.json": "728d20c55ae741b02849e9251becc63769ec3ce878f073d7dbc36b66e8248c90",
+    "results/test_llm_summary.json": "fee8bddcc30bbe952f78d41ab8d71dcc27a75844fbf7f339baeecab7cc7f0ec1",
+    "results/test_slm_summary.json": "2203d4091dc3280984eb15d111565790c832b39127bee90b0d002ffb8182a37a",
+    "results/test_statistical_analysis_20261008.json": "ff5b17b8495268f62e33ad47830ae8a9780380975f91b6c39b540caaece470fa"
+  },
+  "control": "new matched ONNX FP32; historical PyTorch large is a separate saved comparator",
+  "cost_contract": {
+    "API_expenditure": "saved API accounting only, separate from local resources",
+    "ensemble_joint_memory": "not measured",
+    "ensemble_latency": "sum aligned separately measured member times plus fusion; sequential estimate",
+    "shared_files": "counted once"
+  },
+  "cutoff": 0.7,
+  "execution": {
+    "batch_size": 1,
+    "cpu_threads": 2,
+    "minimum_free_bytes": 2147483648,
+    "new_API_calls": false,
+    "new_conversion": false,
+    "offline": true,
+    "warmup_bags": 3
+  },
+  "existing_test_fingerprint": "b7ab3463602ffb361ff4ecdbc37ce947b0bca7b9cbcfa0221e7761ab3de3f6a3",
+  "gold_rule": "union of official manual labels of selected exact sentence/mention units only",
+  "identity": "74acea576df35ee8456f10748dc21c866ba722270342270e6a224898187f2e50",
+  "input_manifest_sha256": "706eec8d09a9380e8aa26287cacbada881d74f52776bd1aa20ce34895b346245",
+  "int4_binding_identity": "a248658e564252aeb0ad0b6717d28f665bd332d1c5ea08f1b794b44e8235270b",
+  "int4_dependency_identity": "442ef30e4a7e43ed105a91f944d308650b71b178fca6516eb6773975561cfa45",
+  "limitations": [
+    "Official test has already been used for the earlier frozen comparison.",
+    "New reductions/fusion were chosen on validation; no test-driven retuning.",
+    "The trio is exploratory; its validation gain is small and uncertain.",
+    "No new annotation, pruning, adaptation, routing or threshold search."
+  ],
+  "machine": "arm64",
+  "member_order": [
+    "ort_fp32",
+    "ort_int8_dynamic",
+    "ort_int4_weight_only",
+    "ort_fp16_linear"
+  ],
+  "official_test_sha256": "c703fcfef492bda6bb7b8a244eb4755415f04a86f53ab96ea16eb2ff9d431ad9",
+  "original_weights_sha256": "7c5bd751e1b24e4254d70fe4355a986cd65400676ce3735f7752429fcc26960a",
+  "positive_reference_facts": 3899,
+  "primary_systems": [
+    "int8",
+    "mean_int8_int4_fp16"
+  ],
+  "reference_sha256": "4f1ead0830501826ff93cf5e39ee1d1e3f6a525d2b7ff10f72e1387dd7491c4e",
+  "rules": [
+    {
+      "confirmer": null,
+      "description": "ONNX FP32",
+      "diagnostic_parent": null,
+      "members": [
+        "ort_fp32"
+      ],
+      "method": "single",
+      "proposal_members": [],
+      "role": "control",
+      "system": "fp32"
+    },
+    {
+      "confirmer": null,
+      "description": "Dynamic INT8",
+      "diagnostic_parent": null,
+      "members": [
+        "ort_int8_dynamic"
+      ],
+      "method": "single",
+      "proposal_members": [],
+      "role": "individual",
+      "system": "int8"
+    },
+    {
+      "confirmer": null,
+      "description": "INT4 weight-only",
+      "diagnostic_parent": null,
+      "members": [
+        "ort_int4_weight_only"
+      ],
+      "method": "single",
+      "proposal_members": [],
+      "role": "individual",
+      "system": "int4"
+    },
+    {
+      "confirmer": null,
+      "description": "Mixed FP16 Linear",
+      "diagnostic_parent": null,
+      "members": [
+        "ort_fp16_linear"
+      ],
+      "method": "single",
+      "proposal_members": [],
+      "role": "individual",
+      "system": "fp16"
+    },
+    {
+      "confirmer": null,
+      "description": "Mean INT8 + INT4 + FP16",
+      "diagnostic_parent": null,
+      "members": [
+        "ort_int8_dynamic",
+        "ort_int4_weight_only",
+        "ort_fp16_linear"
+      ],
+      "method": "mean",
+      "proposal_members": [],
+      "role": "exploratory_trio",
+      "system": "mean_int8_int4_fp16"
+    }
+  ],
+  "run_name": "onnx_large_selected_test_v1_20261012",
+  "runtime_packages": {
+    "gliner": "0.2.29",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.5.3",
+    "onnx": "1.23.0",
+    "onnxruntime": "1.31.0",
+    "pandas": "3.0.6",
+    "protobuf": "7.36.2",
+    "psutil": "7.2.2",
+    "safetensors": "0.8.0",
+    "sentencepiece": "0.2.2",
+    "tokenizers": "0.22.2",
+    "torch": "2.14.0",
+    "transformers": "4.57.6"
+  },
+  "schema": "onnx_reduced_selected_evidence_test_v1",
+  "selected_records": 9001,
+  "selection_analysis_identity": "267abef300802f4a4859c297929da6b21ddf8fc01dbfc56ac882a7a280554315",
+  "selection_report_identity": "54f8c1c394eea231cf1080e22c97a8d88a58160d7a563734bf54a7566d1529b7",
+  "shared_asset_inventory": {
+    "added_tokens.json": "14fedd7e9f345ea45fd9b74245468121d5ccac83e523cad1680529d00bb0e8e8",
+    "encoder_config.json": "5ce44ccf504e974c47eefa08d062bdf5023b3ffbde17f62a6d869aa00bd7c982",
+    "gliner_config.json": "b116ed5fa50c3dd63fc5897cf27087293a327ec4e89cde098228b7b4dd500a11",
+    "head.safetensors": "97f911d2476f39b1fc48b7d25528c0f0a7eb75f4275197c0436718290a587174",
+    "special_tokens_map.json": "b2f1b2f15f29a6b6d9d6ea4eca1675d2c231a71477f151d48f79cc83a625ba21",
+    "spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+    "tokenizer.json": "55749f41ba4321fc397859aead96f96a677050e028d9cfdc6564653e875cdf10",
+    "tokenizer_config.json": "ee20eaa4db6f56045339841383f83e98cb79f1672a93bb76a9735243ca65d0fa"
+  },
+  "source_hashes": {
+    "source/nyt10m_test_protocol.py": "ffeab09011228e2fcecd35181ddb32dec6089b148955fb874534fe5beda858a8",
+    "source/onnx_ensemble_analysis.py": "0cbcb50295c1c9dca1498be82088d3f6eac89be944d71dd90dc06dc10de01760",
+    "source/onnx_quantization_worker.py": "bd8e596017a4642083d657e20bc1ead95cec8589f667f5c46522d0cdd9563aa6",
+    "source/onnx_reduction_test.py": "cf3adce94d2b692982bb6c12095adad7ec4284906d22c40762552b6a03b21ae7"
+  },
+  "source_validation_config_identity": "644a3cebf7ff09f5c0fe9d294aab637c3ebbe16a3a8e34064d00f3794e2cf49d",
+  "source_validation_run": "onnx_large_validation_v2_loaderfix_20261011",
+  "worker_sha256": "bd8e596017a4642083d657e20bc1ead95cec8589f667f5c46522d0cdd9563aa6"
+}
