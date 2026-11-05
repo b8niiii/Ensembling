@@ -4,7 +4,11 @@ Data Science master's thesis at the Università degli Studi di Milano. The study
 
 ## Results at a glance
 
-Four separately frozen studies use the same **5,174 officially annotated NYT10m bags**, **9,001 selected evidence units** and **3,899 positive facts**. The table shows selected conditions. Full results include every declared control.
+Four separately frozen studies use the same **5,174 officially annotated NYT10m bags**, **9,001 selected evidence units** and **3,899 positive facts**.
+
+![Scatter plot of relative micro-F1 versus mean CPU inference time for all 25 local test conditions, with DeepSeek as the quality reference](results/figures/overall_quality_cost.png)
+
+The chart normalizes DeepSeek's observed micro-F1 of 67.36% to 100. The horizontal axis uses full-test mean CPU inference time per bag. Circles show recorded individual times and diamonds show estimated sums of component times. The table highlights selected conditions from the chart and the API reference.
 
 | Study | Selected comparison | Test micro-F1 |
 |---|---|---:|
